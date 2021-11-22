@@ -23,9 +23,14 @@ export default function Home() {
       </div>
       <div className={styles.middleRow}>
         <p>
-          I'm Sam, and I build full-stack web and mobile applications. I'm
-          currently working on this site -- here's my contact info + some links
-          for the time being:
+          I'm Sam, and I build full-stack web and mobile applications with a
+          focus on inspiring, accessible UX. I enjoy opportunities to explore
+          project-based solutions, and add new languages and tech to my primary
+          React-Node-SQL stack.
+        </p>
+        <p>
+          My full site is currently under construction -- below is an info
+          navigator, along with some links and a contact form. Have a nice day!
         </p>
       </div>
       <div className={styles.bottomRow}>
