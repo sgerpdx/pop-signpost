@@ -14,7 +14,7 @@ export default function Home() {
         <figure>
           <Image
             src={PlanetImage}
-            alt="image of planets in space"
+            alt="logo image of a blue planet with golden-brown ring"
             height="53"
             width="75"
           />
@@ -41,12 +41,12 @@ export default function Home() {
         </p>
         <p>
           <a href="https://www.linkedin.com/in/sam-h-gerber/" target="_blank">
-            <Image src={LogoLinkedin} alt="github logo" />
+            <Image src={LogoLinkedin} alt="linkedin logo" />
           </a>
         </p>
         <p>
           <a href="https://twitter.com/henrylightcode" target="_blank">
-            <Image src={LogoTwitter} alt="github logo" />
+            <Image src={LogoTwitter} alt="twitter logo" />
           </a>
         </p>
       </div>
