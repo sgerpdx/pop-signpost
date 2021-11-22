@@ -5,28 +5,43 @@ import PlanetImage from "../public/space.png";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Image
-        src={PlanetImage}
-        alt="image of planets in space"
-        height="64"
-        width="64"
-      />
-      <h1>hello : )</h1>
-      <p>
-        I'm Sam, and I build full-stack web and mobile applications. I'm
-        currently working on this site -- here's my contact info + some links
-        for the time being:
-      </p>
-      <p>
-        <a href="https://github.com/sgerpdx">GitHub</a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/sam-h-gerber/">Linkedin</a>
-      </p>
-      <p>
-        <a href="https://twitter.com/henrylightcode">Twitter</a>
-      </p>
-    </div>
+    <section className={styles.container}>
+      <div className={styles.topRow}>
+        {" "}
+        <figure>
+          <Image
+            src={PlanetImage}
+            alt="image of planets in space"
+            height="64"
+            width="64"
+          />
+        </figure>
+        <h1>hello : )</h1>
+      </div>
+      <div className={styles.middleRow}>
+        <p>
+          I'm Sam, and I build full-stack web and mobile applications. I'm
+          currently working on this site -- here's my contact info + some links
+          for the time being:
+        </p>
+      </div>
+      <div className={styles.bottomRow}>
+        <p>
+          <a href="https://github.com/sgerpdx" target="_blank">
+            GitHub
+          </a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/sam-h-gerber/" target="_blank">
+            Linkedin
+          </a>
+        </p>
+        <p>
+          <a href="https://twitter.com/henrylightcode" target="_blank">
+            Twitter
+          </a>
+        </p>
+      </div>
+    </section>
   );
 }
