@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import PlanetImage from "../public/space.png";
+import PlanetImage from "../public/blue-planet-01.png";
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
           <Image
             src={PlanetImage}
             alt="image of planets in space"
-            height="64"
-            width="64"
+            height="53"
+            width="75"
           />
         </figure>
         <h1>hello : )</h1>
