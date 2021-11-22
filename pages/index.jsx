@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import PlanetImage from "../public/blue-planet-01.png";
+import LogoTwitter from "../public/twitter-logo-white-32.png";
+import LogoLinkedin from "../public/linkedin-logo-white-32.png";
+import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
 
 export default function Home() {
   return (
@@ -28,17 +31,17 @@ export default function Home() {
       <div className={styles.bottomRow}>
         <p>
           <a href="https://github.com/sgerpdx" target="_blank">
-            GitHub
+            <Image src={LogoGitHub} alt="github logo" />
           </a>
         </p>
         <p>
           <a href="https://www.linkedin.com/in/sam-h-gerber/" target="_blank">
-            Linkedin
+            <Image src={LogoLinkedin} alt="github logo" />
           </a>
         </p>
         <p>
           <a href="https://twitter.com/henrylightcode" target="_blank">
-            Twitter
+            <Image src={LogoTwitter} alt="github logo" />
           </a>
         </p>
       </div>
