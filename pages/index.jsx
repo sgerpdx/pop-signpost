@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import PlanetImage from "../public/blue-planet-01.png";
 import LogoTwitter from "../public/twitter-logo-white-32.png";
 import LogoLinkedin from "../public/linkedin-logo-white-32.png";
 import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
+import ResumeIcon from "../public/demo-hex_YP.png";
 
 export default function Home() {
   return (
@@ -47,6 +49,14 @@ export default function Home() {
         <p>
           <a href="https://twitter.com/henrylightcode" target="_blank">
             <Image src={LogoTwitter} alt="twitter logo" />
+          </a>
+        </p>
+        <p>
+          <a href="/gerber-sam_resume-current.pdf" target="_blank">
+            <Image
+              src={ResumeIcon}
+              alt="clickable icon to open resume in new tab"
+            />
           </a>
         </p>
       </div>
