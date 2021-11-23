@@ -53,13 +53,58 @@ export default function Home() {
         </p>
         <p>
           <a href="/gerber-sam_resume-current.pdf" target="_blank">
-            <Image
-              src={ResumeIcon}
-              alt="clickable icon to open resume in new tab"
-            />
+            <button>Resume</button>
           </a>
         </p>
       </div>
+      <nav>
+        <div className={styles.rotated}>
+          <span>spin</span>
+        </div>
+        <div class={styles.selectionForm}>
+          <label>Choose Rotation</label>
+          <select>
+            <option>rotate3d(0, 1, 0, 0deg)</option>
+            <option>rotate3d(0, 1, 0, 90deg)</option>
+            <option>rotate3d(0, 1, 0, 180deg)</option>
+            <option>rotate3d(0, 1, 0, 270deg)</option>
+          </select>
+        </div>
+        <section style={style.displayArea}>
+          <div className={styles.frontBox} style={style.boxVantage}>
+            1
+          </div>
+          <div className={styles.sideBoxRight} style={style.boxVantage}>
+            2
+          </div>
+          <div className={styles.backBox} style={style.boxVantage}>
+            3
+          </div>
+          <div className={styles.sideBoxLeft} style={style.boxVantage}>
+            4
+          </div>
+        </section>
+      </nav>
     </section>
   );
 }
+
+const style = {
+  displayArea: {
+    width: "80px",
+    height: "80px",
+    border: "solid 1px goldenrod",
+    transformStyle: "preserve-3d",
+    transition: "transform 2s",
+    transform: "rotate3d(0, 1, 0, -360deg)",
+  },
+  boxVantage: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    backfaceVisibility: "hidden",
+  },
+};

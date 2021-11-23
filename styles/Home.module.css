@@ -57,6 +57,13 @@
   height: 120px;
 }
 
+.rotated {
+  transform: rotate3d(0, 1, 0, 0deg);
+  width: 32px;
+  height: 32px;
+  background-color: darkgreen;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -168,4 +175,81 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+/* .example-choice:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transform: translateY(-50%);
+  border-left: 10px solid #1b76c4;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+} */
+/* 
+<div id="example-element" class="transition-all">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+        </div> */
+
+/* this is our standard state: */
+
+.displayArea {
+  width: 80px;
+  height: 80px;
+  border: solid 1px goldenrod;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.boxVantage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  color: red;
+}
+
+.frontBox {
+  background-color: darkorchid;
+  width: 80px;
+  height: 80px;
+  transform: rotate3d(0, 1, 0, 0deg);
+  position: relative;
+}
+
+.sideBoxRight {
+  background-color: blue;
+  width: 80px;
+  height: 80px;
+  transform: rotate3d(0, 1, 0, 90deg);
+  position: relative;
+}
+
+.backBox {
+  background-color: turquoise;
+  width: 80px;
+  height: 80px;
+  transform: rotate3d(0, 1, 0, 180deg);
+  position: relative;
+}
+
+.sideBoxLeft {
+  background-color: orange;
+  width: 80px;
+  height: 80px;
+  transform: rotate3d(0, 1, 0, 270deg);
+  position: relative;
 }
