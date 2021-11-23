@@ -226,30 +226,34 @@
   background-color: darkorchid;
   width: 80px;
   height: 80px;
-  transform: rotate3d(0, 1, 0, 0deg);
+  transform: rotate3d(0, 1, 0, 0deg) translateZ(40px);
   position: relative;
+  backface-visibility: hidden;
 }
 
 .sideBoxRight {
   background-color: blue;
   width: 80px;
   height: 80px;
-  transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg) translateZ(40px);
   position: relative;
+  backface-visibility: hidden;
 }
 
 .backBox {
   background-color: turquoise;
   width: 80px;
   height: 80px;
-  transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg) translateZ(40px);
   position: relative;
+  backface-visibility: hidden;
 }
 
 .sideBoxLeft {
   background-color: orange;
   width: 80px;
   height: 80px;
-  transform: rotate3d(0, 1, 0, 270deg);
+  transform: rotate3d(0, 1, 0, 270deg) translateZ(40px);
   position: relative;
+  backface-visibility: hidden;
 }

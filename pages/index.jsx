@@ -93,10 +93,10 @@ const style = {
   displayArea: {
     width: "80px",
     height: "80px",
-    border: "solid 1px goldenrod",
+
     transformStyle: "preserve-3d",
     transition: "transform 2s",
-    transform: "rotate3d(0, 1, 0, -360deg)",
+    transform: "rotateY(0deg)",
   },
   boxVantage: {
     display: "flex",
