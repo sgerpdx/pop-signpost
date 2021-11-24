@@ -50,20 +50,6 @@
   padding: 10px;
 }
 
-/* .imageBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 80px;
-}
-
-.headline {
-  text-align: left;
-
-  width: 280px;
-} */
-
 .middleRow {
   display: flex;
   flex-direction: row;

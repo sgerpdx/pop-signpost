@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <>
       <section className={styles.projectScrollArea}>
-        <h4>Yo Ho Ho Here My Projects Go</h4>
+        <p>A scrollable list of projects will go here.</p>
       </section>
     </>
   );
