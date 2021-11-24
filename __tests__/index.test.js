@@ -18,7 +18,7 @@ jest.mock(
 );
 
 describe("Home", () => {
-  it("renders an introductory heading", async () => {
+  it("renders the intro component", async () => {
     render(<Intro />);
 
     //const loading = await screen.getByText("Loading...");
@@ -39,10 +39,15 @@ describe("Home", () => {
       name: "linkedin logo",
     });
 
+    const resumeButton = await screen.getByRole("button", {
+      name: "Resume",
+    });
+
     //expect(loading).toBeInTheDocument();
     expect(heading).toBeInTheDocument();
     expect(githubLogoImage).toBeInTheDocument();
     expect(twitterLogoImage).toBeInTheDocument();
     expect(linkedinLogoImage).toBeInTheDocument();
+    expect(resumeButton).toBeInTheDocument();
   });
 });
