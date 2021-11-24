@@ -68,21 +68,20 @@ export default function Home() {
         </section>
       </div>
       <div className={styles.bottomRow}>
-        <h3>bottom row</h3>
+        <nav>
+          <div class={styles.selectionForm}>
+            <label>
+              Navigation:
+              <select value={content} onChange={handleNavChange}>
+                <option value="home">home</option>
+                <option value="projects">projects</option>
+                <option value="about">about</option>
+                <option value="contact">contact</option>
+              </select>
+            </label>
+          </div>
+        </nav>
       </div>
-      <nav>
-        <div class={styles.selectionForm}>
-          <label>
-            Navigation:
-            <select value={content} onChange={handleNavChange}>
-              <option value="home">home</option>
-              <option value="projects">projects</option>
-              <option value="about">about</option>
-              <option value="contact">contact</option>
-            </select>
-          </label>
-        </div>
-      </nav>
     </section>
   );
 }

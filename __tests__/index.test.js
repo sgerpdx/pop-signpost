@@ -23,9 +23,7 @@ describe("Home", () => {
 
     //const loading = await screen.getByText("Loading...");
 
-    const heading = await screen.getByRole("heading", {
-      name: "Welcome to my site!",
-    });
+    const welcomeMessage = await screen.getByText("Welcome to my site!");
 
     const githubLogoImage = await screen.getByRole("img", {
       name: "github logo",
@@ -44,7 +42,7 @@ describe("Home", () => {
     });
 
     //expect(loading).toBeInTheDocument();
-    expect(heading).toBeInTheDocument();
+    expect(welcomeMessage).toBeInTheDocument();
     expect(githubLogoImage).toBeInTheDocument();
     expect(twitterLogoImage).toBeInTheDocument();
     expect(linkedinLogoImage).toBeInTheDocument();
