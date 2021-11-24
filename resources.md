@@ -8,3 +8,7 @@ Inter Font Family:
 3D Div Transformations:
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d()
+
+### Items to Work On
+
+- Div rotation logic so that the cube rotates using the least amount of degrees necessary to arrive at the target content.
