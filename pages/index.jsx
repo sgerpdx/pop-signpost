@@ -15,7 +15,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
   const [contentTransform, setContentTransform] = useState("0deg");
-  // const [rotationFix, setRotationFix] = useState("Solid 1px White");
 
   const handleNavChange = (e) => {
     setContent(e.target.value);
