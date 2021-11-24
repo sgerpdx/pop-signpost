@@ -1,4 +1,4 @@
-import Head from "next/head";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import PlanetImage from "../public/blue-planet-01.png";
@@ -7,6 +7,28 @@ import LogoLinkedin from "../public/linkedin-logo-white-32.png";
 import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [content, setContent] = useState("home");
+  const [contentTransform, setContentTransform] = useState("0deg");
+
+  const handleNavChange = (e) => {
+    setContent(e.target.value);
+  };
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    const currentContent = content;
+    if (currentContent === "home") setContentTransform("0deg");
+    if (currentContent === "projects") setContentTransform("-90deg");
+    if (currentContent === "about") setContentTransform("-180deg");
+    if (currentContent === "contact") setContentTransform("-270deg");
+  }, [content]);
+
+  if (loading) return <h3>Loading...</h3>;
+
   return (
     <section className={styles.container}>
       <div className={styles.topRow}>
@@ -23,14 +45,14 @@ export default function Home() {
       </div>
       <div className={styles.middleRow}>
         <p>
-          I'm Sam, and I build full-stack web and mobile applications with a
-          focus on inspiring, accessible UX. I enjoy opportunities to explore
-          project-based solutions, and add new languages and tech to my primary
-          React-Node-SQL stack.
+          I'm Sam, thanks for stopping by! I build full-stack applications with
+          a focus on inspiring, accessible UX and I enjoy opportunities to
+          explore project-based solutions, adding new languages and tech to my
+          primary React-Node-SQL stack.
         </p>
         <p>
-          My full site is currently under construction -- below is an info
-          navigator, along with some links and a contact form. Have a nice day!
+          While my full site here is under construction, you can check out
+          projects, contact info and more using the menu below. Have a nice day!
         </p>
       </div>
       <div className={styles.bottomRow}>
@@ -49,7 +71,62 @@ export default function Home() {
             <Image src={LogoTwitter} alt="twitter logo" />
           </a>
         </p>
+        <p>
+          <a href="/gerber-sam_resume-current.pdf" target="_blank">
+            <button>Resume</button>
+          </a>
+        </p>
       </div>
+      <nav>
+        <div class={styles.selectionForm}>
+          <label>
+            Navigation:
+            <select value={content} onChange={handleNavChange}>
+              <option value="home">home</option>
+              <option value="projects">projects</option>
+              <option value="about">about</option>
+              <option value="contact">contact</option>
+            </select>
+          </label>
+        </div>
+        <section
+          className={styles.displayArea}
+          style={{ transform: `rotateY(${contentTransform})` }}
+        >
+          <div className={styles.frontBox} style={style.boxVantage}>
+            1
+          </div>
+          <div className={styles.sideBoxRight} style={style.boxVantage}>
+            2
+          </div>
+          <div className={styles.backBox} style={style.boxVantage}>
+            3
+          </div>
+          <div className={styles.sideBoxLeft} style={style.boxVantage}>
+            4
+          </div>
+        </section>
+      </nav>
     </section>
   );
 }
+
+const style = {
+  displayArea: {
+    width: "100px",
+    height: "100px",
+    transformStyle: "preserve-3d",
+    transition: "transform 1s",
+    transform: "rotateY(-90deg)",
+    border: "0",
+  },
+  boxVantage: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "80%",
+    height: "80%",
+    position: "absolute",
+    backfaceVisibility: "hidden",
+  },
+};
