@@ -75,7 +75,7 @@ export default function Home() {
       </section>
       <section className={styles.bottomRow}>
         <nav>
-          <div class={styles.selectionForm}>
+          <div>
             <label>
               Navigation:
               <select value={content} onChange={handleNavChange}>
