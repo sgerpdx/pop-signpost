@@ -4,7 +4,6 @@ import styles from "../styles/Home.module.css";
 
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
-import HomeIcon from "../public/home-icon-simple.png";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -53,10 +52,7 @@ export default function Home() {
         <div className={styles.headlineTextArea}>
           <h1>hello : )</h1>
         </div>
-        <div className={styles.upperRightArea}>
-          {" "}
-          <Image src={HomeIcon} alt="site home icon" />
-        </div>
+        <div className={styles.upperRightArea}></div>
       </section>
       <section className={styles.middleRow}>
         <div
