@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import PlanetImage from "../public/blue-planet-01.png";
 import LogoTwitter from "../public/twitter-logo-white-32.png";
 import LogoLinkedin from "../public/linkedin-logo-white-32.png";
 import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
-import ResumeIcon from "../public/demo-hex_YP.png";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
   const [contentTransform, setContentTransform] = useState("0deg");
-
-  console.log("CCCCCC", content);
-  console.log("TRNSFRM:", contentTransform);
 
   const handleNavChange = (e) => {
     setContent(e.target.value);
@@ -26,9 +20,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log("Something just happened.");
     const currentContent = content;
-    console.log("*********", currentContent);
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "projects") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
@@ -53,14 +45,14 @@ export default function Home() {
       </div>
       <div className={styles.middleRow}>
         <p>
-          I'm Sam, and I build full-stack web and mobile applications with a
-          focus on inspiring, accessible UX. I enjoy opportunities to explore
-          project-based solutions, and add new languages and tech to my primary
-          React-Node-SQL stack.
+          I'm Sam, thanks for stopping by! I build full-stack applications with
+          a focus on inspiring, accessible UX and I enjoy opportunities to
+          explore project-based solutions, adding new languages and tech to my
+          primary React-Node-SQL stack.
         </p>
         <p>
-          My full site is currently under construction -- below is an info
-          navigator, along with some links and a contact form. Have a nice day!
+          While my full site here is under construction, you can check out
+          projects, contact info and more using the menu below. Have a nice day!
         </p>
       </div>
       <div className={styles.bottomRow}>
