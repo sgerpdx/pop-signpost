@@ -15,7 +15,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
   const [contentTransform, setContentTransform] = useState("0deg");
-  // const [rotationFix, setRotationFix] = useState("Solid 1px White");
 
   const handleNavChange = (e) => {
     setContent(e.target.value);
@@ -89,14 +88,6 @@ export default function Home() {
 }
 
 const style = {
-  // displayArea: {
-  //   width: "360px",
-  //   height: "480px",
-  //   transformStyle: "preserve-3d",
-  //   transition: "transform 1s",
-  //   transform: "rotateY(-90deg)",
-  //   border: "0",
-  // },
   boxVantage: {
     display: "flex",
     flexDirection: "column",
