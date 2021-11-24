@@ -89,14 +89,6 @@ export default function Home() {
 }
 
 const style = {
-  // displayArea: {
-  //   width: "360px",
-  //   height: "480px",
-  //   transformStyle: "preserve-3d",
-  //   transition: "transform 1s",
-  //   transform: "rotateY(-90deg)",
-  //   border: "0",
-  // },
   boxVantage: {
     display: "flex",
     flexDirection: "column",
