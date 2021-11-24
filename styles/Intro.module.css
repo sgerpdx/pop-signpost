@@ -1,0 +1,17 @@
+.introTextArea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+
+.socialMediaArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+}
