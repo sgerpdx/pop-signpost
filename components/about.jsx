@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <section className={styles.aboutMeArea}>
-        <p>talk talk talk</p>
+        <p>Here is where I talk about myself, and include a photo.</p>
       </section>
     </>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "../styles/Intro.module.css";
 import LogoTwitter from "../public/twitter-logo-white-32.png";
 import LogoLinkedin from "../public/linkedin-logo-white-32.png";
@@ -8,16 +9,7 @@ export default function Intro() {
   return (
     <>
       <section className={styles.introTextArea}>
-        <p>
-          I'm Sam, thanks for stopping by! I build full-stack applications with
-          a focus on inspiring, accessible UX and I enjoy opportunities to
-          explore project-based solutions, adding new languages and tech to my
-          primary React-Node-SQL stack.
-        </p>
-        <p>
-          While my full site here is under construction, you can check out
-          projects, contact info and more using the menu below. Have a nice day!
-        </p>
+        <p>Here is a bit of intro text.</p>
       </section>
       <section className={styles.socialMediaArea}>
         <p>
