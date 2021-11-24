@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
+import HomeIcon from "../public/home-icon-simple.png";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -16,14 +17,17 @@ export default function Home() {
   const [content, setContent] = useState("home");
   const [contentTransform, setContentTransform] = useState("0deg");
 
+  // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
     setContent(e.target.value);
   };
 
+  // handles loading spinner:
   useEffect(() => {
     setLoading(false);
   }, []);
 
+  // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(() => {
     const currentContent = content;
     if (currentContent === "home") setContentTransform("0deg");
@@ -35,21 +39,27 @@ export default function Home() {
   if (loading) return <h3>Loading...</h3>;
 
   return (
-    <section className={styles.container}>
-      <div className={styles.topRow}>
+    <main className={styles.container}>
+      <section className={styles.topRow}>
         {" "}
-        <figure>
+        <div className={styles.logoImageArea}>
           <Image
             src={PlanetImage}
             alt="logo image of a blue planet with golden-brown ring"
             height="53"
             width="75"
           />
-        </figure>
-        <h1>hello : )</h1>
-      </div>
-      <div className={styles.middleRow}>
-        <section
+        </div>
+        <div className={styles.headlineTextArea}>
+          <h1>hello : )</h1>
+        </div>
+        <div className={styles.upperRightArea}>
+          {" "}
+          <Image src={HomeIcon} alt="site home icon" />
+        </div>
+      </section>
+      <section className={styles.middleRow}>
+        <div
           className={styles.displayArea}
           style={{ transform: `rotateY(${contentTransform})` }}
         >
@@ -65,25 +75,24 @@ export default function Home() {
           <div className={styles.sideBoxLeft} style={style.boxVantage}>
             <Contact />
           </div>
-        </section>
-      </div>
-      <div className={styles.bottomRow}>
-        <h3>bottom row</h3>
-      </div>
-      <nav>
-        <div class={styles.selectionForm}>
-          <label>
-            Navigation:
-            <select value={content} onChange={handleNavChange}>
-              <option value="home">home</option>
-              <option value="projects">projects</option>
-              <option value="about">about</option>
-              <option value="contact">contact</option>
-            </select>
-          </label>
         </div>
-      </nav>
-    </section>
+      </section>
+      <section className={styles.bottomRow}>
+        <nav>
+          <div class={styles.selectionForm}>
+            <label>
+              Navigation:
+              <select value={content} onChange={handleNavChange}>
+                <option value="home">home</option>
+                <option value="projects">projects</option>
+                <option value="about">about</option>
+                <option value="contact">contact</option>
+              </select>
+            </label>
+          </div>
+        </nav>
+      </section>
+    </main>
   );
 }
 

@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 720px;
   width: 100vw;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   background-color: rgb(53, 52, 52);
   color: white;
 }
@@ -17,11 +17,37 @@
 .topRow {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 360px;
-  height: 120px;
+  width: 480px;
+  height: 60px;
+  margin: 20px;
+}
+
+.logoImageArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  height: 60px;
+  padding: 10px;
+}
+
+.headlineTextArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 240px;
+  height: 60px;
+}
+
+.upperRightArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  height: 60px;
+  padding: 10px;
 }
 
 /* .imageBox {
@@ -55,10 +81,11 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: grey;
+  background-color: rgb(53, 52, 52);
   color: white;
-  width: 360px;
+  width: 480px;
   height: 120px;
+  padding: 20px;
 }
 
 /* below is styling for cube-div-rotation */
@@ -85,7 +112,7 @@
 
 .frontBox {
   background-color: rgb(53, 52, 52);
-  border: solid 1px white;
+  border: solid 1px rgb(105, 182, 207);
   width: 480px;
   height: 480px;
   transform: rotate3d(0, 1, 0, 0deg) translateZ(240px);
@@ -95,7 +122,7 @@
 
 .sideBoxRight {
   background-color: rgb(53, 52, 52);
-  border: solid 1px white;
+  border: solid 1px lightgreen;
   width: 480px;
   height: 480px;
   transform: rotate3d(0, 1, 0, 90deg) translateZ(240px);
@@ -105,7 +132,7 @@
 
 .backBox {
   background-color: rgb(53, 52, 52);
-  border: solid 1px white;
+  border: solid 1px rgb(248, 78, 248);
   width: 480px;
   height: 480px;
   transform: rotate3d(0, 1, 0, 180deg) translateZ(240px);
@@ -115,7 +142,7 @@
 
 .sideBoxLeft {
   background-color: rgb(53, 52, 52);
-  border: solid 1px white;
+  border: solid 1px orange;
   width: 480px;
   height: 480px;
   transform: rotate3d(0, 1, 0, 270deg) translateZ(240px);

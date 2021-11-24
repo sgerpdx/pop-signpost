@@ -18,14 +18,12 @@ jest.mock(
 );
 
 describe("Home", () => {
-  it("renders the intro component", async () => {
+  it("renders the Intro component", async () => {
     render(<Intro />);
 
     //const loading = await screen.getByText("Loading...");
 
-    const heading = await screen.getByRole("heading", {
-      name: "Welcome to my site!",
-    });
+    const welcomeMessage = await screen.getByText("Welcome to my site!");
 
     const githubLogoImage = await screen.getByRole("img", {
       name: "github logo",
@@ -44,10 +42,52 @@ describe("Home", () => {
     });
 
     //expect(loading).toBeInTheDocument();
-    expect(heading).toBeInTheDocument();
+    expect(welcomeMessage).toBeInTheDocument();
     expect(githubLogoImage).toBeInTheDocument();
     expect(twitterLogoImage).toBeInTheDocument();
     expect(linkedinLogoImage).toBeInTheDocument();
     expect(resumeButton).toBeInTheDocument();
   });
 });
+
+// describe("Projects", () => {
+//   it("renders the Projects component", async () => {
+//     render(<Intro />);
+
+//     //const loading = await screen.getByText("Loading...");
+
+//     const heading = await screen.getByRole("heading", {
+//       name: "Welcome to my site!",
+//     });
+
+//     //expect(loading).toBeInTheDocument();
+//   });
+// });
+
+// describe("About", () => {
+//   it("renders the About component", async () => {
+//     render(<Intro />);
+
+//     //const loading = await screen.getByText("Loading...");
+
+//     const heading = await screen.getByRole("heading", {
+//       name: "Welcome to my site!",
+//     });
+
+//     //expect(loading).toBeInTheDocument();
+//   });
+// });
+
+// describe("Contact", () => {
+//   it("renders the Contact component", async () => {
+//     render(<Intro />);
+
+//     //const loading = await screen.getByText("Loading...");
+
+//     const heading = await screen.getByRole("heading", {
+//       name: "Welcome to my site!",
+//     });
+
+//     //expect(loading).toBeInTheDocument();
+//   });
+// });
