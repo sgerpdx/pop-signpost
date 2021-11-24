@@ -4,7 +4,9 @@
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Index from "../pages/index.jsx";
+// necessary to use toBeInTheDocument():
+import "@testing-library/jest-dom";
+import Intro from "../components/intro.jsx";
 
 jest.mock(
   "next/image",
@@ -17,10 +19,10 @@ jest.mock(
 
 describe("Home", () => {
   it("renders an introductory heading", () => {
-    render(<Index />);
+    render(<Intro />);
 
     const heading = screen.getByRole("heading", {
-      name: "Welcome to my Site!",
+      name: "Welcome to my site!",
     });
 
     expect(heading).toBeInTheDocument();

@@ -9,7 +9,7 @@ export default function Intro() {
   return (
     <>
       <section className={styles.introTextArea}>
-        <p>Here is a bit of intro text.</p>
+        <h1>Welcome to my site!</h1>
       </section>
       <section className={styles.socialMediaArea}>
         <p>
