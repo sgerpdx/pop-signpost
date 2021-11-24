@@ -18,13 +18,31 @@ jest.mock(
 );
 
 describe("Home", () => {
-  it("renders an introductory heading", () => {
+  it("renders an introductory heading", async () => {
     render(<Intro />);
 
-    const heading = screen.getByRole("heading", {
+    //const loading = await screen.getByText("Loading...");
+
+    const heading = await screen.getByRole("heading", {
       name: "Welcome to my site!",
     });
 
+    const githubLogoImage = await screen.getByRole("img", {
+      name: "github logo",
+    });
+
+    const twitterLogoImage = await screen.getByRole("img", {
+      name: "twitter logo",
+    });
+
+    const linkedinLogoImage = await screen.getByRole("img", {
+      name: "linkedin logo",
+    });
+
+    //expect(loading).toBeInTheDocument();
     expect(heading).toBeInTheDocument();
+    expect(githubLogoImage).toBeInTheDocument();
+    expect(twitterLogoImage).toBeInTheDocument();
+    expect(linkedinLogoImage).toBeInTheDocument();
   });
 });
