@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +10,33 @@ import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
 import ResumeIcon from "../public/demo-hex_YP.png";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [content, setContent] = useState("home");
+  const [contentTransform, setContentTransform] = useState("0deg");
+
+  console.log("CCCCCC", content);
+  console.log("TRNSFRM:", contentTransform);
+
+  const handleNavChange = (e) => {
+    setContent(e.target.value);
+  };
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    console.log("Something just happened.");
+    const currentContent = content;
+    console.log("*********", currentContent);
+    if (currentContent === "home") setContentTransform("0deg");
+    if (currentContent === "projects") setContentTransform("-90deg");
+    if (currentContent === "about") setContentTransform("-180deg");
+    if (currentContent === "contact") setContentTransform("-270deg");
+  }, [content]);
+
+  if (loading) return <h3>Loading...</h3>;
+
   return (
     <section className={styles.container}>
       <div className={styles.topRow}>
@@ -58,19 +86,21 @@ export default function Home() {
         </p>
       </div>
       <nav>
-        <div className={styles.rotated}>
-          <span>spin</span>
-        </div>
         <div class={styles.selectionForm}>
-          <label>Choose Rotation</label>
-          <select>
-            <option>rotate3d(0, 1, 0, 0deg)</option>
-            <option>rotate3d(0, 1, 0, 90deg)</option>
-            <option>rotate3d(0, 1, 0, 180deg)</option>
-            <option>rotate3d(0, 1, 0, 270deg)</option>
-          </select>
+          <label>
+            Navigation:
+            <select value={content} onChange={handleNavChange}>
+              <option value="home">home</option>
+              <option value="projects">projects</option>
+              <option value="about">about</option>
+              <option value="contact">contact</option>
+            </select>
+          </label>
         </div>
-        <section style={style.displayArea}>
+        <section
+          className={styles.displayArea}
+          style={{ transform: `rotateY(${contentTransform})` }}
+        >
           <div className={styles.frontBox} style={style.boxVantage}>
             1
           </div>
@@ -91,19 +121,19 @@ export default function Home() {
 
 const style = {
   displayArea: {
-    width: "80px",
-    height: "80px",
-
+    width: "100px",
+    height: "100px",
     transformStyle: "preserve-3d",
-    transition: "transform 2s",
-    transform: "rotateY(0deg)",
+    transition: "transform 1s",
+    transform: "rotateY(-90deg)",
+    border: "0",
   },
   boxVantage: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
-    height: "100%",
+    width: "80%",
+    height: "80%",
     position: "absolute",
     backfaceVisibility: "hidden",
   },

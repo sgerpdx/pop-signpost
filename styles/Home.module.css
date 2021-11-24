@@ -203,27 +203,26 @@
 /* this is our standard state: */
 
 .displayArea {
-  width: 80px;
-  height: 80px;
-  border: solid 1px goldenrod;
+  width: 100px;
+  height: 100px;
   transform-style: preserve-3d;
-  transition: transform 2s;
-  transform: rotate3d(0, 1, 0, 0deg);
+  transition: transform 1s;
+  border: 0;
 }
 
 .boxVantage {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  backface-visibility: inherit;
-  color: red;
+  backface-visibility: hidden;
 }
 
 .frontBox {
-  background-color: darkorchid;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px white;
   width: 80px;
   height: 80px;
   transform: rotate3d(0, 1, 0, 0deg) translateZ(40px);
@@ -232,7 +231,8 @@
 }
 
 .sideBoxRight {
-  background-color: blue;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px white;
   width: 80px;
   height: 80px;
   transform: rotate3d(0, 1, 0, 90deg) translateZ(40px);
@@ -241,7 +241,8 @@
 }
 
 .backBox {
-  background-color: turquoise;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px white;
   width: 80px;
   height: 80px;
   transform: rotate3d(0, 1, 0, 180deg) translateZ(40px);
@@ -250,7 +251,8 @@
 }
 
 .sideBoxLeft {
-  background-color: orange;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px white;
   width: 80px;
   height: 80px;
   transform: rotate3d(0, 1, 0, 270deg) translateZ(40px);
