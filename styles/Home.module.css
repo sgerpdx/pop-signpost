@@ -44,8 +44,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  width: 360px;
-  height: 240px;
+  width: 480px;
+  height: 480px;
   font-family: "Courier Prime", monospace;
 }
 
@@ -55,6 +55,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  background-color: grey;
+  color: white;
   width: 360px;
   height: 120px;
 }
@@ -62,14 +64,16 @@
 /* below is styling for cube-div-rotation */
 
 .displayArea {
-  width: 100px;
-  height: 100px;
+  width: 480px;
+  height: 480px;
   transform-style: preserve-3d;
   transition: transform 1s;
+  transform: translateZ(240px);
   border: 0;
 }
 
-.boxVantage {
+/* this is being defined as 'style' in intro.js */
+/* .boxVantage {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,14 +81,14 @@
   height: 80%;
   position: absolute;
   backface-visibility: hidden;
-}
+} */
 
 .frontBox {
   background-color: rgb(53, 52, 52);
   border: solid 1px white;
-  width: 80px;
-  height: 80px;
-  transform: rotate3d(0, 1, 0, 0deg) translateZ(40px);
+  width: 480px;
+  height: 480px;
+  transform: rotate3d(0, 1, 0, 0deg) translateZ(240px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -92,9 +96,9 @@
 .sideBoxRight {
   background-color: rgb(53, 52, 52);
   border: solid 1px white;
-  width: 80px;
-  height: 80px;
-  transform: rotate3d(0, 1, 0, 90deg) translateZ(40px);
+  width: 480px;
+  height: 480px;
+  transform: rotate3d(0, 1, 0, 90deg) translateZ(240px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -102,9 +106,9 @@
 .backBox {
   background-color: rgb(53, 52, 52);
   border: solid 1px white;
-  width: 80px;
-  height: 80px;
-  transform: rotate3d(0, 1, 0, 180deg) translateZ(40px);
+  width: 480px;
+  height: 480px;
+  transform: rotate3d(0, 1, 0, 180deg) translateZ(240px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -112,9 +116,9 @@
 .sideBoxLeft {
   background-color: rgb(53, 52, 52);
   border: solid 1px white;
-  width: 80px;
-  height: 80px;
-  transform: rotate3d(0, 1, 0, 270deg) translateZ(40px);
+  width: 480px;
+  height: 480px;
+  transform: rotate3d(0, 1, 0, 270deg) translateZ(240px);
   position: relative;
   backface-visibility: hidden;
 }

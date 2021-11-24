@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+
+// Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
-import LogoTwitter from "../public/twitter-logo-white-32.png";
-import LogoLinkedin from "../public/linkedin-logo-white-32.png";
-import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
+
+// Content Components for Rotating MiddleRow Div:
+import Intro from "../components/intro";
+import Projects from "../components/projects";
+import About from "../components/about";
+import Contact from "../components/contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
   const [contentTransform, setContentTransform] = useState("0deg");
+  // const [rotationFix, setRotationFix] = useState("Solid 1px White");
 
   const handleNavChange = (e) => {
     setContent(e.target.value);
@@ -44,38 +50,26 @@ export default function Home() {
         <h1>hello : )</h1>
       </div>
       <div className={styles.middleRow}>
-        <p>
-          I'm Sam, thanks for stopping by! I build full-stack applications with
-          a focus on inspiring, accessible UX and I enjoy opportunities to
-          explore project-based solutions, adding new languages and tech to my
-          primary React-Node-SQL stack.
-        </p>
-        <p>
-          While my full site here is under construction, you can check out
-          projects, contact info and more using the menu below. Have a nice day!
-        </p>
+        <section
+          className={styles.displayArea}
+          style={{ transform: `rotateY(${contentTransform})` }}
+        >
+          <div className={styles.frontBox} style={style.boxVantage}>
+            <Intro />
+          </div>
+          <div className={styles.sideBoxRight} style={style.boxVantage}>
+            <Projects />
+          </div>
+          <div className={styles.backBox} style={style.boxVantage}>
+            <About />
+          </div>
+          <div className={styles.sideBoxLeft} style={style.boxVantage}>
+            <Contact />
+          </div>
+        </section>
       </div>
       <div className={styles.bottomRow}>
-        <p>
-          <a href="https://github.com/sgerpdx" target="_blank">
-            <Image src={LogoGitHub} alt="github logo" />
-          </a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/sam-h-gerber/" target="_blank">
-            <Image src={LogoLinkedin} alt="linkedin logo" />
-          </a>
-        </p>
-        <p>
-          <a href="https://twitter.com/henrylightcode" target="_blank">
-            <Image src={LogoTwitter} alt="twitter logo" />
-          </a>
-        </p>
-        <p>
-          <a href="/gerber-sam_resume-current.pdf" target="_blank">
-            <button>Resume</button>
-          </a>
-        </p>
+        <h3>bottom row</h3>
       </div>
       <nav>
         <div class={styles.selectionForm}>
@@ -89,43 +83,27 @@ export default function Home() {
             </select>
           </label>
         </div>
-        <section
-          className={styles.displayArea}
-          style={{ transform: `rotateY(${contentTransform})` }}
-        >
-          <div className={styles.frontBox} style={style.boxVantage}>
-            1
-          </div>
-          <div className={styles.sideBoxRight} style={style.boxVantage}>
-            2
-          </div>
-          <div className={styles.backBox} style={style.boxVantage}>
-            3
-          </div>
-          <div className={styles.sideBoxLeft} style={style.boxVantage}>
-            4
-          </div>
-        </section>
       </nav>
     </section>
   );
 }
 
 const style = {
-  displayArea: {
-    width: "100px",
-    height: "100px",
-    transformStyle: "preserve-3d",
-    transition: "transform 1s",
-    transform: "rotateY(-90deg)",
-    border: "0",
-  },
+  // displayArea: {
+  //   width: "360px",
+  //   height: "480px",
+  //   transformStyle: "preserve-3d",
+  //   transition: "transform 1s",
+  //   transform: "rotateY(-90deg)",
+  //   border: "0",
+  // },
   boxVantage: {
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "100%",
     position: "absolute",
     backfaceVisibility: "hidden",
   },
