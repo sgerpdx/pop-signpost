@@ -39,6 +39,7 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
+      <section className={styles.upperContainer}>
       <section className={styles.topRow}>
         {" "}
         <div className={styles.logoImageArea}>
@@ -54,6 +55,8 @@ export default function Home() {
         </div>
         <div className={styles.upperRightArea}></div>
       </section>
+      </section>
+      <section className={styles.lowerContainer}>
       <section className={styles.middleRow}>
         <div
           className={styles.displayArea}
@@ -87,6 +90,7 @@ export default function Home() {
             </label>
           </div>
         </nav>
+      </section>
       </section>
     </main>
   );
