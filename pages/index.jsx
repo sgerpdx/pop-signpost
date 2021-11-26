@@ -5,6 +5,9 @@ import styles from "../styles/Home.module.css";
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
 
+// Header component for topRow:
+import Header from "../components/header";
+
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
 import Projects from "../components/projects";
@@ -43,7 +46,8 @@ export default function Home() {
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          {" "}
+          <Header />
+          {/* {" "}
           <div className={styles.logoImageArea}>
             <Image
               src={PlanetImage}
@@ -55,7 +59,7 @@ export default function Home() {
           <div className={styles.headlineTextArea}>
             <h1>hello : )</h1>
           </div>
-          <div className={styles.upperRightArea}></div>
+          <div className={styles.upperRightArea}></div> */}
         </section>
       </section>
 
