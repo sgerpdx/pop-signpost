@@ -77,11 +77,11 @@
 /* below is styling for cube-div-rotation */
 
 .displayArea {
-  width: 480px;
-  height: 480px;
+  width: 360px;
+  height: 360px;
   transform-style: preserve-3d;
   transition: transform 1s;
-  transform: translateZ(240px);
+  transform: translateZ(180px);
   border: 0;
 }
 
@@ -99,9 +99,9 @@
 .frontBox {
   background-color: rgb(53, 52, 52);
   border: solid 1px rgb(105, 182, 207);
-  width: 480px;
-  height: 480px;
-  transform: rotate3d(0, 1, 0, 0deg) translateZ(240px);
+  width: 360px;
+  height: 360px;
+  transform: rotate3d(1, 0, 0, 0deg) translateZ(180px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -109,9 +109,9 @@
 .sideBoxRight {
   background-color: rgb(53, 52, 52);
   border: solid 1px lightgreen;
-  width: 480px;
-  height: 480px;
-  transform: rotate3d(0, 1, 0, 90deg) translateZ(240px);
+  width: 360px;
+  height: 360px;
+  transform: rotate3d(1, 0, 0, 90deg) translateZ(180px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -119,9 +119,9 @@
 .backBox {
   background-color: rgb(53, 52, 52);
   border: solid 1px rgb(248, 78, 248);
-  width: 480px;
-  height: 480px;
-  transform: rotate3d(0, 1, 0, 180deg) translateZ(240px);
+  width: 360px;
+  height: 360px;
+  transform: rotate3d(1, 0, 0, 180deg) translateZ(180px);
   position: relative;
   backface-visibility: hidden;
 }
@@ -129,9 +129,9 @@
 .sideBoxLeft {
   background-color: rgb(53, 52, 52);
   border: solid 1px orange;
-  width: 480px;
-  height: 480px;
-  transform: rotate3d(0, 1, 0, 270deg) translateZ(240px);
+  width: 360px;
+  height: 360px;
+  transform: rotate3d(1, 0, 0, 270deg) translateZ(180px);
   position: relative;
   backface-visibility: hidden;
 }

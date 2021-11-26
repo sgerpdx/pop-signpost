@@ -57,7 +57,7 @@ export default function Home() {
       <section className={styles.middleRow}>
         <div
           className={styles.displayArea}
-          style={{ transform: `rotateY(${contentTransform})` }}
+          style={{ transform: `rotateX(${contentTransform})` }}
         >
           <div className={styles.frontBox} style={style.boxVantage}>
             <Intro />
