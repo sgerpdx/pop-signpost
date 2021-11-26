@@ -10,6 +10,7 @@ import Intro from "../components/intro";
 import Projects from "../components/projects";
 import About from "../components/about";
 import Contact from "../components/contact";
+import Navigation from "../components/navigation";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -80,19 +81,7 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.bottomRow}>
-          <nav>
-            <div>
-              <label>
-                Navigation:
-                <select value={content} onChange={handleNavChange}>
-                  <option value="home">home</option>
-                  <option value="projects">projects</option>
-                  <option value="about">about</option>
-                  <option value="contact">contact</option>
-                </select>
-              </label>
-            </div>
-          </nav>
+          <Navigation onChange={handleNavChange} value={content} />
         </section>
       </section>
     </main>
