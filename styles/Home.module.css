@@ -14,6 +14,8 @@
 
 /* custom styling for pop-signpost layout */
 
+/* upper container handles header and non-scrolling elements at top */
+
 .upperContainer {
   display: flex;
   flex-direction: row;
@@ -32,31 +34,7 @@
   margin: 20px;
 }
 
-.logoImageArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100px;
-  height: 60px;
-  padding: 10px;
-}
-
-.headlineTextArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 240px;
-  height: 60px;
-}
-
-.upperRightArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100px;
-  height: 60px;
-  padding: 10px;
-}
+/* lower container is everything below header */
 
 .lowerContainer {
   display: flex;
@@ -77,40 +55,16 @@
   font-family: "Courier Prime", monospace;
 }
 
-.bottomRow {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(53, 52, 52);
-  color: white;
-  width: 240px;
-  height: 120px;
-  padding: 20px;
-}
-
 /* below is styling for cube-div-rotation */
 
 .displayArea {
   width: 420px;
   height: 420px;
   transform-style: preserve-3d;
-  transition: transform 2s;
+  transition: transform 1.5s;
   transform: translateZ(210px);
   border: 0;
 }
-
-/* this is being defined as 'style' in intro.js */
-/* .boxVantage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  backface-visibility: hidden;
-} */
 
 .frontBox {
   display: flex;
@@ -166,4 +120,19 @@
   transform: rotate3d(1, 0, 0, -270deg) translateZ(210px);
   position: absolute;
   backface-visibility: hidden;
+}
+
+/* styling for bottom row navigation menu */
+
+.bottomRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(53, 52, 52);
+  color: white;
+  width: 240px;
+  height: 120px;
+  padding: 20px;
 }

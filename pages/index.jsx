@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
-// Personal Logo:
-import PlanetImage from "../public/blue-planet-01.png";
 
 // Header component for topRow:
 import Header from "../components/header";
@@ -47,19 +43,6 @@ export default function Home() {
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
           <Header />
-          {/* {" "}
-          <div className={styles.logoImageArea}>
-            <Image
-              src={PlanetImage}
-              alt="logo image of a blue planet with golden-brown ring"
-              height="53"
-              width="75"
-            />
-          </div>
-          <div className={styles.headlineTextArea}>
-            <h1>hello : )</h1>
-          </div>
-          <div className={styles.upperRightArea}></div> */}
         </section>
       </section>
 
@@ -91,16 +74,3 @@ export default function Home() {
     </main>
   );
 }
-
-// const style = {
-//   boxVantage: {
-//     display: "flex",
-//     flexDirection: "column",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     width: "100%",
-//     height: "100%",
-//     position: "absolute",
-//     backfaceVisibility: "hidden",
-//   },
-// };

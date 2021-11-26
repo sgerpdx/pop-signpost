@@ -5,7 +5,32 @@ export default function Projects() {
   return (
     <>
       <section className={styles.projectScrollArea}>
-        <p>A scrollable list of projects will go here.</p>
+        <p className={styles.contentScrollArea}>
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+          The tiger Panthera tigris is the largest living cat species and a
+          member of the genus Panthera. It is most recognisable for its dark
+          vertical stripes on orange fur with a white underside. It is an apex
+          predator primarily preying on ungulates such as deer and wild boar.
+        </p>
       </section>
     </>
   );
