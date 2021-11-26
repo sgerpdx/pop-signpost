@@ -84,7 +84,7 @@
   align-items: center;
   background-color: rgb(53, 52, 52);
   color: white;
-  width: 480px;
+  width: 240px;
   height: 120px;
   padding: 20px;
 }
@@ -112,41 +112,57 @@
 } */
 
 .frontBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(53, 52, 52);
   border: solid 1px rgb(105, 182, 207);
   width: 360px;
   height: 360px;
   transform: rotate3d(1, 0, 0, 0deg) translateZ(180px);
-  position: relative;
+  position: absolute;
   backface-visibility: hidden;
 }
 
 .sideBoxRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(53, 52, 52);
   border: solid 1px lightgreen;
   width: 360px;
   height: 360px;
   transform: rotate3d(1, 0, 0, 90deg) translateZ(180px);
-  position: relative;
+  position: absolute;
   backface-visibility: hidden;
 }
 
 .backBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(53, 52, 52);
   border: solid 1px rgb(248, 78, 248);
   width: 360px;
   height: 360px;
   transform: rotate3d(1, 0, 0, 180deg) translateZ(180px);
-  position: relative;
+  position: absolute;
   backface-visibility: hidden;
 }
 
 .sideBoxLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(53, 52, 52);
   border: solid 1px orange;
   width: 360px;
   height: 360px;
   transform: rotate3d(1, 0, 0, 270deg) translateZ(180px);
-  position: relative;
+  position: absolute;
   backface-visibility: hidden;
 }

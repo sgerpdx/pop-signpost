@@ -62,16 +62,16 @@ export default function Home() {
           className={styles.displayArea}
           style={{ transform: `rotateX(${contentTransform})` }}
         >
-          <div className={styles.frontBox} style={style.boxVantage}>
+          <div className={styles.frontBox} >
             <Intro />
           </div>
-          <div className={styles.sideBoxRight} style={style.boxVantage}>
+          <div className={styles.sideBoxRight} >
             <Projects />
           </div>
-          <div className={styles.backBox} style={style.boxVantage}>
+          <div className={styles.backBox} >
             <About />
           </div>
-          <div className={styles.sideBoxLeft} style={style.boxVantage}>
+          <div className={styles.sideBoxLeft} >
             <Contact />
           </div>
         </div>
@@ -96,15 +96,15 @@ export default function Home() {
   );
 }
 
-const style = {
-  boxVantage: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    backfaceVisibility: "hidden",
-  },
-};
+// const style = {
+//   boxVantage: {
+//     display: "flex",
+//     flexDirection: "column",
+//     alignItems: "center",
+//     justifyContent: "center",
+//     width: "100%",
+//     height: "100%",
+//     position: "absolute",
+//     backfaceVisibility: "hidden",
+//   },
+// };
