@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-// Personal Logo:
-import PlanetImage from "../public/blue-planet-01.png";
+// Header component for topRow:
+import Header from "../components/header";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
 import Projects from "../components/projects";
 import About from "../components/about";
 import Contact from "../components/contact";
+import Navigation from "../components/navigation";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -30,81 +30,47 @@ export default function Home() {
   useEffect(() => {
     const currentContent = content;
     if (currentContent === "home") setContentTransform("0deg");
-    if (currentContent === "projects") setContentTransform("-90deg");
-    if (currentContent === "about") setContentTransform("-180deg");
-    if (currentContent === "contact") setContentTransform("-270deg");
+    if (currentContent === "projects") setContentTransform("90deg");
+    if (currentContent === "about") setContentTransform("180deg");
+    if (currentContent === "contact") setContentTransform("270deg");
   }, [content]);
 
   if (loading) return <h3>Loading...</h3>;
 
   return (
     <main className={styles.container}>
+      {/* upper container houses header row */}
       <section className={styles.upperContainer}>
-      <section className={styles.topRow}>
-        {" "}
-        <div className={styles.logoImageArea}>
-          <Image
-            src={PlanetImage}
-            alt="logo image of a blue planet with golden-brown ring"
-            height="53"
-            width="75"
-          />
-        </div>
-        <div className={styles.headlineTextArea}>
-          <h1>hello : )</h1>
-        </div>
-        <div className={styles.upperRightArea}></div>
+        <section className={styles.topRow}>
+          <Header />
+        </section>
       </section>
-      </section>
+
+      {/* lower container houses the content and nav menu in flex-row-wrap */}
       <section className={styles.lowerContainer}>
-      <section className={styles.middleRow}>
-        <div
-          className={styles.displayArea}
-          style={{ transform: `rotateX(${contentTransform})` }}
-        >
-          <div className={styles.frontBox} style={style.boxVantage}>
-            <Intro />
+        <section className={styles.middleRow}>
+          <div
+            className={styles.displayArea}
+            style={{ transform: `rotateX(${contentTransform})` }}
+          >
+            <div className={styles.frontBox}>
+              <Intro />
+            </div>
+            <div className={styles.sideBoxRight}>
+              <Projects />
+            </div>
+            <div className={styles.backBox}>
+              <About />
+            </div>
+            <div className={styles.sideBoxLeft}>
+              <Contact />
+            </div>
           </div>
-          <div className={styles.sideBoxRight} style={style.boxVantage}>
-            <Projects />
-          </div>
-          <div className={styles.backBox} style={style.boxVantage}>
-            <About />
-          </div>
-          <div className={styles.sideBoxLeft} style={style.boxVantage}>
-            <Contact />
-          </div>
-        </div>
-      </section>
-      <section className={styles.bottomRow}>
-        <nav>
-          <div>
-            <label>
-              Navigation:
-              <select value={content} onChange={handleNavChange}>
-                <option value="home">home</option>
-                <option value="projects">projects</option>
-                <option value="about">about</option>
-                <option value="contact">contact</option>
-              </select>
-            </label>
-          </div>
-        </nav>
-      </section>
+        </section>
+        <section className={styles.bottomRow}>
+          <Navigation onChange={handleNavChange} value={content} />
+        </section>
       </section>
     </main>
   );
 }
-
-const style = {
-  boxVantage: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    backfaceVisibility: "hidden",
-  },
-};

@@ -1,0 +1,25 @@
+.logoImageArea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+  }
+  
+  .headlineTextArea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 240px;
+    height: 60px;
+  }
+  
+  .upperRightArea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+  }

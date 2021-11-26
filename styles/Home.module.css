@@ -14,11 +14,14 @@
 
 /* custom styling for pop-signpost layout */
 
+/* upper container handles header and non-scrolling elements at top */
+
 .upperContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .topRow {
@@ -26,36 +29,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 480px;
-  height: 60px;
+  width: 100%;
+  height: 90px;
   margin: 20px;
 }
 
-.logoImageArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100px;
-  height: 60px;
-  padding: 10px;
-}
-
-.headlineTextArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 240px;
-  height: 60px;
-}
-
-.upperRightArea {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100px;
-  height: 60px;
-  padding: 10px;
-}
+/* lower container is everything below header */
 
 .lowerContainer {
   display: flex;
@@ -76,6 +55,75 @@
   font-family: "Courier Prime", monospace;
 }
 
+/* below is styling for cube-div-rotation */
+
+.displayArea {
+  width: 420px;
+  height: 420px;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  transform: translateZ(210px);
+  border: 0;
+}
+
+.frontBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px rgb(105, 182, 207);
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, 0deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.sideBoxRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px lightgreen;
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, -90deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.backBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px rgb(248, 78, 248);
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, -180deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.sideBoxLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 52, 52);
+  border: solid 1px orange;
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, -270deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* styling for bottom row navigation menu */
+
 .bottomRow {
   display: flex;
   flex-direction: row;
@@ -84,69 +132,7 @@
   align-items: center;
   background-color: rgb(53, 52, 52);
   color: white;
-  width: 480px;
+  width: 240px;
   height: 120px;
   padding: 20px;
-}
-
-/* below is styling for cube-div-rotation */
-
-.displayArea {
-  width: 360px;
-  height: 360px;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  transform: translateZ(180px);
-  border: 0;
-}
-
-/* this is being defined as 'style' in intro.js */
-/* .boxVantage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  backface-visibility: hidden;
-} */
-
-.frontBox {
-  background-color: rgb(53, 52, 52);
-  border: solid 1px rgb(105, 182, 207);
-  width: 360px;
-  height: 360px;
-  transform: rotate3d(1, 0, 0, 0deg) translateZ(180px);
-  position: relative;
-  backface-visibility: hidden;
-}
-
-.sideBoxRight {
-  background-color: rgb(53, 52, 52);
-  border: solid 1px lightgreen;
-  width: 360px;
-  height: 360px;
-  transform: rotate3d(1, 0, 0, 90deg) translateZ(180px);
-  position: relative;
-  backface-visibility: hidden;
-}
-
-.backBox {
-  background-color: rgb(53, 52, 52);
-  border: solid 1px rgb(248, 78, 248);
-  width: 360px;
-  height: 360px;
-  transform: rotate3d(1, 0, 0, 180deg) translateZ(180px);
-  position: relative;
-  backface-visibility: hidden;
-}
-
-.sideBoxLeft {
-  background-color: rgb(53, 52, 52);
-  border: solid 1px orange;
-  width: 360px;
-  height: 360px;
-  transform: rotate3d(1, 0, 0, 270deg) translateZ(180px);
-  position: relative;
-  backface-visibility: hidden;
 }
