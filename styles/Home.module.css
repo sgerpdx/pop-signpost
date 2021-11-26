@@ -134,7 +134,7 @@
   border: solid 1px lightgreen;
   width: 360px;
   height: 360px;
-  transform: rotate3d(1, 0, 0, 90deg) translateZ(180px);
+  transform: rotate3d(1, 0, 0, -90deg) translateZ(180px);
   position: absolute;
   backface-visibility: hidden;
 }
@@ -148,7 +148,7 @@
   border: solid 1px rgb(248, 78, 248);
   width: 360px;
   height: 360px;
-  transform: rotate3d(1, 0, 0, 180deg) translateZ(180px);
+  transform: rotate3d(1, 0, 0, -180deg) translateZ(180px);
   position: absolute;
   backface-visibility: hidden;
 }
@@ -162,7 +162,7 @@
   border: solid 1px orange;
   width: 360px;
   height: 360px;
-  transform: rotate3d(1, 0, 0, 270deg) translateZ(180px);
+  transform: rotate3d(1, 0, 0, -270deg) translateZ(180px);
   position: absolute;
   backface-visibility: hidden;
 }
