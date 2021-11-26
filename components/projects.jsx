@@ -6,30 +6,7 @@ export default function Projects() {
     <>
       <section className={styles.projectScrollArea}>
         <p className={styles.contentScrollArea}>
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
-          The tiger Panthera tigris is the largest living cat species and a
-          member of the genus Panthera. It is most recognisable for its dark
-          vertical stripes on orange fur with a white underside. It is an apex
-          predator primarily preying on ungulates such as deer and wild boar.
+          Here is where project info can be scrolled through.
         </p>
       </section>
     </>
