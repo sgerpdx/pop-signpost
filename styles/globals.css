@@ -7,8 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
-  background-image: url("../public/seamles_topopatt04_edit-01-lt-blue-240.png");
-  background: linear-gradient( rgb(53, 52, 52), transparent, rgb(53, 52, 52)),
+  background: linear-gradient(rgb(53, 52, 52), transparent, rgb(53, 52, 52)),
     url("../public/seamles_topopatt04_edit-01-480.png");
   /* background: linear-gradient(#3f87a6, #ebf8e1, #f69d3c); */
   background-color: rgb(53, 52, 52);
