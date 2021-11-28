@@ -30,9 +30,9 @@ export default function Home() {
   useEffect(() => {
     const currentContent = content;
     if (currentContent === "home") setContentTransform("0deg");
-    if (currentContent === "projects") setContentTransform("90deg");
-    if (currentContent === "about") setContentTransform("180deg");
-    if (currentContent === "contact") setContentTransform("270deg");
+    if (currentContent === "projects") setContentTransform("-90deg");
+    if (currentContent === "about") setContentTransform("-180deg");
+    if (currentContent === "contact") setContentTransform("-270deg");
   }, [content]);
 
   if (loading) return <h3>Loading...</h3>;
@@ -51,7 +51,7 @@ export default function Home() {
         <section className={styles.middleRow}>
           <div
             className={styles.displayArea}
-            style={{ transform: `rotateX(${contentTransform})` }}
+            style={{ transform: `rotateY(${contentTransform})` }}
           >
             <div className={styles.frontBox}>
               <Intro />

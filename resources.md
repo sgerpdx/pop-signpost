@@ -12,3 +12,7 @@ Inter Font Family:
 ### Items to Work On
 
 - Div rotation logic so that the cube rotates using the least amount of degrees necessary to arrive at the target content.
+
+### Various Other Resources:
+
+- https://chakra-ui.com/docs/media-and-icons/icon#using-chakra-ui-icons

@@ -1,25 +1,36 @@
+.mainTitleArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: burlywood;
+  width: 480px;
+}
 .logoImageArea {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100px;
-    height: 60px;
-    padding: 10px;
-  }
-  
-  .headlineTextArea {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 240px;
-    height: 60px;
-  }
-  
-  .upperRightArea {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100px;
-    height: 60px;
-    padding: 10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.headlineTextArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 240px;
+  height: 80px;
+  font-size: 2em;
+}
+
+.mainMenuArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 240px;
+  height: 80px;
+  padding: 10px;
+  background-color: cornflowerblue;
+}
