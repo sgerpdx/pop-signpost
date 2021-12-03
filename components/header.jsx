@@ -38,16 +38,32 @@ export default function Header({ onClick }) {
           </MenuButton>
 
           <MenuList>
-            <MenuItem onClick={onClick} value="home">
+            <MenuItem
+              className={styles.headerMenuItem}
+              onClick={onClick}
+              value="home"
+            >
               Home
             </MenuItem>
-            <MenuItem onClick={onClick} value="projects">
+            <MenuItem
+              className={styles.headerMenuItem}
+              onClick={onClick}
+              value="projects"
+            >
               Projects
             </MenuItem>
-            <MenuItem onClick={onClick} value="about">
+            <MenuItem
+              className={styles.headerMenuItem}
+              onClick={onClick}
+              value="about"
+            >
               About
             </MenuItem>
-            <MenuItem onClick={onClick} value="contact">
+            <MenuItem
+              className={styles.headerMenuItem}
+              onClick={onClick}
+              value="contact"
+            >
               Contact
             </MenuItem>
           </MenuList>
