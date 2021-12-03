@@ -10,7 +10,11 @@ import Projects from "../components/projects";
 import About from "../components/about";
 import Contact from "../components/contact";
 import Navigation from "../components/navigation";
-import SocialMedia from '../components/socialMedia';
+import SocialMedia from "../components/socialMedia";
+
+// images and icons:
+import { RiArrowGoBackLine } from "react-icons/ri";
+import { RiHomeFill } from "react-icons/ri";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +47,7 @@ export default function Home() {
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          <Header onClick={handleNavChange}/>
+          <Header onClick={handleNavChange} />
         </section>
       </section>
 
@@ -67,10 +71,13 @@ export default function Home() {
               <Contact />
             </div>
           </div>
+          <RiArrowGoBackLine size="1.5em" />
+          <RiHomeFill size="1.5em" />
         </section>
         <section className={styles.bottomRow}>
           <SocialMedia />
-          <Navigation onChange={handleNavChange} value={content} />
+
+          {/* <Navigation onChange={handleNavChange} value={content} /> */}
         </section>
       </section>
     </main>

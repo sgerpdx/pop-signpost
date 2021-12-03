@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
+import { RiMenuLine } from "react-icons/ri";
 
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
@@ -29,7 +29,7 @@ export default function Header({ onClick }) {
             className={styles.headerMenuButton}
             style={{ backgroundColor: "rgba(53, 52, 52,0)" }}
           >
-            <HamburgerIcon w={40} h={40} style={{ color: "white" }} />
+            <RiMenuLine size="2.5em" color="white" />
           </MenuButton>
 
           <MenuList>

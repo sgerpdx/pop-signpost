@@ -32,15 +32,6 @@ export default function SocialMedia() {
             <Image src={LogoTwitter} alt="twitter logo" />
           </a>
         </p>
-        <p>
-          <a
-            href="/gerber-sam_resume-current.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button>Resume</button>
-          </a>
-        </p>
       </section>
     </>
   );
