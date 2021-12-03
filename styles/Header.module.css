@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: burlywood;
   width: 480px;
 }
 .logoImageArea {
@@ -12,6 +11,7 @@
   align-items: center;
   width: 100px;
   height: 80px;
+  margin-left: 32px;
   margin-right: 20px;
 }
 
@@ -29,8 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  width: 240px;
+  width: 140px;
   height: 80px;
-  padding: 10px;
-  background-color: cornflowerblue;
+  margin-right: 32px;
 }
