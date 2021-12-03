@@ -2,18 +2,12 @@ import React from "react";
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/button";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
 
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
 
 export default function Header({ onClick }) {
-  // const handleMenuClick1 = (e) => {
-  //   console.log("Click");
-  //   console.log("ETV:", e.target.value);
-  // };
-
   return (
     <>
       <section className={styles.mainTitleArea}>
@@ -32,9 +26,10 @@ export default function Header({ onClick }) {
       <section className={styles.mainMenuArea}>
         <Menu>
           <MenuButton
-            style={{ backgroundColor: "rgba(53, 52, 52,0)", border: "none" }}
+            className={styles.headerMenuButton}
+            style={{ backgroundColor: "rgba(53, 52, 52,0)" }}
           >
-            <HamburgerIcon w={32} h={32} style={{ color: "white" }} />
+            <HamburgerIcon w={40} h={40} style={{ color: "white" }} />
           </MenuButton>
 
           <MenuList>
@@ -42,6 +37,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="home"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Home
             </MenuItem>
@@ -49,6 +50,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="projects"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Projects
             </MenuItem>
@@ -56,6 +63,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="about"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               About
             </MenuItem>
@@ -63,6 +76,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="contact"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Contact
             </MenuItem>
