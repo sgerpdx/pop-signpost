@@ -10,6 +10,7 @@ import Projects from "../components/projects";
 import About from "../components/about";
 import Contact from "../components/contact";
 import Navigation from "../components/navigation";
+import SocialMedia from '../components/socialMedia';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -68,6 +69,7 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.bottomRow}>
+          <SocialMedia />
           <Navigation onChange={handleNavChange} value={content} />
         </section>
       </section>
