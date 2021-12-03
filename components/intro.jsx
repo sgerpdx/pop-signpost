@@ -1,36 +1,26 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Intro.module.css";
-import LogoTwitter from "../public/twitter-logo-white-32.png";
-import LogoLinkedin from "../public/linkedin-logo-white-32.png";
-import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
+import SatelliteImage from "../public/satellite.png";
 
 export default function Intro() {
   return (
     <>
-      <section className={styles.introTextArea}>
-        <p>Welcome to my site!</p>
-      </section>
-      <section className={styles.socialMediaArea}>
-        <p>
-          <a href="https://github.com/sgerpdx" target="_blank" rel="noreferrer">
-            <Image src={LogoGitHub} alt="github logo" />
-          </a>
+      <section className={styles.introTextContainer}>
+        <p className={styles.introTextArea}>
+          Hello, and thanks for stopping by! I&apos;m a software developer
+          building full-stack applications, exploring new tech based on each
+          project&apos;s unique UX goals.
         </p>
-        <p>
-          <a href="https://www.linkedin.com/in/sam-h-gerber/" target="_blank" rel="noreferrer">
-            <Image src={LogoLinkedin} alt="linkedin logo" />
-          </a>
-        </p>
-        <p>
-          <a href="https://twitter.com/henrylightcode" target="_blank" rel="noreferrer">
-            <Image src={LogoTwitter} alt="twitter logo" />
-          </a>
-        </p>
-        <p>
-          <a href="/gerber-sam_resume-current.pdf" target="_blank" rel="noreferrer">
-            <button>Resume</button>
-          </a>
+        <Image
+          alt="satellite illustration"
+          height="48"
+          width="48"
+          src={SatelliteImage}
+        />
+        <p className={styles.introTextArea}>
+          Have a look around, send me a message if you&apos;d like to
+          collaborate, and have a nice day!
         </p>
       </section>
     </>

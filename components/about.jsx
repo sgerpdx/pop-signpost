@@ -7,6 +7,15 @@ export default function About() {
     <>
       <section className={styles.aboutMeArea}>
         <p>Here is where I talk about myself, and include a photo.</p>
+        <p>
+          <a
+            href="/gerber-sam_resume-current.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>Resume</button>
+          </a>
+        </p>
       </section>
     </>
   );
