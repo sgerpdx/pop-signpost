@@ -40,7 +40,7 @@ export default function Header({ onClick }) {
               w="96px"
               h="28px"
               _active={{
-                bgColor: "rgba(113, 192, 187, 255)",
+                bgColor: "coral",
                 color: "rgb(53, 52, 52)",
               }}
             >
@@ -53,7 +53,7 @@ export default function Header({ onClick }) {
               w="96px"
               h="28px"
               _active={{
-                bgColor: "rgba(113, 192, 187, 255)",
+                bgColor: "coral",
                 color: "rgb(53, 52, 52)",
               }}
             >
@@ -66,7 +66,7 @@ export default function Header({ onClick }) {
               w="96px"
               h="28px"
               _active={{
-                bgColor: "rgba(113, 192, 187, 255)",
+                bgColor: "coral",
                 color: "rgb(53, 52, 52)",
               }}
             >
@@ -79,7 +79,7 @@ export default function Header({ onClick }) {
               w="96px"
               h="28px"
               _active={{
-                bgColor: "rgba(113, 192, 187, 255)",
+                bgColor: "coral",
                 color: "rgb(53, 52, 52)",
               }}
             >
