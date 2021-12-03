@@ -3,6 +3,8 @@ require("dotenv").config();
 const AWS = require("aws-sdk");
 //
 const myBucket = "pop-portfolio-bucket";
+
+//to fetch my logo from S3 bucket:
 const myKey = "blue-planet-01.png";
 const signedUrlExpireSeconds = 60 * 1;
 const s3 = new AWS.S3({
