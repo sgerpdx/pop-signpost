@@ -42,7 +42,7 @@ export default function Home() {
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          <Header />
+          <Header onClick={handleNavChange}/>
         </section>
       </section>
 

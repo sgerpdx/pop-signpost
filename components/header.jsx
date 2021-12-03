@@ -8,15 +8,11 @@ import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
 
-export default function Header() {
-  const handleMenuClick = (e) => {
-    console.log(e.target.value);
-  };
-
-  const handleMenuClick1 = (e) => {
-    console.log("Click");
-    console.log("ETV:", e.target.value);
-  };
+export default function Header({ onClick }) {
+  // const handleMenuClick1 = (e) => {
+  //   console.log("Click");
+  //   console.log("ETV:", e.target.value);
+  // };
 
   return (
     <>
@@ -42,12 +38,18 @@ export default function Header() {
           </MenuButton>
 
           <MenuList>
-            <MenuItem onClick={handleMenuClick1} value="tech">
-              Tech
+            <MenuItem onClick={onClick} value="home">
+              Home
             </MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Contact</MenuItem>
-            <MenuItem>Blog</MenuItem>
+            <MenuItem onClick={onClick} value="projects">
+              Projects
+            </MenuItem>
+            <MenuItem onClick={onClick} value="about">
+              About
+            </MenuItem>
+            <MenuItem onClick={onClick} value="contact">
+              Contact
+            </MenuItem>
           </MenuList>
         </Menu>
       </section>
