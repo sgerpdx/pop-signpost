@@ -2,18 +2,12 @@ import React from "react";
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/button";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
 
 // Personal Logo:
 import PlanetImage from "../public/blue-planet-01.png";
 
 export default function Header({ onClick }) {
-  // const handleMenuClick1 = (e) => {
-  //   console.log("Click");
-  //   console.log("ETV:", e.target.value);
-  // };
-
   return (
     <>
       <section className={styles.mainTitleArea}>
@@ -32,7 +26,8 @@ export default function Header({ onClick }) {
       <section className={styles.mainMenuArea}>
         <Menu>
           <MenuButton
-            style={{ backgroundColor: "rgba(53, 52, 52,0)", border: "none" }}
+            className={styles.headerMenuButton}
+            style={{ backgroundColor: "rgba(53, 52, 52,0)" }}
           >
             <HamburgerIcon w={40} h={40} style={{ color: "white" }} />
           </MenuButton>
