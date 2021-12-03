@@ -41,9 +41,9 @@
 }
 
 .headerMenuItem:hover {
-  background-color: #D1460A;
+  background-color: #d1460a;
 }
 
-.headerMenuItem:active {
+/* .headerMenuItem:active {
   background-color: rgba(113, 192, 187, 255);
-}
+} */

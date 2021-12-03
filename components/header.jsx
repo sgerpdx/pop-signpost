@@ -34,7 +34,7 @@ export default function Header({ onClick }) {
           <MenuButton
             style={{ backgroundColor: "rgba(53, 52, 52,0)", border: "none" }}
           >
-            <HamburgerIcon w={32} h={32} style={{ color: "white" }} />
+            <HamburgerIcon w={40} h={40} style={{ color: "white" }} />
           </MenuButton>
 
           <MenuList>
@@ -42,6 +42,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="home"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Home
             </MenuItem>
@@ -49,6 +55,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="projects"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Projects
             </MenuItem>
@@ -56,6 +68,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="about"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               About
             </MenuItem>
@@ -63,6 +81,12 @@ export default function Header({ onClick }) {
               className={styles.headerMenuItem}
               onClick={onClick}
               value="contact"
+              w="96px"
+              h="28px"
+              _active={{
+                bgColor: "rgba(113, 192, 187, 255)",
+                color: "rgb(53, 52, 52)",
+              }}
             >
               Contact
             </MenuItem>
