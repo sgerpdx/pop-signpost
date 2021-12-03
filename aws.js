@@ -5,7 +5,7 @@ const AWS = require("aws-sdk");
 const myBucket = "pop-portfolio-bucket";
 
 //to fetch my logo from S3 bucket:
-const myKey = "blue-planet-01.png";
+const myKey = "seamles_topopatt04_edit-01-480.png";
 const signedUrlExpireSeconds = 60 * 1;
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
