@@ -1,0 +1,21 @@
+.projectScrollArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+  background-color: rgba(113, 192, 187, 255);
+  overflow: auto;
+}
+
+.contentScrollArea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+}

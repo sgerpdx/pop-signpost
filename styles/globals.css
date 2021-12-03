@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  background: linear-gradient(rgb(53, 52, 52), transparent, rgb(53, 52, 52)),
+    url("https://pop-portfolio-bucket.s3.us-west-2.amazonaws.com/seamles_topopatt04_edit-01-480.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAU7ADNKLOSFWTOALT%2F20211203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211203T174653Z&X-Amz-Expires=60&X-Amz-Signature=f831af9d7ed51feea902798c1518c2d72f01bff601aee810500be33e8cae3447&X-Amz-SignedHeaders=host ");
+  /* background: linear-gradient(#3f87a6, #ebf8e1, #f69d3c); */
+  background-color: rgb(53, 52, 52);
+  font-family: "Montserrat", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
