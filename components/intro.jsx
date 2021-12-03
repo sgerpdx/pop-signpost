@@ -8,9 +8,9 @@ export default function Intro() {
     <>
       <section className={styles.introTextContainer}>
         <p className={styles.introTextArea}>
-          Hello, and thanks for stopping by! I'm a software developer building
-          full-stack applications, exploring new tech based on each project's
-          unique UX goals.
+          Hello, and thanks for stopping by! I&apos;m a software developer
+          building full-stack applications, exploring new tech based on each
+          project&apos;s unique UX goals.
         </p>
         <Image
           alt="satellite illustration"
@@ -19,8 +19,8 @@ export default function Intro() {
           src={SatelliteImage}
         />
         <p className={styles.introTextArea}>
-          Have a look around, send me a message if you'd like to collaborate,
-          and have a nice day!
+          Have a look around, send me a message if you&apos;d like to
+          collaborate, and have a nice day!
         </p>
       </section>
     </>
