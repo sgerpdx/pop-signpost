@@ -77,6 +77,15 @@
   border: 0;
 }
 
+.preDisplayArea {
+  width: 210px;
+  height: 210px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: translateZ(105px);
+  border: 0;
+}
+
 .frontBox {
   display: flex;
   flex-direction: column;
@@ -129,6 +138,34 @@
   width: 420px;
   height: 420px;
   transform: rotate3d(0, 1, 0, -90deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.topBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: coral;
+  border: solid 1px rgba(113, 192, 187, 255);
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, 90deg) translateZ(210px);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.bottomBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: purple;
+  border: solid 1px rgba(113, 192, 187, 255);
+  width: 420px;
+  height: 420px;
+  transform: rotate3d(1, 0, 0, -90deg) translateZ(210px);
   position: absolute;
   backface-visibility: hidden;
 }

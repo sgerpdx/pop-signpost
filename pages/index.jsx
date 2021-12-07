@@ -23,11 +23,16 @@ import { Spinner } from "@chakra-ui/spinner";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
+  const [entered, setEntered] = useState(false);
   const [contentTransform, setContentTransform] = useState("0deg");
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
     setContent(e.target.value);
+  };
+
+  const handleEnterSite = () => {
+    setEntered(true);
   };
 
   // handles loading spinner:
@@ -58,23 +63,46 @@ export default function Home() {
       {/* lower container houses the content and nav menu in flex-row-wrap */}
       <section className={styles.lowerContainer}>
         <section className={styles.middleRow}>
-          <div
-            className={styles.displayArea}
-            style={{ transform: `rotateY(${contentTransform})` }}
-          >
-            <div className={styles.frontBox}>
-              <Intro />
+          {entered ? (
+            <div
+              className={styles.displayArea}
+              style={{ transform: `rotateY(${contentTransform})` }}
+            >
+              <div className={styles.frontBox}>
+                <Intro />
+              </div>
+              <div className={styles.sideBoxRight}>
+                <Tech />
+              </div>
+              <div className={styles.backBox}>
+                <About />
+              </div>
+              <div className={styles.sideBoxLeft}>
+                <Contact />
+              </div>
+              <div className={styles.topBox}>
+                <h3>TOP</h3>
+              </div>
+              <div className={styles.bottomBox}>
+                <h3>BOTTOM</h3>
+              </div>
             </div>
-            <div className={styles.sideBoxRight}>
-              <Tech />
+          ) : (
+            <div
+              className={styles.displayArea}
+              style={{
+                transform:
+                  "rotate3d(1, 1, 0, -60deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5)",
+              }}
+            >
+              <div className={styles.frontBox}></div>
+              <div className={styles.sideBoxRight}></div>
+              <div className={styles.backBox}></div>
+              <div className={styles.sideBoxLeft}></div>
+              <div className={styles.topBox}></div>
+              <div className={styles.bottomBox}></div>
             </div>
-            <div className={styles.backBox}>
-              <About />
-            </div>
-            <div className={styles.sideBoxLeft}>
-              <Contact />
-            </div>
-          </div>
+          )}
           <nav className={styles.lowerNavArea}>
             <RiArrowGoBackLine size="1.5em" />
           </nav>
@@ -83,6 +111,7 @@ export default function Home() {
           <SocialMedia />
 
           {/* <Navigation onChange={handleNavChange} value={content} /> */}
+          <button onClick={handleEnterSite}>Enter Site</button>
         </section>
       </section>
     </main>
