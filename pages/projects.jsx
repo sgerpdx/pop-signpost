@@ -7,9 +7,9 @@ import { RiHomeFill } from "react-icons/ri";
 import ReturnHome from "../components/navigation/returnHome";
 
 // individual project screencaps:
-import DesignasaurImage from "../public/saturn-3d.png";
-import ElseImage from "../public/saturn-3d.png";
-import GreetingImage from "../public/saturn-3d.png";
+import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
+import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
+import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
 export default function Projects() {
   const handleNavChange = () => {
@@ -26,47 +26,88 @@ export default function Projects() {
       <section className={styles.lowerContainer}>
         <section className={styles.projectScrollArea}>
           <div className={styles.contentScrollArea}>
-            <h3>Designasaur Park</h3>
-            <Image
-              src={DesignasaurImage}
-              alt="screenshot of designasaur park app"
-              width="240"
-              height="240"
-            />
-            <p>
-              This app is a virtual dino-engineering and field a observation
-              experience -- combine various DNA samples to create your own new
-              species of dinosaur, and see how they fare when released into the
-              wild!
-            </p>
-          </div>
-          <div className={styles.contentScrollArea}>
-            <h3>Else By Elsewhere</h3>
-            <Image
-              src={ElseImage}
-              alt="screenshot of designasaur park app"
-              width="240"
-              height="240"
-            />
-            <p>
-              This app is a geoguessing game that uses APIs to allow users to
-              see random locations in Google street view, move the camera and
-              access local hints in the effort to guess where the place is.
-            </p>
-          </div>
-          <div className={styles.contentScrollArea}>
-            <h3>Greeting Art</h3>
             <Image
               src={GreetingImage}
               alt="screenshot of designasaur park app"
               width="240"
               height="240"
             />
-            <p>
-              This app combines a random art generator, AWS-powered gallery and
-              a greeting card service.
-            </p>
+            <p style={{ fontSize: "1.8em" }}>Greeting Art</p>
+            <div className={styles.projectSummaryArea}>
+              <p>
+                Random generative art creation tool with gallery and
+                send-as-eCard service. Built in two-week remote team sprint,
+                using:
+              </p>
+              <ul>
+                <li>React + Node</li>
+                <li>p5.js</li>
+                <li>AWS</li>
+                <li>SendGrid</li>
+              </ul>
+              <p>
+                My role: I initiated and coordinated the project; wrote
+                customized art-rendering functions in p5.js with added
+                randomization logic; designed the interface from wireframe
+                through CSS, including incorporation of Material-UI components;
+                and did general testing and debugging throughout.
+              </p>
+            </div>
           </div>
+          <div className={styles.contentScrollArea}>
+            <Image
+              src={ElseImage}
+              alt="screenshot of designasaur park app"
+              width="240"
+              height="240"
+            />
+            <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
+            <div className={styles.projectSummaryArea}>
+              <p>
+                API-driven geoguessing game app. primarily mobprogrammed in a
+                one-week remote sprint, using:
+              </p>
+              <ul>
+                <li>React + Node</li>
+                <li>Google Maps Street View Static API</li>
+                <li>GeoDataSource API</li>
+              </ul>
+              <p>
+                My role: I pitched the idea; researched APIs; and developed a
+                state-management framework for the user-controls to zoom and
+                rotate Google-sourced images;
+              </p>
+            </div>
+          </div>
+          <div className={styles.contentScrollArea}>
+            <Image
+              src={DesignasaurImage}
+              alt="screenshot of designasaur park app"
+              width="240"
+              height="240"
+            />
+            <p style={{ fontSize: "1.8em" }}>Designasaur Park</p>
+            <p>🌐🔧</p>
+            <div className={styles.projectSummaryArea}>
+              <p>
+                Simulated DNA laboratory allowing users to custom-engineer new
+                dinosaur hybrids and observe their behavior in a virtual park.
+                Primarily mob-programmed in a one-week remote sprint, using:
+              </p>
+              <ul>
+                <li>Vanilla JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <p>
+                My role: I originated the app concept; handled composite image
+                rendering via the DOM; set up avatar selection and
+                thematically-styled sign-in on the homepage; and created
+                graphics assets.
+              </p>
+            </div>
+          </div>
+
           <nav>
             <button onClick={handleNavChange}>return home</button>
           </nav>
