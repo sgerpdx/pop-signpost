@@ -32,7 +32,8 @@
   align-items: center;
   width: 100%;
   height: 90px;
-  margin: 20px;
+  padding: 20px;
+  border-bottom: solid 1px coral;
 }
 
 /* lower container is everything below header */
@@ -43,6 +44,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .projectScrollArea {
@@ -54,29 +56,27 @@
   width: 90%;
   height: 90%;
   backface-visibility: hidden;
-  background-color: rgb(53, 52, 52);
   color: white;
-  overflow: auto;
 }
 
-.projectScrollArea::-webkit-scrollbar {
+.lowerContainer::-webkit-scrollbar {
   width: 10px;
 }
 
-.projectScrollArea::-webkit-scrollbar-track {
+.lowerContainer::-webkit-scrollbar-track {
   background: rgb(53, 52, 52);
 }
 
-.projectScrollArea::-webkit-scrollbar-thumb {
-  background: #71c0bb;
-}
-
-.projectScrollArea::-webkit-scrollbar-thumb:hover {
+.lowerContainer::-webkit-scrollbar-thumb {
   border: solid 1px coral;
 }
 
-.projectScrollArea::-webkit-scrollbar-thumb:active {
-  background: #94e2dd;
+.lowerContainer::-webkit-scrollbar-thumb:hover {
+  background: #71c0bb;
+}
+
+.lowerContainer::-webkit-scrollbar-thumb:active {
+  background: coral;
 }
 
 .contentScrollArea {
