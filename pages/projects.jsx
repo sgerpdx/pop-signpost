@@ -26,12 +26,29 @@ export default function Projects() {
       <section className={styles.lowerContainer}>
         <section className={styles.projectScrollArea}>
           <div className={styles.contentScrollArea}>
-            <Image
-              src={GreetingImage}
-              alt="screenshot of designasaur park app"
-              width="240"
-              height="240"
-            />
+            <figure className={styles.projectImageArea}>
+              <figcaption
+                style={{ width: "48px", textAlign: "center" }}
+              ></figcaption>
+              <Image
+                src={GreetingImage}
+                alt="screenshot of designasaur park app"
+                width="240"
+                height="240"
+              />
+              <figcaption style={{ width: "48px", textAlign: "center" }}>
+                <p>
+                  <a href="https://greeting-art.netlify.app/" target="_blank">
+                    🌐
+                  </a>
+                </p>
+                <p>
+                  <a href="https://github.com/Greeting-Art" target="_blank">
+                    🔧
+                  </a>
+                </p>
+              </figcaption>
+            </figure>
             <p style={{ fontSize: "1.8em" }}>Greeting Art</p>
             <div className={styles.projectSummaryArea}>
               <p>
@@ -87,7 +104,6 @@ export default function Projects() {
               height="240"
             />
             <p style={{ fontSize: "1.8em" }}>Designasaur Park</p>
-            <p>🌐🔧</p>
             <div className={styles.projectSummaryArea}>
               <p>
                 Simulated DNA laboratory allowing users to custom-engineer new
@@ -105,12 +121,11 @@ export default function Projects() {
                 thematically-styled sign-in on the homepage; and created
                 graphics assets.
               </p>
+              <nav>
+                <button onClick={handleNavChange}>return home</button>
+              </nav>
             </div>
           </div>
-
-          <nav>
-            <button onClick={handleNavChange}>return home</button>
-          </nav>
         </section>
       </section>
     </main>
