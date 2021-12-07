@@ -10,6 +10,7 @@
   /* padding: 0 2rem; */
   /* background-color: rgb(53, 52, 52); */
   color: white;
+  /* overflow: hidden; */
 }
 
 /* custom styling for pop-signpost layout */
@@ -42,6 +43,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 
 .middleRow {

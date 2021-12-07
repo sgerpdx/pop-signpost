@@ -10,6 +10,7 @@
   /* padding: 0 2rem; */
   /* background-color: rgb(53, 52, 52); */
   color: white;
+  overflow: hidden;
 }
 
 /* custom styling for pop-signpost layout */
@@ -58,12 +59,30 @@
   overflow: auto;
 }
 
+.projectScrollArea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.projectScrollArea::-webkit-scrollbar-track {
+  background: rgb(53, 52, 52);
+}
+
+.projectScrollArea::-webkit-scrollbar-thumb {
+  background: #71c0bb;
+}
+
+.projectScrollArea::-webkit-scrollbar-thumb:hover {
+  border: solid 1px coral;
+}
+
+.projectScrollArea::-webkit-scrollbar-thumb:active {
+  background: #94e2dd;
+}
+
 .contentScrollArea {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: 420px;
-  overflow: auto;
 }

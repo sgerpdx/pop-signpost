@@ -7,9 +7,9 @@ import { RiHomeFill } from "react-icons/ri";
 import ReturnHome from "../components/navigation/returnHome";
 
 // individual project screencaps:
-import DesignasaurImage from "../public/proj_designasaur-park_640x320.png";
-import ElseImage from "../public/proj_else-by-elsewhere_640x320.png";
-import GreetingImage from "../public/proj_greeting-art_640x320.png";
+import DesignasaurImage from "../public/saturn-3d.png";
+import ElseImage from "../public/saturn-3d.png";
+import GreetingImage from "../public/saturn-3d.png";
 
 export default function Projects() {
   const handleNavChange = () => {
@@ -31,7 +31,7 @@ export default function Projects() {
               src={DesignasaurImage}
               alt="screenshot of designasaur park app"
               width="240"
-              height="120"
+              height="240"
             />
             <p>
               This app is a virtual dino-engineering and field a observation
@@ -46,7 +46,7 @@ export default function Projects() {
               src={ElseImage}
               alt="screenshot of designasaur park app"
               width="240"
-              height="120"
+              height="240"
             />
             <p>
               This app is a geoguessing game that uses APIs to allow users to
@@ -60,7 +60,7 @@ export default function Projects() {
               src={GreetingImage}
               alt="screenshot of designasaur park app"
               width="240"
-              height="120"
+              height="240"
             />
             <p>
               This app combines a random art generator, AWS-powered gallery and
