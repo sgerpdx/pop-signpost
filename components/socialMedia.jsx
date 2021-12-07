@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../styles/SocialMedia.module.css";
 import Image from "next/image";
-import LogoTwitter from "../public/twitter-logo-white-32.png";
-import LogoLinkedin from "../public/linkedin-logo-white-32.png";
-import LogoGitHub from "../public/GitHub-Mark-Light-32px.png";
+import LogoTwitter from "../public/twitter.png";
+import LogoLinkedin from "../public/linkedin.png";
+import LogoGitHub from "../public/github.png";
 
 export default function SocialMedia() {
   return (
@@ -16,7 +16,12 @@ export default function SocialMedia() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={LogoGitHub} alt="github logo" />
+              <Image
+                src={LogoGitHub}
+                alt="github logo"
+                width="48"
+                height="48"
+              />
             </a>
           </p>
           <p>
@@ -25,7 +30,12 @@ export default function SocialMedia() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={LogoLinkedin} alt="linkedin logo" />
+              <Image
+                src={LogoLinkedin}
+                alt="linkedin logo"
+                width="48"
+                height="48"
+              />
             </a>
           </p>
           <p>
@@ -34,7 +44,12 @@ export default function SocialMedia() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image src={LogoTwitter} alt="twitter logo" />
+              <Image
+                src={LogoTwitter}
+                alt="twitter logo"
+                width="48"
+                height="48"
+              />
             </a>
           </p>
         </div>

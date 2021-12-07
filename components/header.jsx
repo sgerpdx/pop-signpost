@@ -7,7 +7,7 @@ import Link from "next/link";
 import { RiHomeFill } from "react-icons/ri";
 
 // Personal Logo:
-import PlanetImage from "../public/blue-planet-01.png";
+import PlanetImage from "../public/saturn-simple.png";
 import ReturnHome from "./navigation/returnHome";
 
 export default function Header({ onClick, icon }) {
@@ -18,8 +18,8 @@ export default function Header({ onClick, icon }) {
           <Image
             src={PlanetImage}
             alt="logo image of a blue planet with golden-brown ring"
-            height="53"
-            width="75"
+            height="48"
+            width="48"
           />
         </div>
         <div className={styles.headlineTextArea}>

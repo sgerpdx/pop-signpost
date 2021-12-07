@@ -18,6 +18,7 @@ import MainMenu from "../components/navigation/mainMenu";
 // images and icons:
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { RiHomeFill } from "react-icons/ri";
+import { Spinner } from "@chakra-ui/spinner";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ export default function Home() {
     if (currentContent === "contact") setContentTransform("-270deg");
   }, [content]);
 
-  if (loading) return <h3>Loading...</h3>;
+  if (loading) return <Spinner color="white" />;
 
   return (
     <main className={styles.container}>
@@ -76,9 +77,6 @@ export default function Home() {
           </div>
           <nav className={styles.lowerNavArea}>
             <RiArrowGoBackLine size="1.5em" />
-            <Link href="/">
-              <RiHomeFill size="1.5em" />
-            </Link>
           </nav>
         </section>
         <section className={styles.bottomRow}>
