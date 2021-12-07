@@ -10,6 +10,7 @@
   /* padding: 0 2rem; */
   /* background-color: rgb(53, 52, 52); */
   color: white;
+  overflow: hidden;
 }
 
 /* custom styling for pop-signpost layout */
@@ -31,7 +32,8 @@
   align-items: center;
   width: 100%;
   height: 90px;
-  margin: 20px;
+  padding: 20px;
+  border-bottom: solid 1px coral;
 }
 
 /* lower container is everything below header */
@@ -42,6 +44,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .projectScrollArea {
@@ -53,9 +56,27 @@
   width: 90%;
   height: 90%;
   backface-visibility: hidden;
-  background-color: rgb(53, 52, 52);
   color: white;
-  overflow: auto;
+}
+
+.lowerContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.lowerContainer::-webkit-scrollbar-track {
+  background: rgb(53, 52, 52);
+}
+
+.lowerContainer::-webkit-scrollbar-thumb {
+  border: solid 1px coral;
+}
+
+.lowerContainer::-webkit-scrollbar-thumb:hover {
+  background: #71c0bb;
+}
+
+.lowerContainer::-webkit-scrollbar-thumb:active {
+  background: coral;
 }
 
 .contentScrollArea {
@@ -64,6 +85,28 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: 420px;
-  overflow: auto;
+  font-family: "Courier Prime", monospace;
+  margin-bottom: 40px;
+}
+
+.projectImageArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectSummaryArea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  /* background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(53, 52, 52),
+    rgba(0, 0, 0, 0)
+  ); */
 }
