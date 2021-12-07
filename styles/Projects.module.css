@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 0 2rem; */
+  /* background-color: rgb(53, 52, 52); */
+  color: white;
+}
+
+/* custom styling for pop-signpost layout */
+
+/* upper container handles header and non-scrolling elements at top */
+
+.upperContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin: 20px;
+}
+
+/* lower container is everything below header */
+
+.lowerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .projectScrollArea {
   display: flex;
   flex-direction: row;
@@ -8,6 +54,7 @@
   height: 90%;
   backface-visibility: hidden;
   background-color: rgb(53, 52, 52);
+  color: white;
   overflow: auto;
 }
 
@@ -17,5 +64,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  width: 420px;
   overflow: auto;
 }

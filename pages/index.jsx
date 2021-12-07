@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 // Header component for topRow:
 import Header from "../components/header";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
-import Projects from "../components/projects";
+//import Projects from./projectsts";
+import Tech from "../components/tech";
 import About from "../components/about";
 import Contact from "../components/contact";
-import Navigation from "../components/navigation";
+//import Navigation from "../components/navigation";
 import SocialMedia from "../components/socialMedia";
+import MainMenu from "../components/navigation/mainMenu";
 
 // images and icons:
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { RiHomeFill } from "react-icons/ri";
+import { Spinner } from "@chakra-ui/spinner";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,14 +44,14 @@ export default function Home() {
     if (currentContent === "contact") setContentTransform("-270deg");
   }, [content]);
 
-  if (loading) return <h3>Loading...</h3>;
+  if (loading) return <Spinner color="white" />;
 
   return (
     <main className={styles.container}>
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          <Header onClick={handleNavChange} />
+          <Header onClick={handleNavChange} icon={"menu"} />
         </section>
       </section>
 
@@ -62,7 +66,7 @@ export default function Home() {
               <Intro />
             </div>
             <div className={styles.sideBoxRight}>
-              <Projects />
+              <Tech />
             </div>
             <div className={styles.backBox}>
               <About />
@@ -71,8 +75,9 @@ export default function Home() {
               <Contact />
             </div>
           </div>
-          <RiArrowGoBackLine size="1.5em" />
-          <RiHomeFill size="1.5em" />
+          <nav className={styles.lowerNavArea}>
+            <RiArrowGoBackLine size="1.5em" />
+          </nav>
         </section>
         <section className={styles.bottomRow}>
           <SocialMedia />
