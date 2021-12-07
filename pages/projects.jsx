@@ -38,12 +38,20 @@ export default function Projects() {
               />
               <figcaption style={{ width: "48px", textAlign: "center" }}>
                 <p>
-                  <a href="https://greeting-art.netlify.app/" target="_blank">
+                  <a
+                    href="https://greeting-art.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     🌐
                   </a>
                 </p>
                 <p>
-                  <a href="https://github.com/Greeting-Art" target="_blank">
+                  <a
+                    href="https://github.com/Greeting-Art"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     🔧
                   </a>
                 </p>
