@@ -4,6 +4,8 @@ import Link from "next/link";
 
 // Header component for topRow:
 import Header from "../components/header";
+import WelcomeModal from "../components/welcomeModal";
+//import { useDisclosure } from "@chakra-ui/react";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -25,6 +27,10 @@ export default function Home() {
   const [content, setContent] = useState("home");
   const [entered, setEntered] = useState(false);
   const [contentTransform, setContentTransform] = useState("0deg");
+  const [show, setShow] = useState(true);
+  const [interfaceStage, setInterfaceStage] = useState(0);
+  //state for chakra-uimodal:
+  //const { isOpen, onOpen, onClose } = useDisclosure();
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
@@ -49,10 +55,19 @@ export default function Home() {
     if (currentContent === "contact") setContentTransform("-270deg");
   }, [content]);
 
+  const handleModalClose = () => {
+    setShow(false);
+    setInterfaceStage(1);
+  };
+
   if (loading) return <Spinner color="white" />;
+
+  //if (interfaceStage === 0)
+  //return <WelcomeModal onClose={handleModalClose} show={show} />;
 
   return (
     <main className={styles.container}>
+      <WelcomeModal onClose={handleModalClose} show={show} />
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
