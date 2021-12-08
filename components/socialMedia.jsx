@@ -53,7 +53,7 @@ export default function SocialMedia() {
             </a>
           </p>
         </div>
-        <div className={styles.resumeArea}>
+        {/* <div className={styles.resumeArea}>
           <p>
             <a
               href="/gerber-sam_resume-current.pdf"
@@ -63,7 +63,7 @@ export default function SocialMedia() {
               <button className={styles.popButton}>Resume</button>
             </a>
           </p>
-        </div>
+        </div> */}
       </section>
     </>
   );
