@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   const handleEnterSite = () => {
-    setEntered(true);
+    setTimeout(setEntered(true), 4000);
   };
 
   // handles loading spinner:
@@ -57,7 +57,8 @@ export default function Home() {
 
   const handleModalClose = () => {
     setShow(false);
-    setInterfaceStage(1);
+      (setInterfaceStage(1));
+      handleEnterSite();
   };
 
   if (loading) return <Spinner color="white" />;
