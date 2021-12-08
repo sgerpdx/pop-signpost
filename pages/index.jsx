@@ -29,8 +29,6 @@ export default function Home() {
   const [contentTransform, setContentTransform] = useState("0deg");
   const [show, setShow] = useState(true);
   const [interfaceStage, setInterfaceStage] = useState(0);
-  //state for chakra-uimodal:
-  //const { isOpen, onOpen, onClose } = useDisclosure();
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
@@ -127,7 +125,7 @@ export default function Home() {
           <SocialMedia />
 
           {/* <Navigation onChange={handleNavChange} value={content} /> */}
-          <button onClick={handleEnterSite}>Enter Site</button>
+          {/* <button onClick={handleEnterSite}>Enter Site</button> */}
         </section>
       </section>
     </main>

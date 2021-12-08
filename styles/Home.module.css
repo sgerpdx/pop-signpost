@@ -206,11 +206,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-image: linear-gradient(
-    rgba(11, 90, 85, 0),
-    rgba(0, 65, 60, 1),
-    rgba(11, 90, 85, 0)
-  ); */
   font-family: "Courier New", Courier, monospace;
   background-color: rgb(53, 52, 52);
   color: white;
@@ -218,7 +213,6 @@
   height: 180px;
   border: double 1px coral;
   border-radius: 4px;
-  
 }
 
 .enterButton {
