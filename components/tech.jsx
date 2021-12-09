@@ -8,44 +8,49 @@ export default function Tech() {
     <>
       <section>
         <div style={{ padding: "10px", justifyContent: "center" }}>
-          <h2>My Tech Stack:</h2>
+          <h2 style={{ textAlign: "center" }}>My Tech Stack:</h2>
           <dl style={{ fontSize: "0.9em" }}>
-            <dt>
+            <dt className={styles.techCategory}>
               <u>Languages</u>:
             </dt>{" "}
             <dd>JavaScript, HTML, CSS</dd>
-            <dt>
+            <dt className={styles.techCategory}>
               <u>Libraries/Runtimes/Frameworks</u>:
             </dt>{" "}
             <dd>
-              <dt>Front End:</dt> <dd>React.js, Next.js, React Native</dd>
+              <dt style={{ color: "#C4E175" }}>Front End:</dt>{" "}
+              <dd>React.js, Next.js, React Native</dd>
             </dd>
             <dd>
-              <dt>Back End:</dt>
+              <dt style={{ color: "#C4E175" }}>Back End:</dt>
               <dd>Node.js, Express</dd>
             </dd>
-            <dt>
+            <dt className={styles.techCategory}>
               <u>Testing</u>:
             </dt>{" "}
             <dd>Jest, React Testing Library</dd>
-            <dt>
+            <dt className={styles.techCategory}>
               <u>Databases</u>:
             </dt>{" "}
             <dd> PostgresSQL, pgAdmin, Firebase, Supabase</dd>
-            <dt>
+            <dt className={styles.techCategory}>
               <u>Tools/Deployment</u>:
             </dt>{" "}
             <dd> Git, GitHub, Netlify, Heroku, Postman, AWS S3</dd>
           </dl>
-          <p>
-            I've also worked a little bit with Python and Solidity, and am
+          {/* <p style={{ fontSize: "0.9em", textIndent: "40px" }}>
+            I've also done limited work with Python and Solidity, and am
             currently learning TypeScript.
-          </p>
-          <RiArrowRightCircleLine
-            className={styles.enterButton}
-            style={{ fontSize: "2em" }}
-          />
-          <Link href="/projects">Go to Projects</Link>
+          </p> */}
+          <nav className={styles.projectLinksArea}>
+            <p style={{ color: "rgba(113, 192, 187, 255)" }}>Go to Projects</p>
+            <Link href="/projects">
+              <RiArrowRightCircleLine
+                className={styles.projectLink}
+                style={{ fontSize: "2em" }}
+              />
+            </Link>
+          </nav>
         </div>
       </section>
     </>
