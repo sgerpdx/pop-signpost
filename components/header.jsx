@@ -29,7 +29,7 @@ export default function Header({ onClick, icon }) {
       <section className={styles.mainMenuArea}>
         {icon === "home" ? (
           <Link href="/">
-            <RiHomeFill size="2em" />
+            <RiHomeFill title="return home" size="2em" />
           </Link>
         ) : (
           <Menu>
