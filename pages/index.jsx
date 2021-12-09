@@ -84,7 +84,7 @@ export default function Home() {
               style={{ transform: `rotateY(${contentTransform})` }}
             >
               <div className={styles.frontBox}>
-                <Intro />
+                <Intro  onClick={handleNavChange} />
               </div>
               <div className={styles.sideBoxRight}>
                 <Tech />

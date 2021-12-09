@@ -26,6 +26,7 @@
   /* text-indent: 30px; */
   padding: 10px;
   background-color: white;
+  border: solid 1px rgba(53, 52, 52, 0.5);
 }
 .introLinkArea {
   display: flex;
@@ -36,10 +37,30 @@
   height: 50%;
 }
 
+.linksLeft,
+.linksRight {
+  display: flex;
+  flex-direction: column;
+}
+
 .introLinks {
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
   font-size: 0.9em;
   background-color: rgb(53, 52, 52);
   color: white;
-  width: 80px;
+  width: 100px;
+  border: solid 2px rgba(113, 192, 187, 255);
+  margin: 4px 0px 4px 0px;
+}
+
+.introLinks:hover {
+  border: solid 2px white;
+}
+
+.introLinks:active {
+  font-weight: bold;
+  background-color: white;
+  color: rgb(53, 52, 52);
+  border: solid 2px coral;
 }

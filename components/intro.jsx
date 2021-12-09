@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Intro.module.css";
 import SatelliteImage from "../public/satellite.png";
+import Link from "next/link";
 
-export default function Intro() {
+export default function Intro({ onClick }) {
   return (
     <>
       <section className={styles.introTextContainer}>
@@ -14,8 +15,16 @@ export default function Intro() {
         </p>
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>
-            <p className={styles.introLinks}>tech stack</p>
-            <p className={styles.introLinks}>projects</p>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="projects"
+            >
+              tech stack
+            </button>
+            <button className={styles.introLinks}>
+              <Link href="/projects">projects</Link>
+            </button>
           </nav>
           <Image
             alt="satellite illustration"
@@ -23,10 +32,30 @@ export default function Intro() {
             width="180"
             src={SatelliteImage}
           />
-          <nav className={styles.linksLeft}>
-            <p className={styles.introLinks}>about</p>
-            <p className={styles.introLinks}>contact</p>
-            <p className={styles.introLinks}>resume</p>
+          <nav className={styles.linksRight}>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="about"
+            >
+              about
+            </button>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="contact"
+            >
+              contact
+            </button>
+            <button className={styles.introLinks}>
+              <a
+                href="/gerber-sam_resume-current.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                resume
+              </a>
+            </button>
           </nav>
         </div>
       </section>
