@@ -1,0 +1,26 @@
+.techCategory {
+  color: rgba(113, 192, 187, 255);
+}
+
+.projectLinksArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLink {
+  color: rgba(113, 192, 187, 255);
+  margin: 6px;
+}
+
+.projectLink:hover {
+  color: white;
+}
+
+.projectLink:active {
+    border: solid 1px coral;
+    border-radius: 0.5em;
+  background-color: coral;
+  color: rgb(53, 52, 52);
+}
