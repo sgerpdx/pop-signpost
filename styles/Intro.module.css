@@ -10,16 +10,36 @@
   background-color: rgba(113, 192, 187, 255);
   color: rgb(53, 52, 52);
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
   /* font-family: 'Encode Sans', sans-serif; */
   /* font-family: 'Quantico', sans-serif; */
-  font-size: 1.2em;
+  font-size: 1.1em;
   /* position: absolute; */
   overflow: auto;
 }
 
 .introTextArea {
+  text-align: center;
   width: 90%;
-  text-indent: 30px;
+  height: 30%;
+  /* text-indent: 30px; */
   padding: 10px;
+  background-color: white;
+}
+.introLinkArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50%;
+}
+
+.introLinks {
+  text-align: center;
+  font-size: 0.9em;
+  background-color: rgb(53, 52, 52);
+  color: white;
+  width: 80px;
 }
