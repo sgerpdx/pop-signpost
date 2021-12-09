@@ -15,7 +15,8 @@ import About from "../components/about";
 import Contact from "../components/contact";
 //import Navigation from "../components/navigation";
 import SocialMedia from "../components/socialMedia";
-import MainMenu from "../components/navigation/mainMenu";
+//mainMenu is obsolete -- replaced by simple state toggle on header:
+//import MainMenu from "../components/navigation/mainMenu";
 
 // images and icons:
 import { RiArrowGoBackLine } from "react-icons/ri";
@@ -55,8 +56,8 @@ export default function Home() {
 
   const handleModalClose = () => {
     setShow(false);
-      (setInterfaceStage(1));
-      handleEnterSite();
+    setInterfaceStage(1);
+    handleEnterSite();
   };
 
   if (loading) return <Spinner color="white" />;
@@ -83,7 +84,7 @@ export default function Home() {
               style={{ transform: `rotateY(${contentTransform})` }}
             >
               <div className={styles.frontBox}>
-                <Intro />
+                <Intro  onClick={handleNavChange} />
               </div>
               <div className={styles.sideBoxRight}>
                 <Tech />
@@ -117,9 +118,9 @@ export default function Home() {
               <div className={styles.bottomBox}></div>
             </div>
           )}
-          <nav className={styles.lowerNavArea}>
+          {/* <nav className={styles.lowerNavArea}>
             <RiArrowGoBackLine size="1.5em" />
-          </nav>
+          </nav> */}
         </section>
         <section className={styles.bottomRow}>
           <SocialMedia />

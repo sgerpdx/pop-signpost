@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
 import Image from "next/image";
 import Header from "../components/header";
 import Link from "next/link";
 import { RiHomeFill } from "react-icons/ri";
 import ReturnHome from "../components/navigation/returnHome";
+import { Spinner } from "@chakra-ui/spinner";
 
 // individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
@@ -12,9 +13,17 @@ import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
 export default function Projects() {
+  const [loading, setLoading] = useState(true);
+
   const handleNavChange = () => {
     console.log("ET Phone Home");
   };
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) return <Spinner color="white" />;
 
   return (
     <main className={styles.container}>

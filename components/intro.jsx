@@ -2,26 +2,62 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Intro.module.css";
 import SatelliteImage from "../public/satellite.png";
+import Link from "next/link";
 
-export default function Intro() {
+export default function Intro({ onClick }) {
   return (
     <>
       <section className={styles.introTextContainer}>
         <p className={styles.introTextArea}>
-          Hello, and thanks for stopping by! I&apos;m a software developer
-          building full-stack applications, exploring new tech based on each
-          project&apos;s unique UX goals.
+          I&apos;m a software developer building full-stack applications, Have a
+          look around, send me a message if you&apos;d like to collaborate, and
+          have a nice day!
         </p>
-        <Image
-          alt="satellite illustration"
-          height="48"
-          width="48"
-          src={SatelliteImage}
-        />
-        <p className={styles.introTextArea}>
-          Have a look around, send me a message if you&apos;d like to
-          collaborate, and have a nice day!
-        </p>
+        <div className={styles.introLinkArea}>
+          <nav className={styles.linksLeft}>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="projects"
+            >
+              tech stack
+            </button>
+            <button className={styles.introLinks}>
+              <Link href="/projects">projects</Link>
+            </button>
+          </nav>
+          <Image
+            alt="satellite illustration"
+            height="180"
+            width="180"
+            src={SatelliteImage}
+          />
+          <nav className={styles.linksRight}>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="about"
+            >
+              about
+            </button>
+            <button
+              className={styles.introLinks}
+              onClick={onClick}
+              value="contact"
+            >
+              contact
+            </button>
+            <button className={styles.introLinks}>
+              <a
+                href="/gerber-sam_resume-current.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                resume
+              </a>
+            </button>
+          </nav>
+        </div>
       </section>
     </>
   );
