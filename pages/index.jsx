@@ -30,6 +30,7 @@ export default function Home() {
   const [contentTransform, setContentTransform] = useState("0deg");
   const [show, setShow] = useState(true);
   const [interfaceStage, setInterfaceStage] = useState(0);
+  const [icon, setIcon] = useState("none");
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
@@ -52,13 +53,26 @@ export default function Home() {
     if (currentContent === "projects") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
+    console.log("Now THIS is Podracing");
   }, [content]);
 
   const handleModalClose = () => {
     setShow(false);
     setInterfaceStage(1);
+
     handleEnterSite();
   };
+
+  const handleInterfaceStage = () => {
+    const currentStage = interfaceStage;
+    if (currentStage !== 0) setIcon("menu");
+    console.log("III", icon);
+  };
+
+  useEffect(() => {
+    handleInterfaceStage();
+    console.log("SIS:", interfaceStage);
+  }, [interfaceStage]);
 
   if (loading) return <Spinner color="white" />;
 
@@ -71,7 +85,7 @@ export default function Home() {
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          <Header onClick={handleNavChange} icon={"menu"} />
+          <Header onClick={handleNavChange} icon={icon} />
         </section>
       </section>
 
@@ -84,7 +98,7 @@ export default function Home() {
               style={{ transform: `rotateY(${contentTransform})` }}
             >
               <div className={styles.frontBox}>
-                <Intro  onClick={handleNavChange} />
+                <Intro onClick={handleNavChange} />
               </div>
               <div className={styles.sideBoxRight}>
                 <Tech />
