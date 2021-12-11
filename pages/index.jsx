@@ -31,15 +31,19 @@ export default function Home() {
   const [show, setShow] = useState(true);
   const [interfaceStage, setInterfaceStage] = useState(0);
   const [icon, setIcon] = useState("none");
+  const [contentHistory, setContentHistory] = useState([]);
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
     setContent(e.target.value);
+    //const lastContent = e.target.value;
+    //   setContentHistory(lastContent);
+    //   console.log("NAVlastContent:", lastContent);
   };
 
-  const handleEnterSite = () => {
-    setTimeout(setEntered(true), 4000);
-  };
+  // const handleEnterSite = () => {
+  //   setTimeout(setEntered(true), 4000);
+  // };
 
   // handles loading spinner:
   useEffect(() => {
@@ -48,31 +52,42 @@ export default function Home() {
 
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(() => {
+    //setEntered(false);
     const currentContent = content;
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "projects") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
-    console.log("Now THIS is Podracing");
+    //const currentContentArr = [];
+    //currentContentArr.push(currentContent);
+    // setContentHistory(currentContentArr);
+    // console.log("contentHistory", contentHistory);
+    // console.log("CURRENT***", content);
   }, [content]);
 
   const handleModalClose = () => {
     setShow(false);
     setInterfaceStage(1);
-
-    handleEnterSite();
+    setEntered(true);
+    console.log("Entered:", entered);
   };
 
-  const handleInterfaceStage = () => {
-    const currentStage = interfaceStage;
-    if (currentStage !== 0) setIcon("menu");
-    console.log("III", icon);
+  const handleEntered = () => {
+    //const currentStage = entered;
+    if (entered) setIcon("menu");
+    console.log("icon:", icon);
   };
+
+  // const handleGoBack = () => {
+  //   const previousContent = contentHistory;
+  //   setContent(previousContent);
+  // };
 
   useEffect(() => {
-    handleInterfaceStage();
-    console.log("SIS:", interfaceStage);
-  }, [interfaceStage]);
+    handleEntered();
+    // setContent("home");
+    console.log("entered:", entered);
+  }, [entered]);
 
   if (loading) return <Spinner color="white" />;
 
@@ -82,6 +97,7 @@ export default function Home() {
   return (
     <main className={styles.container}>
       <WelcomeModal onClose={handleModalClose} show={show} />
+
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>

@@ -8,7 +8,7 @@ import { RiHomeFill } from "react-icons/ri";
 
 // Personal Logo:
 import PlanetImage from "../public/saturn-simple.png";
-import StarsImage from "../public/stars.png";
+//import StarsImage from "../public/stars.png";
 
 export default function Header({ onClick, icon }) {
   return (
