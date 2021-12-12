@@ -19,8 +19,8 @@
 }
 
 .projectLink:active {
-    border: solid 1px coral;
-    border-radius: 0.5em;
+  border: solid 1px coral;
+  border-radius: 0.5em;
   background-color: coral;
   color: rgb(53, 52, 52);
 }

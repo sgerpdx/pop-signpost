@@ -1,44 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
+//import Link from "next/link";
 
-// Header component for topRow:
+// Component imports:
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
-//import { useDisclosure } from "@chakra-ui/react";
+import SocialMedia from "../components/socialMedia";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
-//import Projects from./projectsts";
 import Tech from "../components/tech";
 import About from "../components/about";
 import Contact from "../components/contact";
-//import Navigation from "../components/navigation";
-import SocialMedia from "../components/socialMedia";
-//mainMenu is obsolete -- replaced by simple state toggle on header:
-//import MainMenu from "../components/navigation/mainMenu";
 
 // images and icons:
-import { RiArrowGoBackLine } from "react-icons/ri";
-import { RiHomeFill } from "react-icons/ri";
 import { Spinner } from "@chakra-ui/spinner";
 
-export default function Home() {
+export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
-  const [entered, setEntered] = useState(false);
+  //const [entered, setEntered] = useState(false);
   const [contentTransform, setContentTransform] = useState("0deg");
   const [show, setShow] = useState(true);
-  const [interfaceStage, setInterfaceStage] = useState(0);
-
+  const [icon, setIcon] = useState("none");
+  // state items for managing user movement thru the site:
+  //const [contentHistory, setContentHistory] = useState([]);
+  //const [currentStage, setCurrentStage] = useState(0);
+  const changeStage = value.handleStageChange;
+  const toggleEntered = value.handleEntered;
+  const stage = value.stage;
+  const entered = value.entered;
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
     setContent(e.target.value);
+    changeStage();
+    console.log("///Stage:", stage);
   };
 
-  const handleEnterSite = () => {
-    setTimeout(setEntered(true), 4000);
-  };
+  // const handleEnterSite = () => {
+  //   setTimeout(setEntered(true), 4000);
+  // };
 
   // handles loading spinner:
   useEffect(() => {
@@ -47,6 +48,7 @@ export default function Home() {
 
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(() => {
+    //setEntered(false);
     const currentContent = content;
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "projects") setContentTransform("-90deg");
@@ -54,24 +56,45 @@ export default function Home() {
     if (currentContent === "contact") setContentTransform("-270deg");
   }, [content]);
 
+  // closes the welcome modal and sets entered to reflect that:
   const handleModalClose = () => {
     setShow(false);
-    setInterfaceStage(1);
-    handleEnterSite();
+    toggleEntered(true);
+    console.log("Entered:", entered);
   };
+
+  // makes the top-right menu visible once modal closes
+  const handleEntered = () => {
+    if (entered) setIcon("menu");
+    console.log("icon:", icon);
+  };
+
+  //// this needs more work, but should be an eventual feature:
+  // const handleGoBack = () => {
+  //   const previousContent = contentHistory;
+  //   setContent(previousContent);
+  // };
+
+  useEffect(() => {
+    handleEntered();
+    // setContent("home");
+    console.log("entered:", entered);
+  }, [entered]);
 
   if (loading) return <Spinner color="white" />;
 
-  //if (interfaceStage === 0)
-  //return <WelcomeModal onClose={handleModalClose} show={show} />;
-
   return (
     <main className={styles.container}>
-      <WelcomeModal onClose={handleModalClose} show={show} />
+      {stage > 0 ? (
+        <></>
+      ) : (
+        <WelcomeModal onClose={handleModalClose} show={show} />
+      )}
+
       {/* upper container houses header row */}
       <section className={styles.upperContainer}>
         <section className={styles.topRow}>
-          <Header onClick={handleNavChange} icon={"menu"} />
+          <Header onClick={handleNavChange} icon={icon} />
         </section>
       </section>
 
@@ -84,7 +107,7 @@ export default function Home() {
               style={{ transform: `rotateY(${contentTransform})` }}
             >
               <div className={styles.frontBox}>
-                <Intro  onClick={handleNavChange} />
+                <Intro onClick={handleNavChange} />
               </div>
               <div className={styles.sideBoxRight}>
                 <Tech />
@@ -118,15 +141,9 @@ export default function Home() {
               <div className={styles.bottomBox}></div>
             </div>
           )}
-          {/* <nav className={styles.lowerNavArea}>
-            <RiArrowGoBackLine size="1.5em" />
-          </nav> */}
         </section>
         <section className={styles.bottomRow}>
           <SocialMedia />
-
-          {/* <Navigation onChange={handleNavChange} value={content} /> */}
-          {/* <button onClick={handleEnterSite}>Enter Site</button> */}
         </section>
       </section>
     </main>

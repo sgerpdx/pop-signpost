@@ -8,7 +8,7 @@ import { RiHomeFill } from "react-icons/ri";
 
 // Personal Logo:
 import PlanetImage from "../public/saturn-simple.png";
-import ReturnHome from "./navigation/returnHome";
+//import StarsImage from "../public/stars.png";
 
 export default function Header({ onClick, icon }) {
   return (
@@ -27,7 +27,16 @@ export default function Header({ onClick, icon }) {
         </div>
       </section>
       <section className={styles.mainMenuArea}>
-        {icon === "home" ? (
+        {icon === "none" ? (
+          <div>
+            {/* <Image
+              src={StarsImage}
+              alt="logo image of a blue planet with golden-brown ring"
+              height="32"
+              width="32"
+            /> */}
+          </div>
+        ) : icon === "home" ? (
           <Link href="/">
             <RiHomeFill title="return home" size="2em" />
           </Link>
