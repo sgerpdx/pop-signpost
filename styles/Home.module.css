@@ -230,4 +230,20 @@
   background-color: coral;
 }
 
+.homeNavButton {
+  border: solid 1px rgba(53, 52, 52, 0);
+  background-color: rgba(53, 52, 52, 0);
+  color: white;
+}
 
+.homeNavButton:hover {
+  border: solid 1px white;
+  background-color: rgba(53, 52, 52, 0);
+  color: white;
+}
+
+.homeNavButton:active {
+  border: solid 1px white;
+  background-color: rgba(113, 192, 187, 255);
+  color: rgb(53, 52, 52);
+}

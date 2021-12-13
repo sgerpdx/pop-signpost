@@ -166,9 +166,12 @@ export default function Home({ value }) {
           )}
         </section>
         <section className={styles.bottomRow}>
-          <Link href="/projects">Hey</Link>
-          <button onClick={handleBackNav}>Back</button>
-          <button onClick={handleHomeNav}>Home</button>
+          <button className={styles.homeNavButton} onClick={handleBackNav}>
+            Back
+          </button>
+          <button className={styles.homeNavButton} onClick={handleHomeNav}>
+            Home
+          </button>
           <SocialMedia />
         </section>
       </section>
