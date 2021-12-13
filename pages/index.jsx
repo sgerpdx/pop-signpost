@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
-//import Link from "next/link";
+import Link from "next/link";
 
 // Component imports:
 import Header from "../components/header";
@@ -24,7 +24,7 @@ export default function Home({ value }) {
   const [show, setShow] = useState(true);
   const [icon, setIcon] = useState("none");
   // state items for managing user movement thru the site:
-  //const [contentHistory, setContentHistory] = useState([]);
+  const [contentHistory, setContentHistory] = useState([]);
   //const [currentStage, setCurrentStage] = useState(0);
   const changeStage = value.handleStageChange;
   const toggleEntered = value.handleEntered;
@@ -35,6 +35,19 @@ export default function Home({ value }) {
     setContent(e.target.value);
     changeStage();
     console.log("///Stage:", stage);
+  };
+
+  const handleBackNav = () => {
+    const newContentHistory = contentHistory;
+    const prevLocation = newContentHistory.splice(-2, 2);
+    console.log("prevLoc:", prevLocation);
+    setContent(prevLocation[0]);
+    setContentHistory(newContentHistory);
+  };
+
+  const handleHomeNav = () => {
+    setContent("home");
+    console.log("HNC:", content);
   };
 
   // const handleEnterSite = () => {
@@ -50,17 +63,23 @@ export default function Home({ value }) {
   useEffect(() => {
     //setEntered(false);
     const currentContent = content;
+
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "projects") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
+    const newContentHistory = contentHistory;
+    newContentHistory.push(currentContent);
+    setContentHistory(newContentHistory);
+    console.log("AlienName:", contentHistory);
+    console.log(content);
   }, [content]);
 
   // closes the welcome modal and sets entered to reflect that:
   const handleModalClose = () => {
     setShow(false);
     toggleEntered(true);
-    console.log("Entered:", entered);
+    console.log("Entered:", entered, "WORRRD");
   };
 
   // makes the top-right menu visible once modal closes
@@ -80,6 +99,10 @@ export default function Home({ value }) {
     // setContent("home");
     console.log("entered:", entered);
   }, [entered]);
+
+  useEffect(() => {
+    console.log("***CH***:", contentHistory);
+  }, [contentHistory]);
 
   if (loading) return <Spinner color="white" />;
 
@@ -143,6 +166,9 @@ export default function Home({ value }) {
           )}
         </section>
         <section className={styles.bottomRow}>
+          <Link href="/projects">Hey</Link>
+          <button onClick={handleBackNav}>Back</button>
+          <button onClick={handleHomeNav}>Home</button>
           <SocialMedia />
         </section>
       </section>
