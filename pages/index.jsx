@@ -57,6 +57,7 @@ export default function Home({ value }) {
   // handles loading spinner:
   useEffect(() => {
     setLoading(false);
+    console.log("------Stage:", stage);
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
@@ -130,9 +131,9 @@ export default function Home({ value }) {
               style={{ transform: `rotateY(${contentTransform})` }}
             >
               <div className={styles.frontBox}>
-                <Intro onClick={handleNavChange} />
+                <Intro onClick={handleNavChange} toProjects={changeStage} />
               </div>
-              <div className={styles.sideBoxRight}>
+              <div className={styles.sideBoxRight} onClick={changeStage}>
                 <Tech />
               </div>
               <div className={styles.backBox}>
@@ -142,10 +143,10 @@ export default function Home({ value }) {
                 <Contact />
               </div>
               <div className={styles.topBox}>
-                <h3>TOP</h3>
+                <h3></h3>
               </div>
               <div className={styles.bottomBox}>
-                <h3>BOTTOM</h3>
+                <h3></h3>
               </div>
             </div>
           ) : (
@@ -166,12 +167,34 @@ export default function Home({ value }) {
           )}
         </section>
         <section className={styles.bottomRow}>
-          <button className={styles.homeNavButton} onClick={handleBackNav}>
-            Back
-          </button>
-          <button className={styles.homeNavButton} onClick={handleHomeNav}>
-            Home
-          </button>
+          {entered ? (
+            <>
+              {" "}
+              <button className={styles.homeNavButton} onClick={handleBackNav}>
+                Back
+              </button>
+              <button className={styles.homeNavButton} onClick={handleHomeNav}>
+                Home
+              </button>
+            </>
+          ) : (
+            <>
+              {" "}
+              <button
+                className={styles.homeNavButton}
+                style={{ color: "grey" }}
+              >
+                Back
+              </button>
+              <button
+                className={styles.homeNavButton}
+                style={{ color: "grey" }}
+              >
+                Home
+              </button>
+            </>
+          )}
+
           <SocialMedia />
         </section>
       </section>

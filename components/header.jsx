@@ -28,14 +28,7 @@ export default function Header({ onClick, icon }) {
       </section>
       <section className={styles.mainMenuArea}>
         {icon === "none" ? (
-          <div>
-            {/* <Image
-              src={StarsImage}
-              alt="logo image of a blue planet with golden-brown ring"
-              height="32"
-              width="32"
-            /> */}
-          </div>
+          <></>
         ) : icon === "home" ? (
           <Link href="/">
             <RiHomeFill title="return home" size="2em" />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/Tech.module.css";
 import { RiArrowRightCircleLine } from "react-icons/ri";
 
-export default function Tech() {
+export default function Tech({ onClick }) {
   return (
     <>
       <section>
@@ -46,6 +46,7 @@ export default function Tech() {
             <p style={{ color: "rgba(113, 192, 187, 255)" }}>Go to Projects</p>
             <Link href="/projects">
               <RiArrowRightCircleLine
+                onClick={onClick}
                 className={styles.projectLink}
                 style={{ fontSize: "2em" }}
               />

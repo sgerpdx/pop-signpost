@@ -12,7 +12,7 @@ import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
-export default function Projects() {
+export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
 
   const handleNavChange = () => {
