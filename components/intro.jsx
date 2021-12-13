@@ -4,7 +4,7 @@ import styles from "../styles/Intro.module.css";
 import SatelliteImage from "../public/satellite.png";
 import Link from "next/link";
 
-export default function Intro({ onClick }) {
+export default function Intro({ onClick, toProjects }) {
   return (
     <>
       <section className={styles.introTextContainer}>
@@ -22,9 +22,12 @@ export default function Intro({ onClick }) {
             >
               tech stack
             </button>
-            <button className={styles.introLinks}>
-              <Link href="/projects">projects</Link>
-            </button>
+
+            <Link href="/projects" onClick={toProjects}>
+              <button className={styles.introLinks} onClick={toProjects}>
+                projects
+              </button>
+            </Link>
           </nav>
           <Image
             alt="satellite illustration"
