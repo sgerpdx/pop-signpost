@@ -90,12 +90,37 @@ export default function Projects({ value }) {
             </div>
           </div>
           <div className={styles.contentScrollArea}>
-            <Image
-              src={ElseImage}
-              alt="screenshot of designasaur park app"
-              width="240"
-              height="240"
-            />
+            <figure className={styles.projectImageArea}>
+              <figcaption
+                style={{ width: "48px", textAlign: "center" }}
+              ></figcaption>
+              <Image
+                src={ElseImage}
+                alt="screenshot of designasaur park app"
+                width="240"
+                height="240"
+              />
+              <figcaption style={{ width: "48px", textAlign: "center" }}>
+                <p>
+                  <a
+                    href="https://else-by-elsewhere.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    🌐
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/where-in-the-search"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    🔧
+                  </a>
+                </p>
+              </figcaption>
+            </figure>
             <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
             <div className={styles.projectSummaryArea}>
               <p>
@@ -115,12 +140,37 @@ export default function Projects({ value }) {
             </div>
           </div>
           <div className={styles.contentScrollArea}>
-            <Image
-              src={DesignasaurImage}
-              alt="screenshot of designasaur park app"
-              width="240"
-              height="240"
-            />
+            <figure className={styles.projectImageArea}>
+              <figcaption
+                style={{ width: "48px", textAlign: "center" }}
+              ></figcaption>
+              <Image
+                src={DesignasaurImage}
+                alt="screenshot of designasaur park app"
+                width="240"
+                height="240"
+              />
+              <figcaption style={{ width: "48px", textAlign: "center" }}>
+                <p>
+                  <a
+                    href="https://designosaurpark.github.io/DesignasaurPark/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    🌐
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/DesignosaurPark/DesignasaurPark"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    🔧
+                  </a>
+                </p>
+              </figcaption>
+            </figure>
             <p style={{ fontSize: "1.8em" }}>Designasaur Park</p>
             <div className={styles.projectSummaryArea}>
               <p>
