@@ -43,11 +43,18 @@ export default function Tech({ onClick }) {
             currently learning TypeScript.
           </p> */}
           <nav className={styles.projectLinksArea}>
-            <p style={{ color: "rgba(113, 192, 187, 255)" }}>Go to Projects</p>
+            <p style={{ color: "rgba(113, 192, 187, 255)" }}>
+              Go to{" "}
+              <Link href="/projects">
+                <span onClick={onClick} className={styles.projectLinkSpan}>
+                  Projects
+                </span>
+              </Link>
+            </p>
             <Link href="/projects">
               <RiArrowRightCircleLine
                 onClick={onClick}
-                className={styles.projectLink}
+                className={styles.projectLinkIcon}
                 style={{ fontSize: "2em" }}
               />
             </Link>

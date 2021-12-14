@@ -1,5 +1,5 @@
 .techCategory {
-  color: rgba(113, 192, 187, 255);
+  color: #c4e175;
 }
 
 .projectLinksArea {
@@ -9,18 +9,31 @@
   align-items: center;
 }
 
-.projectLink {
-  color: rgba(113, 192, 187, 255);
-  margin: 6px;
-}
-
-.projectLink:hover {
+.projectLinkSpan {
   color: white;
 }
 
-.projectLink:active {
-  border: solid 1px coral;
+.projectLinkSpan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.projectLinkSpan:active {
+  color: #c4e175;
+}
+
+.projectLinkIcon {
+  color: rgba(113, 192, 187, 255);
+  margin: 6px;
   border-radius: 0.5em;
-  background-color: coral;
+}
+
+.projectLinkIcon:hover {
+  color: white;
+  border: solid 1px #c4e175;
+}
+
+.projectLinkIcon:active {
+  background-color: #c4e175;
   color: rgb(53, 52, 52);
 }
