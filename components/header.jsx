@@ -13,7 +13,7 @@ import PlanetImage from "../public/saturn-simple.png";
 export default function Header({ onClick, icon }) {
   return (
     <>
-      <section className={styles.mainTitleArea}>
+      <section className={styles.mainLogoArea}>
         <div className={styles.logoImageArea}>
           <Image
             src={PlanetImage}
@@ -22,6 +22,8 @@ export default function Header({ onClick, icon }) {
             width="48"
           />
         </div>
+      </section>
+      <section className={styles.mainTitleArea}>
         <div className={styles.headlineTextArea}>
           <h1>Sam Gerber</h1>
         </div>
@@ -31,7 +33,12 @@ export default function Header({ onClick, icon }) {
           <></>
         ) : icon === "home" ? (
           <Link href="/">
-            <RiHomeFill title="return home" size="2em" />
+            <RiHomeFill
+              title="return home"
+              size="2em"
+              color="rgba(113, 192, 187, 255)"
+              title="return home"
+            />
           </Link>
         ) : (
           <Menu>
@@ -39,7 +46,7 @@ export default function Header({ onClick, icon }) {
               className={styles.headerMenuButton}
               style={{ backgroundColor: "rgba(53, 52, 52,0)" }}
             >
-              <RiMenuLine size="2.5em" color="white" />
+              <RiMenuLine size="3em" color="rgba(113, 192, 187, 255)" />
             </MenuButton>
 
             <MenuList>

@@ -21,8 +21,8 @@ export default function WelcomeModal({ show, onClose }) {
                 padding: "10px",
               }}
             >
-              Welcome to my site! Tap the arrow below to get started, then use the menu to
-              explore the cube!
+              Welcome to my site! Tap the arrow below to get started, then use
+              the menu to explore the cube...
             </p>
           </div>
           <div>
