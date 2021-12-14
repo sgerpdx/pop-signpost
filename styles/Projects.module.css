@@ -19,7 +19,7 @@
 
 .upperContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -33,7 +33,13 @@
   width: 100%;
   height: 90px;
   padding: 20px;
-  border-bottom: solid 1px coral;
+  border-bottom: solid 1px rgba(170, 199, 91, 255);
+}
+
+.scrollBorder {
+  background-color: sandybrown;
+  width: 100%;
+  height: 20px;
 }
 
 /* lower container is everything below header */
@@ -68,7 +74,7 @@
 }
 
 .lowerContainer::-webkit-scrollbar-thumb {
-  border: solid 1px coral;
+  border: solid 1px rgba(170, 199, 91, 255);
 }
 
 .lowerContainer::-webkit-scrollbar-thumb:hover {
@@ -76,7 +82,7 @@
 }
 
 .lowerContainer::-webkit-scrollbar-thumb:active {
-  background: coral;
+  background: rgba(170, 199, 91, 255);
 }
 
 .contentScrollArea {
