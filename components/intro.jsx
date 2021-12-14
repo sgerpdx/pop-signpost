@@ -11,7 +11,7 @@ export default function Intro({ onClick, toProjects }) {
         <p className={styles.introTextArea}>
           I&apos;m a software developer building full-stack applications, Have a
           look around, send me a message if you&apos;d like to collaborate, and
-          have a nice day!
+          have a nice day...
         </p>
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>
