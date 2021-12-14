@@ -31,6 +31,7 @@ export default function Projects({ value }) {
         <section className={styles.topRow}>
           <Header onClick={handleNavChange} icon={"home"} />
         </section>
+        <div className={styles.scrollBorder}></div>
       </section>
       <section className={styles.lowerContainer}>
         <section className={styles.projectScrollArea}>
