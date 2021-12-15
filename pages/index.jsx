@@ -137,7 +137,7 @@ export default function Home({ value }) {
                 <Tech />
               </div>
               <div className={styles.backBox}>
-                <About />
+                <About onClick={handleNavChange} />
               </div>
               <div className={styles.sideBoxLeft}>
                 <Contact />
