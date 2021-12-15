@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../styles/About.module.css";
 import Image from "next/image";
 //import Link from 'next/link';
+//import MeClassic from "../public/red-grey_new-3.png";
+import MeForest from "../public/me_forest-tones.JPG";
 
 export default function About({ onClick }) {
   return (
@@ -9,11 +11,9 @@ export default function About({ onClick }) {
       <section className={styles.aboutMeArea}>
         <div className={styles.aboutHeader}>
           <h4>About Me</h4>
-          <Image
-            src="http://placekitten.com/200/300"
-            width="100px"
-            height="150px"
-          />
+          <figure>
+            <Image src={MeForest} width="320px" height="240px" />
+          </figure>
         </div>
 
         <p>
