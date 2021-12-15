@@ -8,6 +8,15 @@ export default function Contact() {
         <h4>send email</h4>
         <input type="text" placeholder="type here" />
         <button>submit</button>
+        <p>
+          <a
+            href="/gerber-sam_resume-current.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>Resume</button>
+          </a>
+        </p>
       </section>
     </>
   );

@@ -18,11 +18,11 @@ export default function Tech({ onClick }) {
               <u>Libraries/Runtimes/Frameworks</u>:
             </dt>{" "}
             <dd>
-              <dt style={{ color: "#C4E175" }}>Front End:</dt>{" "}
+              <dt style={{ color: "#C4E175" }}>→ Front End:</dt>{" "}
               <dd>React.js, Next.js, React Native</dd>
             </dd>
             <dd>
-              <dt style={{ color: "#C4E175" }}>Back End:</dt>
+              <dt style={{ color: "#C4E175" }}>→ Back End:</dt>
               <dd>Node.js, Express</dd>
             </dd>
             <dt className={styles.techCategory}>
