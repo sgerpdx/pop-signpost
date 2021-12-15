@@ -12,6 +12,7 @@
   background-color: white;
   color: rgb(53, 52, 52);
   border: solid 4px rgba(113, 192, 187, 255);
+  padding: 0px 10px 0px 10px;
   overflow: auto;
 
   /* background-color: mediumturquoise; */
@@ -44,8 +45,20 @@
   background: rgba(113, 192, 187, 255);
 }
 
+.aboutHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactLink {
+  font-family: "Courier Prime", monospace;
+  font-size: 1em;
   text-decoration: underline;
+  border: none;
+  background-color: white;
+  color: rgb(53, 52, 52);
 }
 
 .contactLink:hover {
