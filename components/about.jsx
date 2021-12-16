@@ -17,16 +17,17 @@ export default function About({ onClick }) {
         </div>
 
         <p>
-          Hi, I&apos;m Sam! I love discovering the amazing connections between
-          things, and I think that one of the best things about tech is its
-          potential to bring us together, to shorten the distance in all sorts
-          of ways.
+          Hi, I&apos;m Sam! I love finding the often-amazing or surprising
+          connections between things, and I&apos;m deeply inspired by
+          tech&apos;s potential to bring us together, to shorten the distance in
+          all sorts of ways.
         </p>
         <p>
-          Along the road to software development, I&apos;ve been an account and
-          studied linguistics, with a lifelong love a languages. I&apos;m
-          energized by the universal nature of coding languages, and how a great
-          app can reach users anywhere in the world.
+          Along the road to software development, I&apos;ve been an accountant
+          and studied linguistics. Having a lifelong passion for languages,
+          I&apos;m energized by the universal nature of coding languages, both
+          in terms of collaboration potential, and in the potential for users
+          anywhere in the world to benefit from a well-designed app.
         </p>
         <p>
           I was born in and reside in Oregon, grew up in Alaska in between, and
