@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
 import Image from "next/image";
 import Layout from "../components/layout";
-import Header from "../components/header";
-import Link from "next/link";
-import { RiHomeFill } from "react-icons/ri";
-import ReturnHome from "../components/navigation/returnHome";
+//import Header from "../components/header";
+import ProjectHeader from "../components/projectHeader";
 import { Spinner } from "@chakra-ui/spinner";
-
-//imports for vue and vuera which allows use of vue in react:
-//format: import MyVueComponent from './MyVueComponent.vue'
 
 // individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
@@ -25,22 +20,23 @@ export default function Projects({ value }) {
 
   useEffect(() => {
     setLoading(false);
-    setTimeout(() => console.log("At laaast!"), 5000);
+    // setTimeout(() => console.log("At laaast!"), 5000);
   }, []);
 
-  if (loading)
-    return (
-      <div style={{ backgroundColor: "orange" }}>
-        <Spinner color="white" />
-      </div>
-    );
+  if (loading) return <Spinner color="white" />;
 
   return (
     <Layout>
       <main className={styles.container}>
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <Header onClick={handleNavChange} icon={"home"} />
+            {/* <Header onClick={handleNavChange} icon={"home"} /> */}
+            {/* <div style={{ display: "flex", flexDirection: "row" }}>
+              <Image src={Saturn3D} width="120" height="120" />
+              <h2>Projects</h2>
+              <h1>🌐</h1>
+            </div> */}
+            <ProjectHeader />
           </section>
           <div className={styles.scrollBorder}></div>
         </section>
