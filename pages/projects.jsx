@@ -7,6 +7,10 @@ import { RiHomeFill } from "react-icons/ri";
 import ReturnHome from "../components/navigation/returnHome";
 import { Spinner } from "@chakra-ui/spinner";
 
+//imports for vue and vuera which allows use of vue in react:
+//format: import MyVueComponent from './MyVueComponent.vue'
+
+
 // individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
