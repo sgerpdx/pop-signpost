@@ -45,7 +45,7 @@ export default function Tech({ onClick }) {
           <nav className={styles.projectLinksArea}>
             <p style={{ color: "rgba(113, 192, 187, 255)" }}>
               Go to{" "}
-              <Link href="/projects">
+              <Link href="/projects" scroll={false}>
                 <span onClick={onClick} className={styles.projectLinkSpan}>
                   Projects
                 </span>

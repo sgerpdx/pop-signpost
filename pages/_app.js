@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../styles/globals.css";
 //currently provider is no longer being used
 //import Provider from "../state/provider";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   //
@@ -27,7 +28,15 @@ function MyApp({ Component, pageProps }) {
     console.log("S:", stage);
   }, [stage]);
 
-  return <Component {...pageProps} value={state} />;
+  return (
+    <AnimatePresence
+      exitBeforeEnter
+      initial={false}
+      onExitComplete={() => window.scrollTo(0, 0)}
+    >
+      <Component {...pageProps} value={state} />
+    </AnimatePresence>
+  );
 }
 
 export default MyApp;

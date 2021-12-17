@@ -96,6 +96,7 @@
 }
 
 .lowerContainer::-webkit-scrollbar-thumb {
+  background: rgba(113, 192, 187, 255);
   border: solid 1px rgba(113, 192, 187, 255);
   /* background: rgb(53, 52, 52); */
 }

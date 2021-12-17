@@ -32,7 +32,7 @@ export default function Header({ onClick, icon }) {
         {icon === "none" ? (
           <></>
         ) : icon === "home" ? (
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <RiHomeFill
               title="return home"
               size="2em"

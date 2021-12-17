@@ -23,7 +23,7 @@ export default function Intro({ onClick, toProjects }) {
               tech stack
             </button>
 
-            <Link href="/projects" onClick={toProjects}>
+            <Link href="/projects" scroll={false} onClick={toProjects}>
               <button className={styles.introLinks} onClick={toProjects}>
                 projects
               </button>
