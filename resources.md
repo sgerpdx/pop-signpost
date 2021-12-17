@@ -16,3 +16,9 @@ Inter Font Family:
 ### Various Other Resources:
 
 - https://chakra-ui.com/docs/media-and-icons/icon#using-chakra-ui-icons
+
+### Tutorial for Nextjs page transitions:
+
+https://wallis.dev/blog/nextjs-page-transitions-with-framer-motion
+https://github.com/james-wallis/wallis.dev/blob/master/pages/index.tsx
+https://www.framer.com/motion/

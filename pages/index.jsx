@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 // Component imports:
+import Layout from "../components/layout";
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
 import SocialMedia from "../components/socialMedia";
@@ -108,96 +109,104 @@ export default function Home({ value }) {
   if (loading) return <Spinner color="white" />;
 
   return (
-    <main className={styles.container}>
-      {stage > 0 ? (
-        <></>
-      ) : (
-        <WelcomeModal onClose={handleModalClose} show={show} />
-      )}
+    <Layout>
+      <main className={styles.container}>
+        {stage > 0 ? (
+          <></>
+        ) : (
+          <WelcomeModal onClose={handleModalClose} show={show} />
+        )}
 
-      {/* upper container houses header row */}
-      <section className={styles.upperContainer}>
-        <section className={styles.topRow}>
-          <Header onClick={handleNavChange} icon={icon} />
+        {/* upper container houses header row */}
+        <section className={styles.upperContainer}>
+          <section className={styles.topRow}>
+            <Header onClick={handleNavChange} icon={icon} />
+          </section>
         </section>
-      </section>
 
-      {/* lower container houses the content and nav menu in flex-row-wrap */}
-      <section className={styles.lowerContainer}>
-        <section className={styles.middleRow}>
-          {entered ? (
-            <div
-              className={styles.displayArea}
-              style={{ transform: `rotateY(${contentTransform})` }}
-            >
-              <div className={styles.frontBox}>
-                <Intro onClick={handleNavChange} toProjects={changeStage} />
-              </div>
-              <div className={styles.sideBoxRight} onClick={changeStage}>
-                <Tech />
-              </div>
-              <div className={styles.backBox}>
-                <About onClick={handleNavChange} />
-              </div>
-              <div className={styles.sideBoxLeft}>
-                <Contact />
-              </div>
-              <div className={styles.topBox}>
-                <h3></h3>
-              </div>
-              <div className={styles.bottomBox}>
-                <h3></h3>
-              </div>
-            </div>
-          ) : (
-            <div
-              className={styles.displayArea}
-              style={{
-                transform:
-                  "rotate3d(1, 1, 0, -60deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5)",
-              }}
-            >
-              <div className={styles.frontBox}></div>
-              <div className={styles.sideBoxRight}></div>
-              <div className={styles.backBox}></div>
-              <div className={styles.sideBoxLeft}></div>
-              <div className={styles.topBox}></div>
-              <div className={styles.bottomBox}></div>
-            </div>
-          )}
-        </section>
-        <section className={styles.bottomRow}>
-          {entered ? (
-            <>
-              {" "}
-              <button className={styles.homeNavButton} onClick={handleBackNav}>
-                Back
-              </button>
-              <button className={styles.homeNavButton} onClick={handleHomeNav}>
-                Home
-              </button>
-            </>
-          ) : (
-            <>
-              {" "}
-              <button
-                className={styles.homeNavButton}
-                style={{ color: "grey" }}
+        {/* lower container houses the content and nav menu in flex-row-wrap */}
+        <section className={styles.lowerContainer}>
+          <section className={styles.middleRow}>
+            {entered ? (
+              <div
+                className={styles.displayArea}
+                style={{ transform: `rotateY(${contentTransform})` }}
               >
-                Back
-              </button>
-              <button
-                className={styles.homeNavButton}
-                style={{ color: "grey" }}
+                <div className={styles.frontBox}>
+                  <Intro onClick={handleNavChange} toProjects={changeStage} />
+                </div>
+                <div className={styles.sideBoxRight} onClick={changeStage}>
+                  <Tech />
+                </div>
+                <div className={styles.backBox}>
+                  <About onClick={handleNavChange} />
+                </div>
+                <div className={styles.sideBoxLeft}>
+                  <Contact />
+                </div>
+                <div className={styles.topBox}>
+                  <h3></h3>
+                </div>
+                <div className={styles.bottomBox}>
+                  <h3></h3>
+                </div>
+              </div>
+            ) : (
+              <div
+                className={styles.displayArea}
+                style={{
+                  transform:
+                    "rotate3d(1, 1, 0, -60deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5)",
+                }}
               >
-                Home
-              </button>
-            </>
-          )}
+                <div className={styles.frontBox}></div>
+                <div className={styles.sideBoxRight}></div>
+                <div className={styles.backBox}></div>
+                <div className={styles.sideBoxLeft}></div>
+                <div className={styles.topBox}></div>
+                <div className={styles.bottomBox}></div>
+              </div>
+            )}
+          </section>
+          <section className={styles.bottomRow}>
+            {entered ? (
+              <>
+                {" "}
+                <button
+                  className={styles.homeNavButton}
+                  onClick={handleBackNav}
+                >
+                  Back
+                </button>
+                <button
+                  className={styles.homeNavButton}
+                  onClick={handleHomeNav}
+                >
+                  Home
+                </button>
+              </>
+            ) : (
+              <>
+                {" "}
+                <button
+                  className={styles.homeNavButton}
+                  style={{ color: "grey" }}
+                >
+                  Back
+                </button>
+                <button
+                  className={styles.homeNavButton}
+                  style={{ color: "grey" }}
+                >
+                  Home
+                </button>
+              </>
+            )}
 
-          <SocialMedia />
+            <SocialMedia />
+          </section>
         </section>
-      </section>
-    </main>
+      </main>
+    </Layout>
   );
 }

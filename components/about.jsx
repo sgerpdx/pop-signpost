@@ -75,9 +75,8 @@ export default function About({ onClick }) {
               fontSize: "0.9em",
             }}
           >
-            keeping it in perspective: small tho&apos; we are in the grand
-            scheme, if only only horizontal dimensions are taken into account,
-            we&apos;re almost as wide as this redwood tree
+            on the bright side, if only only horizontal
+            dimensions are taken into account, almost as wide as a tree
           </figcaption>
         </figure>
         <p>
