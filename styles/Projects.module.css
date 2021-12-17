@@ -83,17 +83,17 @@
 }
 
 .lowerContainer::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 .lowerContainer::-webkit-scrollbar-track {
   background: rgba(113, 192, 187, 255);
 }
 
-.lowerContainer::-webkit-scrollbar-track:hover {
+/* .lowerContainer::-webkit-scrollbar-track:hover {
   background: rgb(53, 52, 52);
   border: solid 1px coral;
-}
+} */
 
 .lowerContainer::-webkit-scrollbar-thumb {
   background: rgba(113, 192, 187, 255);
@@ -102,13 +102,14 @@
 }
 
 .lowerContainer::-webkit-scrollbar-thumb:hover {
-  border: solid 1px coral;
+  border: solid 1px rgb(53, 52, 52);
+  background: rgb(53, 52, 52);
 }
 
-.lowerContainer::-webkit-scrollbar-thumb:active {
+/* .lowerContainer::-webkit-scrollbar-thumb:active {
   border: solid 1px coral;
   background: coral;
-}
+} */
 
 .contentScrollArea {
   display: flex;
