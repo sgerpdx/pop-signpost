@@ -21,9 +21,15 @@ export default function Projects({ value }) {
 
   useEffect(() => {
     setLoading(false);
+    setTimeout(() => console.log("At laaast!"), 5000);
   }, []);
 
-  if (loading) return <Spinner color="white" />;
+  if (loading)
+    return (
+      <div style={{ backgroundColor: "orange" }}>
+        <Spinner color="white" />
+      </div>
+    );
 
   return (
     <main className={styles.container}>
@@ -33,6 +39,7 @@ export default function Projects({ value }) {
         </section>
         <div className={styles.scrollBorder}></div>
       </section>
+
       <section className={styles.lowerContainer}>
         <section className={styles.projectScrollArea}>
           <div className={styles.contentScrollArea}>
