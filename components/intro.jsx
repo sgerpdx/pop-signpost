@@ -9,9 +9,8 @@ export default function Intro({ onClick, toProjects }) {
     <>
       <section className={styles.introTextContainer}>
         <p className={styles.introTextArea}>
-          I&apos;m a software developer building full-stack applications, Have a
-          look around, send me a message if you&apos;d like to collaborate, and
-          have a nice day :)
+          I&apos;m a software developer building full-stack applications with an
+          interest in inspiring UX. Have a look around, and have a nice day :)
         </p>
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>
