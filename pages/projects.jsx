@@ -11,6 +11,10 @@ import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
+//social media icons:
+import GithubWhite from "../public/GitHub-Mark-Light-32px.png";
+import AsteroidBlack from "../public/asteroid.png";
+
 export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
 
@@ -30,12 +34,6 @@ export default function Projects({ value }) {
       <main className={styles.container}>
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            {/* <Header onClick={handleNavChange} icon={"home"} /> */}
-            {/* <div style={{ display: "flex", flexDirection: "row" }}>
-              <Image src={Saturn3D} width="120" height="120" />
-              <h2>Projects</h2>
-              <h1>🌐</h1>
-            </div> */}
             <ProjectHeader />
           </section>
           <div className={styles.scrollBorder}></div>
@@ -50,7 +48,7 @@ export default function Projects({ value }) {
                 ></figcaption>
                 <Image
                   src={GreetingImage}
-                  alt="screenshot of designasaur park app"
+                  alt="screenshot of greeting art app"
                   width="240"
                   height="240"
                 />
@@ -60,8 +58,9 @@ export default function Projects({ value }) {
                       href="https://greeting-art.netlify.app/"
                       target="_blank"
                       rel="noreferrer"
+                      title="deployed website link"
                     >
-                      🌐
+                      <Image src={AsteroidBlack} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -69,13 +68,33 @@ export default function Projects({ value }) {
                       href="https://github.com/Greeting-Art"
                       target="_blank"
                       rel="noreferrer"
+                      title="github repository link"
                     >
-                      🔧
+                      <Image src={GithubWhite} width="32" height={32} />
                     </a>
                   </p>
                 </figcaption>
               </figure>
               <p style={{ fontSize: "1.8em" }}>Greeting Art</p>
+              {/* <figure>
+                <a
+                  href="https://github.com/Greeting-Art"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>github</span>
+                  <Image src={GithubWhite} width="32" height={32} />
+                </a>
+
+                <a
+                  href="https://greeting-art.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image src={AsteroidBlack} width="32" height={32} />
+                  <span>website</span>
+                </a>
+              </figure> */}
               <div className={styles.projectSummaryArea}>
                 <p>
                   Random generative art creation tool with gallery and
@@ -104,7 +123,7 @@ export default function Projects({ value }) {
                 ></figcaption>
                 <Image
                   src={ElseImage}
-                  alt="screenshot of designasaur park app"
+                  alt="screenshot of else by elsewhere app"
                   width="240"
                   height="240"
                 />
@@ -114,8 +133,9 @@ export default function Projects({ value }) {
                       href="https://else-by-elsewhere.netlify.app/"
                       target="_blank"
                       rel="noreferrer"
+                      title="deployed website link"
                     >
-                      🌐
+                      <Image src={AsteroidBlack} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -123,8 +143,9 @@ export default function Projects({ value }) {
                       href="https://github.com/where-in-the-search"
                       target="_blank"
                       rel="noreferrer"
+                      title="github repository link"
                     >
-                      🔧
+                      <Image src={GithubWhite} width="32" height={32} />
                     </a>
                   </p>
                 </figcaption>
@@ -132,7 +153,7 @@ export default function Projects({ value }) {
               <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
               <div className={styles.projectSummaryArea}>
                 <p>
-                  API-driven geoguessing game app. primarily mobprogrammed in a
+                  API-driven geoguessing game app. primarily mob programmed in a
                   one-week remote sprint, using:
                 </p>
                 <ul>
@@ -164,8 +185,9 @@ export default function Projects({ value }) {
                       href="https://designosaurpark.github.io/DesignasaurPark/"
                       target="_blank"
                       rel="noreferrer"
+                      title="deployed website link"
                     >
-                      🌐
+                      <Image src={AsteroidBlack} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -173,8 +195,9 @@ export default function Projects({ value }) {
                       href="https://github.com/DesignosaurPark/DesignasaurPark"
                       target="_blank"
                       rel="noreferrer"
+                      title="github repository link"
                     >
-                      🔧
+                      <Image src={GithubWhite} width="32" height={32} />
                     </a>
                   </p>
                 </figcaption>
@@ -197,9 +220,7 @@ export default function Projects({ value }) {
                   thematically-styled sign-in on the homepage; and created
                   graphics assets.
                 </p>
-                <nav>
-                  <button onClick={handleNavChange}>return home</button>
-                </nav>
+                <nav></nav>
               </div>
             </div>
           </section>

@@ -10,13 +10,11 @@
   backface-visibility: hidden;
   background-color: rgb(53, 52, 52);
   padding: 0px 40px 0px 40px;
-  /* background-color: mediumslateblue; */
 }
 
 .socialMediaTextArea {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
@@ -26,23 +24,29 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgba(113, 192, 187, 255);
+  background-color: rgb(53, 52, 52);
   color: rgb(53, 52, 52);
-  border: solid 2px white;
-  border-radius: 8px;
+  border: solid 2px rgba(113, 192, 187, 255);
+  font-weight: bold;
   width: 180px;
   height: 60px;
   margin-top: 20px;
 }
 
 .resumeButtonContact {
-  border: solid 2px rgba(113, 192, 187, 255);
+  border: solid 2px white;
   border-radius: 6px;
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: rgb(53, 52, 52);
   font-size: 1em;
 }
 
 .resumeButtonContact:hover {
   cursor: pointer;
+  border: solid 2px rgba(113, 192, 187, 255);
+}
+
+.resumeButtonContact:active {
+  background-color: rgb(53, 52, 52);
+  color: white;
 }

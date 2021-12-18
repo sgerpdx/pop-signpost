@@ -3,7 +3,6 @@ import styles from "../styles/Contact.module.css";
 import Image from "next/image";
 //
 import StarsImage from "../public/stars.png";
-import AsteroidImage from "../public/asteroid-blue.png";
 
 export default function Contact() {
   return (

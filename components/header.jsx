@@ -3,8 +3,6 @@ import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
 import { RiMenuLine } from "react-icons/ri";
-import Link from "next/link";
-import { RiHomeFill } from "react-icons/ri";
 
 // Personal Logo:
 import PlanetImage from "../public/saturn-simple.png";
@@ -17,7 +15,7 @@ export default function Header({ onClick, icon }) {
         <div className={styles.logoImageArea}>
           <Image
             src={PlanetImage}
-            alt="logo image of a blue planet with golden-brown ring"
+            alt="logo image of a blue ringed planet and stars"
             height="48"
             width="48"
           />
@@ -30,7 +28,18 @@ export default function Header({ onClick, icon }) {
       </section>
       <section className={styles.mainMenuArea}>
         {icon === "none" ? (
-          <></>
+          <Menu>
+            <MenuButton
+              className={styles.headerMenuButton}
+              style={{
+                backgroundColor: "rgba(53, 52, 52,0)",
+                padding: "4px",
+                border: "none",
+              }}
+            >
+              <RiMenuLine size="3em" color="grey" />
+            </MenuButton>
+          </Menu>
         ) : (
           <Menu>
             <MenuButton
@@ -57,7 +66,7 @@ export default function Header({ onClick, icon }) {
               <MenuItem
                 className={styles.headerMenuItem}
                 onClick={onClick}
-                value="projects"
+                value="tech"
                 w="96px"
                 h="28px"
                 _active={{
@@ -65,7 +74,7 @@ export default function Header({ onClick, icon }) {
                   color: "rgb(53, 52, 52)",
                 }}
               >
-                Projects
+                Tech
               </MenuItem>
               <MenuItem
                 className={styles.headerMenuItem}

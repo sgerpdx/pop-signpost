@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/globals.css";
+import Head from "next/head";
 //currently provider is no longer being used
 //import Provider from "../state/provider";
 import { AnimatePresence } from "framer-motion";
@@ -29,13 +30,18 @@ function MyApp({ Component, pageProps }) {
   }, [stage]);
 
   return (
-    <AnimatePresence
-      exitBeforeEnter
-      initial={false}
-      onExitComplete={() => window.scrollTo(0, 0)}
-    >
-      <Component {...pageProps} value={state} />
-    </AnimatePresence>
+    <>
+      <Head>
+        <link rel="icon" href="/saturn-simple.png" type="image/png" />
+      </Head>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} value={state} />
+      </AnimatePresence>
+    </>
   );
 }
 

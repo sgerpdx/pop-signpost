@@ -67,7 +67,7 @@ export default function Home({ value }) {
     const currentContent = content;
 
     if (currentContent === "home") setContentTransform("0deg");
-    if (currentContent === "projects") setContentTransform("-90deg");
+    if (currentContent === "tech") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
     const newContentHistory = contentHistory;
