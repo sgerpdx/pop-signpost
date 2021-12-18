@@ -64,3 +64,13 @@
 .contactLink:hover {
   cursor: pointer;
 }
+
+.backToTopIcon {
+  color: rgba(113, 192, 187, 255);
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
+
+.creditsList {
+  list-style-type: none;
+}
