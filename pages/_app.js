@@ -32,6 +32,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>Sam Gerber</title>
+        <meta property="my-title" content="Sam Gerber" key="title" />
         <link rel="icon" href="/saturn-simple.png" type="image/png" />
       </Head>
       <AnimatePresence
