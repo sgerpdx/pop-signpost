@@ -13,8 +13,6 @@ import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
 //social media icons:
 import GithubWhite from "../public/GitHub-Mark-Light-32px.png";
-import LinkedinWhite from "../public/linkedin-logo-white-32.png";
-import TwitterWhite from "../public/twitter-logo-white-32.png";
 import AsteroidBlack from "../public/asteroid.png";
 
 export default function Projects({ value }) {
@@ -155,7 +153,7 @@ export default function Projects({ value }) {
               <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
               <div className={styles.projectSummaryArea}>
                 <p>
-                  API-driven geoguessing game app. primarily mobprogrammed in a
+                  API-driven geoguessing game app. primarily mob programmed in a
                   one-week remote sprint, using:
                 </p>
                 <ul>
@@ -222,9 +220,7 @@ export default function Projects({ value }) {
                   thematically-styled sign-in on the homepage; and created
                   graphics assets.
                 </p>
-                <nav>
-                  <button onClick={handleNavChange}>return home</button>
-                </nav>
+                <nav></nav>
               </div>
             </div>
           </section>

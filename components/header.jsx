@@ -30,7 +30,18 @@ export default function Header({ onClick, icon }) {
       </section>
       <section className={styles.mainMenuArea}>
         {icon === "none" ? (
-          <></>
+          <Menu>
+            <MenuButton
+              className={styles.headerMenuButton}
+              style={{
+                backgroundColor: "rgba(53, 52, 52,0)",
+                padding: "4px",
+                border: "none",
+              }}
+            >
+              <RiMenuLine size="3em" color="grey" />
+            </MenuButton>
+          </Menu>
         ) : (
           <Menu>
             <MenuButton
