@@ -10,12 +10,14 @@ export default function ProjectHeader() {
     <>
       <section className={styles.mainLogoArea}>
         <div className={styles.logoImageArea}>
-          <Image
-            src={Planet3D}
-            alt="logo image of a blue planet with rings and stars"
-            height="48"
-            width="48"
-          />
+          <Link href="/" scroll={false}>
+            <Image
+              src={Planet3D}
+              alt="logo image of a blue planet with rings and stars"
+              height="48"
+              width="48"
+            />
+          </Link>
         </div>
       </section>
       <section className={styles.mainTitleArea}>
