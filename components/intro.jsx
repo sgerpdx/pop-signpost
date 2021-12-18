@@ -18,7 +18,7 @@ export default function Intro({ onClick, toProjects }) {
             <button
               className={styles.introLinks}
               onClick={onClick}
-              value="projects"
+              value="tech"
             >
               tech stack
             </button>
