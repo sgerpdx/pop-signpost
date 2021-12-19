@@ -47,15 +47,23 @@ export default function Projects({ value }) {
                 <figcaption
                   style={{ width: "48px", textAlign: "center" }}
                 ></figcaption>
-                <Image
-                  src={GreetingImage}
-                  alt="screenshot of greeting art app"
-                  width="240"
-                  height="240"
-                  id="projects-top"
-                />
+                <a
+                  href="https://greeting-art.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="deployed website link"
+                >
+                  <Image
+                    src={GreetingImage}
+                    alt="screenshot of greeting art app"
+                    width="240"
+                    height="240"
+                    id="projects-top"
+                  />
+                </a>
+
                 <figcaption style={{ width: "48px", textAlign: "center" }}>
-                  <p>
+                  {/* <p>
                     <a
                       href="https://greeting-art.netlify.app/"
                       target="_blank"
@@ -64,7 +72,7 @@ export default function Projects({ value }) {
                     >
                       <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
-                  </p>
+                  </p> */}
                   <p>
                     <a
                       href="https://github.com/Greeting-Art"
@@ -79,7 +87,7 @@ export default function Projects({ value }) {
                     <a
                       href="#projects-top"
                       rel="noreferrer"
-                      title="link to top of page"
+                      title="return to top of page"
                     >
                       <TiArrowBack
                         style={{
@@ -137,14 +145,22 @@ export default function Projects({ value }) {
                 <figcaption
                   style={{ width: "48px", textAlign: "center" }}
                 ></figcaption>
-                <Image
-                  src={ElseImage}
-                  alt="screenshot of else by elsewhere app"
-                  width="240"
-                  height="240"
-                />
+                <a
+                  href="https://else-by-elsewhere.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="deployed website link"
+                >
+                  <Image
+                    src={ElseImage}
+                    alt="screenshot of else by elsewhere app"
+                    width="240"
+                    height="240"
+                  />
+                </a>
+
                 <figcaption style={{ width: "48px", textAlign: "center" }}>
-                  <p>
+                  {/* <p>
                     <a
                       href="https://else-by-elsewhere.netlify.app/"
                       target="_blank"
@@ -153,7 +169,7 @@ export default function Projects({ value }) {
                     >
                       <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
-                  </p>
+                  </p> */}
                   <p>
                     <a
                       href="https://github.com/where-in-the-search"
@@ -168,7 +184,7 @@ export default function Projects({ value }) {
                     <a
                       href="#projects-top"
                       rel="noreferrer"
-                      title="link to top of page"
+                      title="return to top of page"
                     >
                       <TiArrowBack
                         style={{
@@ -203,14 +219,22 @@ export default function Projects({ value }) {
                 <figcaption
                   style={{ width: "48px", textAlign: "center" }}
                 ></figcaption>
-                <Image
-                  src={DesignasaurImage}
-                  alt="screenshot of designasaur park app"
-                  width="240"
-                  height="240"
-                />
+                <a
+                  href="https://designosaurpark.github.io/DesignasaurPark/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="deployed website link"
+                >
+                  <Image
+                    src={DesignasaurImage}
+                    alt="screenshot of designasaur park app"
+                    width="240"
+                    height="240"
+                  />
+                </a>
+
                 <figcaption style={{ width: "48px", textAlign: "center" }}>
-                  <p>
+                  {/* <p>
                     <a
                       href="https://designosaurpark.github.io/DesignasaurPark/"
                       target="_blank"
@@ -219,7 +243,7 @@ export default function Projects({ value }) {
                     >
                       <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
-                  </p>
+                  </p> */}
                   <p>
                     <a
                       href="https://github.com/DesignosaurPark/DesignasaurPark"
@@ -234,7 +258,7 @@ export default function Projects({ value }) {
                     <a
                       href="#projects-top"
                       rel="noreferrer"
-                      title="link to top of page"
+                      title="return to top of page"
                     >
                       <TiArrowBack
                         style={{
