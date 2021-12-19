@@ -16,6 +16,8 @@ import Contact from "../components/contact";
 
 // images and icons:
 import { Spinner } from "@chakra-ui/spinner";
+import { TiArrowBack } from "react-icons/ti";
+import { TiHome } from "react-icons/ti";
 
 export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
@@ -177,12 +179,14 @@ export default function Home({ value }) {
                   onClick={handleBackNav}
                 >
                   Back
+                  <TiArrowBack className={styles.homeNavIcon} />
                 </button>
                 <button
                   className={styles.homeNavButton}
                   onClick={handleHomeNav}
                 >
                   Home
+                  <TiHome className={styles.homeNavIcon} />
                 </button>
               </>
             ) : (
