@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
 .mainLogoArea {
   display: flex;
   flex-direction: row;
@@ -31,6 +34,10 @@
   width: 240px;
   height: 80px;
   font-size: 2em;
+}
+
+.subHeading {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mainMenuArea {

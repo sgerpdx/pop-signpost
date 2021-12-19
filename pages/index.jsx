@@ -16,6 +16,8 @@ import Contact from "../components/contact";
 
 // images and icons:
 import { Spinner } from "@chakra-ui/spinner";
+import { TiArrowBack } from "react-icons/ti";
+import { TiHome } from "react-icons/ti";
 
 export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
@@ -169,41 +171,49 @@ export default function Home({ value }) {
             )}
           </section>
           <section className={styles.bottomRow}>
-            {entered ? (
-              <>
-                {" "}
-                <button
-                  className={styles.homeNavButton}
-                  onClick={handleBackNav}
-                >
-                  Back
-                </button>
-                <button
-                  className={styles.homeNavButton}
-                  onClick={handleHomeNav}
-                >
-                  Home
-                </button>
-              </>
-            ) : (
-              <>
-                {" "}
-                <button
-                  className={styles.homeNavButton}
-                  style={{ color: "grey" }}
-                >
-                  Back
-                </button>
-                <button
-                  className={styles.homeNavButton}
-                  style={{ color: "grey" }}
-                >
-                  Home
-                </button>
-              </>
-            )}
-
-            <SocialMedia />
+            <div className={styles.navIconArea}>
+              {entered ? (
+                <>
+                  {" "}
+                  <button
+                    className={styles.homeNavButton}
+                    onClick={handleBackNav}
+                  >
+                    <TiArrowBack className={styles.homeNavIcon} />
+                  </button>
+                  <button
+                    className={styles.homeNavButton}
+                    onClick={handleHomeNav}
+                  >
+                    <TiHome className={styles.homeNavIcon} />
+                  </button>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <button
+                    className={styles.homeNavButton}
+                    style={{ color: "grey", visibility: "hidden" }}
+                  >
+                    <TiArrowBack className={styles.homeNavIcon} />
+                  </button>
+                  <button
+                    className={styles.homeNavButton}
+                    style={{ color: "grey", visibility: "hidden" }}
+                  >
+                    <TiHome className={styles.homeNavIcon} />
+                  </button>
+                </>
+              )}
+            </div>
+            <div className={styles.socialMediaArea}>
+              <SocialMedia />
+            </div>
+            {/* <span
+              style={{ color: "rgba(113, 192, 187, 255)", fontSize: "0.8em" }}
+            >
+              © 2021 sam gerber
+            </span> */}
           </section>
         </section>
       </main>

@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "../styles/SocialMedia.module.css";
 import Image from "next/image";
+//image static imports:
 import LogoTwitter from "../public/twitter.png";
+//import TwitterWhite from '../public/twitter-white.png';
 import LogoLinkedin from "../public/linkedin.png";
+//import LinkedinWhite from '../public/linkedin-white.png';
 import LogoGitHub from "../public/github.png";
+//import GithubWhite from '../public/github-white.png';
 
 export default function SocialMedia() {
   return (
