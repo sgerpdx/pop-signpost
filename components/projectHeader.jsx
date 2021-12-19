@@ -1,5 +1,5 @@
 import React from "react";
-import Planet3D from "../public/saturn-3d.png";
+import SatelliteBlue from "../public/satellite-blue.png";
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +12,7 @@ export default function ProjectHeader() {
         <div className={styles.logoImageArea}>
           <Link href="/" scroll={false}>
             <Image
-              src={Planet3D}
+              src={SatelliteBlue}
               alt="logo image of a blue planet with rings and stars"
               height="48"
               width="48"
