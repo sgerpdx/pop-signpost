@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 //import Header from "../components/header";
 import ProjectHeader from "../components/projectHeader";
 import { Spinner } from "@chakra-ui/spinner";
+import { TiArrowBack } from "react-icons/ti";
 
 // individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
@@ -12,8 +13,8 @@ import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
 //social media icons:
-import GithubWhite from "../public/GitHub-Mark-Light-32px.png";
-import AsteroidBlack from "../public/asteroid.png";
+import GithubDkGrey from "../public/github-dkgrey.png";
+import GlobeDkGrey from "../public/network-dkgrey.png";
 
 export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ export default function Projects({ value }) {
                   alt="screenshot of greeting art app"
                   width="240"
                   height="240"
+                  id="projects-top"
                 />
                 <figcaption style={{ width: "48px", textAlign: "center" }}>
                   <p>
@@ -60,7 +62,7 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="deployed website link"
                     >
-                      <Image src={AsteroidBlack} width="32" height={32} />
+                      <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -70,7 +72,21 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="github repository link"
                     >
-                      <Image src={GithubWhite} width="32" height={32} />
+                      <Image src={GithubDkGrey} width="32" height={32} />
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#projects-top"
+                      rel="noreferrer"
+                      title="link to top of page"
+                    >
+                      <TiArrowBack
+                        style={{
+                          transform: "rotate(90deg)",
+                          fontSize: "1.8em",
+                        }}
+                      />
                     </a>
                   </p>
                 </figcaption>
@@ -83,7 +99,7 @@ export default function Projects({ value }) {
                   rel="noreferrer"
                 >
                   <span>github</span>
-                  <Image src={GithubWhite} width="32" height={32} />
+                  <Image src={GithubDkGrey} width="32" height={32} />
                 </a>
 
                 <a
@@ -91,7 +107,7 @@ export default function Projects({ value }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image src={AsteroidBlack} width="32" height={32} />
+                  <Image src={GlobeDkGrey} width="32" height={32} />
                   <span>website</span>
                 </a>
               </figure> */}
@@ -135,7 +151,7 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="deployed website link"
                     >
-                      <Image src={AsteroidBlack} width="32" height={32} />
+                      <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -145,7 +161,21 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="github repository link"
                     >
-                      <Image src={GithubWhite} width="32" height={32} />
+                      <Image src={GithubDkGrey} width="32" height={32} />
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#projects-top"
+                      rel="noreferrer"
+                      title="link to top of page"
+                    >
+                      <TiArrowBack
+                        style={{
+                          transform: "rotate(90deg)",
+                          fontSize: "1.8em",
+                        }}
+                      />
                     </a>
                   </p>
                 </figcaption>
@@ -187,7 +217,7 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="deployed website link"
                     >
-                      <Image src={AsteroidBlack} width="32" height={32} />
+                      <Image src={GlobeDkGrey} width="32" height={32} />
                     </a>
                   </p>
                   <p>
@@ -197,7 +227,21 @@ export default function Projects({ value }) {
                       rel="noreferrer"
                       title="github repository link"
                     >
-                      <Image src={GithubWhite} width="32" height={32} />
+                      <Image src={GithubDkGrey} width="32" height={32} />
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#projects-top"
+                      rel="noreferrer"
+                      title="link to top of page"
+                    >
+                      <TiArrowBack
+                        style={{
+                          transform: "rotate(90deg)",
+                          fontSize: "1.8em",
+                        }}
+                      />
                     </a>
                   </p>
                 </figcaption>
