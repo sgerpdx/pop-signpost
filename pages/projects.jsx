@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 //import Header from "../components/header";
 import ProjectHeader from "../components/projectHeader";
 import { Spinner } from "@chakra-ui/spinner";
-import { TiArrowBack } from "react-icons/ti";
+//import { TiArrowBack } from "react-icons/ti";
 
 // individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
@@ -14,7 +14,7 @@ import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 
 //social media icons:
 import GithubDkGrey from "../public/github-dkgrey.png";
-import GlobeDkGrey from "../public/network-dkgrey.png";
+//import GlobeDkGrey from "../public/network-dkgrey.png";
 
 export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
@@ -83,7 +83,7 @@ export default function Projects({ value }) {
                       <Image src={GithubDkGrey} width="32" height={32} />
                     </a>
                   </p>
-                  <p>
+                  {/* <p>
                     <a
                       href="#projects-top"
                       rel="noreferrer"
@@ -96,29 +96,10 @@ export default function Projects({ value }) {
                         }}
                       />
                     </a>
-                  </p>
+                  </p> */}
                 </figcaption>
               </figure>
               <p style={{ fontSize: "1.8em" }}>Greeting Art</p>
-              {/* <figure>
-                <a
-                  href="https://github.com/Greeting-Art"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>github</span>
-                  <Image src={GithubDkGrey} width="32" height={32} />
-                </a>
-
-                <a
-                  href="https://greeting-art.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={GlobeDkGrey} width="32" height={32} />
-                  <span>website</span>
-                </a>
-              </figure> */}
               <div className={styles.projectSummaryArea}>
                 <p>
                   Random generative art creation tool with gallery and
@@ -180,7 +161,7 @@ export default function Projects({ value }) {
                       <Image src={GithubDkGrey} width="32" height={32} />
                     </a>
                   </p>
-                  <p>
+                  {/* <p>
                     <a
                       href="#projects-top"
                       rel="noreferrer"
@@ -193,7 +174,7 @@ export default function Projects({ value }) {
                         }}
                       />
                     </a>
-                  </p>
+                  </p> */}
                 </figcaption>
               </figure>
               <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
@@ -254,7 +235,7 @@ export default function Projects({ value }) {
                       <Image src={GithubDkGrey} width="32" height={32} />
                     </a>
                   </p>
-                  <p>
+                  {/* <p>
                     <a
                       href="#projects-top"
                       rel="noreferrer"
@@ -267,7 +248,7 @@ export default function Projects({ value }) {
                         }}
                       />
                     </a>
-                  </p>
+                  </p> */}
                 </figcaption>
               </figure>
               <p style={{ fontSize: "1.8em" }}>Designasaur Park</p>
