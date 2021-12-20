@@ -180,6 +180,15 @@ export default function Projects({ value }) {
               </figure>
               <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
               <div className={styles.projectSummaryArea}>
+                <p
+                  style={{
+                    backgroundColor: "rgb(53, 52, 52)",
+                    color: "white",
+                    fontSize: "0.9em",
+                  }}
+                >
+                  ***note: currently working on an API key issue***
+                </p>
                 <p>
                   API-driven geoguessing game app. primarily mob programmed in a
                   one-week remote sprint, using:
@@ -339,6 +348,7 @@ export default function Projects({ value }) {
                     href="https://itch.io/jam/stop-waiting-for-godot"
                     target="blank"
                     rel="noreferrer"
+                    style={{ textDecoration: "underline" }}
                   >
                     <em>Stop Waiting For Godot</em>
                   </a>{" "}
