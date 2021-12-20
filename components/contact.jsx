@@ -3,6 +3,7 @@ import styles from "../styles/Contact.module.css";
 import Image from "next/image";
 //
 import StarsImage from "../public/stars.png";
+import EnvelopeImage from "../public/email-blue.png";
 
 export default function Contact() {
   return (
@@ -11,16 +12,11 @@ export default function Contact() {
         <h2>Contact Details</h2>
 
         {/* concerning email */}
-        <p>
-          <span
-            style={{
-              color: "rgba(113, 192, 187, 255)",
-              fontSize: "1.2em",
-              marginRight: "10px",
-            }}
-          >
-            ✉
-          </span>
+        <div className={styles.socialMediaTextArea}>
+          <figure style={{ marginRight: "10px" }}>
+            {" "}
+            <Image src={EnvelopeImage} width="27px" height="27px" />
+          </figure>
           <a
             style={{ textDecoration: "underline" }}
             href="mailto:samhgerber@protonmail.com"
@@ -28,7 +24,7 @@ export default function Contact() {
           >
             send me an email
           </a>
-        </p>
+        </div>
 
         {/* concerning social media */}
         <div className={styles.socialMediaTextArea}>
@@ -39,7 +35,7 @@ export default function Contact() {
 
           <p style={{ width: "240px", textAlign: "left" }}>
             {" "}
-            check out my social media links (below the cube){" "}
+            check out my social media links (below){" "}
           </p>
         </div>
 
