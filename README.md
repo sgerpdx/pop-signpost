@@ -1,34 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Sam's Personal Portfolio Site
 
-## Getting Started
+Note on the code: Believe it or not, this repo began simply as the base for a single-page placeholder in lieu of my 'real' site, a longer-term project. One thing led to another and long story short, this little signpost acquired an improvisational complexity beyond my initial intent.
 
-First, run the development server:
+As such, refactoring and simplification of theme and styling are ongoing efforts, as I work to make the code more efficient and readable, now that the nature of the thing is known.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Credits + Resources
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+After a bit of a search for an easy-to-implement approach to page transitions, I came across and made use of [this excellent tutorial](https://wallis.dev/blog/nextjs-page-transitions-with-framer-motion) by James Wallis.
