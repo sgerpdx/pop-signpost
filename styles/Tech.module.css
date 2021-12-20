@@ -1,5 +1,7 @@
 .techCategory {
   color: #c4e175;
+  color: #faa2fa;
+  color: #71c0bb;
 }
 
 .projectLinksArea {
@@ -20,20 +22,21 @@
 
 .projectLinkSpan:active {
   color: #c4e175;
+  color: #faa2fa;
 }
 
 .projectLinkIcon {
-  color: rgba(113, 192, 187, 255);
+  color: #71c0bb;
   margin: 6px;
   border-radius: 0.5em;
 }
 
 .projectLinkIcon:hover {
   color: white;
-  border: solid 1px #c4e175;
+  border: solid 1px #faa2fa;
 }
 
 .projectLinkIcon:active {
-  background-color: #c4e175;
+  background-color: #faa2fa;
   color: rgb(53, 52, 52);
 }
