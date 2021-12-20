@@ -48,11 +48,11 @@ export default function About({ onClick }) {
             </figure>
           </div>
 
-          <p>
-            Hi, I&apos;m Sam! I love finding the often-amazing or surprising
-            connections between things, and I&apos;m deeply inspired by
-            tech&apos;s potential to bring us together, to shorten the distance
-            in all sorts of ways.
+          <p style={{ marginBottom: "32px" }}>
+            Hi, I&apos;m Sam! I love finding the unexpected and often-amazing
+            connections between things, even moreso between people. I&apos;m
+            deeply inspired by tech&apos;s potential to bring out those
+            connections between us.
           </p>
           <figure
             style={{
@@ -60,6 +60,7 @@ export default function About({ onClick }) {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              marginBottom: "20px",
             }}
           >
             <Image src={MeCoffee} width="240px" height="240px" />
@@ -74,12 +75,12 @@ export default function About({ onClick }) {
               an absurdly contemplative moment
             </figcaption>
           </figure>
-          <p>
+          <p style={{ marginBottom: "32px" }}>
             Along the road to software development, I&apos;ve been an accountant
             and studied linguistics. Having a lifelong passion for languages,
-            I&apos;m energized by the universal nature of coding languages, both
-            in terms of collaboration, and in the potential for users anywhere
-            in the world to benefit from a well-designed app.
+            I&apos;m energized by the universal nature of coding. It&apos;s an
+            incredible thing to be able to communicate and collaborate
+            regardless of borders or distance.
           </p>
           <figure
             style={{
@@ -87,6 +88,7 @@ export default function About({ onClick }) {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              marginBottom: "20px",
             }}
           >
             <Image src={MeRedwoods} width="320px" height="240px" />
@@ -98,16 +100,16 @@ export default function About({ onClick }) {
                 fontSize: "0.9em",
               }}
             >
-              if only only horizontal dimensions are taken into account, almost
-              as wide as a tree
+              glass-half-full: if only only horizontal dimensions are taken into
+              account, almost as wide as a tree
             </figcaption>
           </figure>
-          <p>
-            I was born in and reside in Oregon, grew up in Alaska in between,
-            and love getting out into our beautiful forests, visiting the coast
-            or the mountains when I have the chance, as well as reading and
-            writing fiction in my free time. Coffee, music and random humor also
-            figure in. Feel free to{" "}
+          <p style={{ marginBottom: "32px" }}>
+            I was born/reside in Oregon, grew up in Alaska in between, and love
+            getting out into our beautiful forests, visiting the coast or the
+            mountains when I have the chance, as well as reading and writing
+            fiction in my free time. Coffee, music and random humor also figure
+            in. Feel free to{" "}
             <button
               className={styles.contactLink}
               onClick={onClick}
