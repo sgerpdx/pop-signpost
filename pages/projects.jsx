@@ -301,44 +301,11 @@ export default function Projects({ value }) {
                   />
                 </a>
 
-                <figcaption style={{ width: "48px", textAlign: "center" }}>
-                  {/* <p>
-                    <a
-                      href="https://designosaurpark.github.io/DesignasaurPark/"
-                      target="_blank"
-                      rel="noreferrer"
-                      title="deployed website link"
-                    >
-                      <Image src={GlobeDkGrey} width="32" height={32} />
-                    </a>
-                  </p> */}
-                  {/* <p>
-                    <a
-                      href="https://github.com/DesignosaurPark/DesignasaurPark"
-                      target="_blank"
-                      rel="noreferrer"
-                      title="github repository link"
-                    >
-                      <Image src={GithubDkGrey} width="32" height={32} />
-                    </a>
-                  </p> */}
-                  {/* <p>
-                    <a
-                      href="#projects-top"
-                      rel="noreferrer"
-                      title="return to top of page"
-                    >
-                      <TiArrowBack
-                        style={{
-                          transform: "rotate(90deg)",
-                          fontSize: "1.8em",
-                        }}
-                      />
-                    </a>
-                  </p> */}
-                </figcaption>
+                <figcaption
+                  style={{ width: "48px", textAlign: "center" }}
+                ></figcaption>
               </figure>
-              <p style={{ fontSize: "1.8em" }}>S'mple S'more</p>
+              <p style={{ fontSize: "1.8em" }}>S&apos;mple S&apos;more</p>
               <div className={styles.projectSummaryArea}>
                 <p>
                   A fun, very simple little camping-themed game that a friend
