@@ -103,13 +103,11 @@
 
 .lowerContainer::-webkit-scrollbar-thumb:hover {
   border: solid 1px rgb(53, 52, 52);
-  background: rgb(53, 52, 52);
 }
 
-/* .lowerContainer::-webkit-scrollbar-thumb:active {
-  border: solid 1px coral;
-  background: coral;
-} */
+.lowerContainer::-webkit-scrollbar-thumb:active {
+  background: rgb(53, 52, 52);
+}
 
 .contentScrollArea {
   display: flex;
