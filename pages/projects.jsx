@@ -11,6 +11,7 @@ import { Spinner } from "@chakra-ui/spinner";
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
+import SimpleSmoreImage from "../public/Projects_Simple-Smore.png";
 
 //social media icons:
 import GithubDkGrey from "../public/github-dkgrey.png";
@@ -179,6 +180,15 @@ export default function Projects({ value }) {
               </figure>
               <p style={{ fontSize: "1.8em" }}>Else By Elsewhere</p>
               <div className={styles.projectSummaryArea}>
+                <p
+                  style={{
+                    backgroundColor: "rgb(53, 52, 52)",
+                    color: "white",
+                    fontSize: "0.9em",
+                  }}
+                >
+                  ***note: currently working on an API key issue***
+                </p>
                 <p>
                   API-driven geoguessing game app. primarily mob programmed in a
                   one-week remote sprint, using:
@@ -191,7 +201,7 @@ export default function Projects({ value }) {
                 <p>
                   My role: I pitched the idea; researched APIs; and developed a
                   state-management framework for the user-controls to zoom and
-                  rotate Google-sourced images;
+                  rotate Google-sourced images.
                 </p>
               </div>
             </div>
@@ -268,6 +278,48 @@ export default function Projects({ value }) {
                   rendering via the DOM; set up avatar selection and
                   thematically-styled sign-in on the homepage; and created
                   graphics assets.
+                </p>
+                <nav></nav>
+              </div>
+            </div>
+            <div className={styles.contentScrollArea}>
+              <figure className={styles.projectImageArea}>
+                <figcaption
+                  style={{ width: "48px", textAlign: "center" }}
+                ></figcaption>
+                <a
+                  href="https://samger.itch.io/smplsmore"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="deployed website link"
+                >
+                  <Image
+                    src={SimpleSmoreImage}
+                    alt="screenshot of simple s'more game app"
+                    width="240"
+                    height="240"
+                  />
+                </a>
+
+                <figcaption
+                  style={{ width: "48px", textAlign: "center" }}
+                ></figcaption>
+              </figure>
+              <p style={{ fontSize: "1.8em" }}>S&apos;mple S&apos;more</p>
+              <div className={styles.projectSummaryArea}>
+                <p>
+                  A fun, very simple little camping-themed game that a friend
+                  and I built over a couple of days using the Godot Game Engine
+                  for the{" "}
+                  <a
+                    href="https://itch.io/jam/stop-waiting-for-godot"
+                    target="blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "underline" }}
+                  >
+                    <em>Stop Waiting For Godot</em>
+                  </a>{" "}
+                  game jam.
                 </p>
                 <nav></nav>
               </div>
