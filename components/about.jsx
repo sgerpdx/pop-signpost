@@ -12,7 +12,7 @@ import { TiArrowBack } from "react-icons/ti";
 export default function About({ onClick }) {
   return (
     <>
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -31,7 +31,7 @@ export default function About({ onClick }) {
         >
           <a href="#about-me">about</a> | <a href="#about-credits">credits</a>
         </p>
-      </div>
+      </div> */}
       <section className={styles.aboutMeArea}>
         <section id="about-me">
           <div className={styles.aboutHeader}>
@@ -98,8 +98,8 @@ export default function About({ onClick }) {
                 fontSize: "0.9em",
               }}
             >
-              on the bright side, if only only horizontal dimensions are taken
-              into account, almost as wide as a tree
+              if only only horizontal dimensions are taken into account, almost
+              as wide as a tree
             </figcaption>
           </figure>
           <p>
@@ -129,9 +129,9 @@ export default function About({ onClick }) {
             }}
           >
             <h2>Site Credits</h2>
-            <a href="#about-top">
+            {/* <a href="#about-top">
               <TiArrowBack className={styles.backToTopIcon} />
-            </a>
+            </a> */}
           </span>
           <p>
             This website was built using React with a Next.js framework, the

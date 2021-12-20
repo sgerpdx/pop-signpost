@@ -19,9 +19,9 @@ import GithubDkGrey from "../public/github-dkgrey.png";
 export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
 
-  const handleNavChange = () => {
-    console.log("ET Phone Home");
-  };
+  // const handleNavChange = () => {
+  //   console.log("ET Phone Home");
+  // };
 
   useEffect(() => {
     setLoading(false);
