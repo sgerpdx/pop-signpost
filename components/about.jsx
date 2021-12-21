@@ -100,8 +100,7 @@ export default function About({ onClick }) {
                 fontSize: "0.9em",
               }}
             >
-              glass-half-full: if only only horizontal dimensions are taken into
-              account, almost as wide as a tree
+              requisite self-to-redwood comparison
             </figcaption>
           </figure>
           <p style={{ marginBottom: "32px" }}>
@@ -139,7 +138,12 @@ export default function About({ onClick }) {
             This website was built using React with a Next.js framework, the
             Framer Motion, Chakra UI and React Icons libraries, AWS S3 cloud
             storage, and image assets by the following creators at{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
+            <a
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span style={{ textDecoration: "underline" }}>
                 www.flaticon.com
               </span>
@@ -159,13 +163,20 @@ export default function About({ onClick }) {
               <a
                 href="https://www.flaticon.com/authors/fjstudio"
                 title="fjstudio"
+                target="_blank"
+                rel="noreferrer"
               >
                 fjstudio
               </a>
             </li>
             <li className={styles.creditsList}>
               {" "}
-              <a href="https://www.freepik.com" title="Freepik">
+              <a
+                href="https://www.freepik.com"
+                title="Freepik"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Freepik
               </a>
             </li>
@@ -174,6 +185,8 @@ export default function About({ onClick }) {
               <a
                 href="https://www.flaticon.com/authors/md-tanvirul-haque"
                 title="Md Tanvirul Haque"
+                target="_blank"
+                rel="noreferrer"
               >
                 {" "}
                 Md Tanvirul Haque{" "}
@@ -184,6 +197,8 @@ export default function About({ onClick }) {
               <a
                 href="https://www.flaticon.com/authors/pixel-perfect"
                 title="Pixel perfect"
+                target="_blank"
+                rel="noreferrer"
               >
                 {" "}
                 Pixel perfect{" "}
@@ -193,6 +208,8 @@ export default function About({ onClick }) {
               <a
                 href="https://www.flaticon.com/authors/riajulislam"
                 title="riajulislam"
+                target="_blank"
+                rel="noreferrer"
               >
                 {" "}
                 riajulislam{" "}
@@ -202,6 +219,8 @@ export default function About({ onClick }) {
               <a
                 href="https://www.flaticon.com/authors/maxim-basinski-premium"
                 title="Maxim Basinski Premium"
+                target="_blank"
+                rel="noreferrer"
               >
                 Maxim Basinski Premium
               </a>
