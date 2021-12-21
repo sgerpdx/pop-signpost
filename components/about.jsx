@@ -100,8 +100,7 @@ export default function About({ onClick }) {
                 fontSize: "0.9em",
               }}
             >
-              glass-half-full: if only only horizontal dimensions are taken into
-              account, almost as wide as a tree
+              requisite self-to-redwood comparison
             </figcaption>
           </figure>
           <p style={{ marginBottom: "32px" }}>

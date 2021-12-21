@@ -4,6 +4,7 @@ import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { RiHomeFill } from "react-icons/ri";
+import { TiArrowBack } from "react-icons/ti";
 
 export default function ProjectHeader() {
   return (
@@ -27,12 +28,24 @@ export default function ProjectHeader() {
       </section>
       <section className={styles.mainMenuArea}>
         <Link href="/" scroll={false}>
-          <RiHomeFill
-            title="return home"
-            size="2em"
-            color="rgba(113, 192, 187, 255)"
-            style={{ cursor: "pointer" }}
-          />
+          <span
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
+              cursor: "pointer",
+            }}
+          >
+            {" "}
+            <RiHomeFill
+              title="return home"
+              size="2em"
+              color="rgba(113, 192, 187, 255)"
+              style={{ margin: "0px 4px 0px 4px" }}
+            />
+            <em>home</em>
+            <TiArrowBack className={styles.backHomeIcon} />
+          </span>
         </Link>
       </section>
     </>

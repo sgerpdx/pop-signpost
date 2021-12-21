@@ -75,3 +75,10 @@
   background-color: rgba(113, 192, 187, 255);
   color: rgb(53, 52, 52);
 }
+
+
+.backHomeIcon {
+  color: rgba(113, 192, 187, 255);
+  margin-left: 4px;
+  font-size: 1.2em;
+}

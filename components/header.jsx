@@ -62,7 +62,7 @@ export default function Header({ onClick, icon }) {
                   color: "rgb(53, 52, 52)",
                 }}
               >
-                Home
+                home
               </MenuItem>
               <MenuItem
                 className={styles.headerMenuItem}
@@ -75,7 +75,7 @@ export default function Header({ onClick, icon }) {
                   color: "rgb(53, 52, 52)",
                 }}
               >
-                Tech
+                tech
               </MenuItem>
               <MenuItem
                 className={styles.headerMenuItem}
@@ -88,7 +88,7 @@ export default function Header({ onClick, icon }) {
                   color: "rgb(53, 52, 52)",
                 }}
               >
-                About
+                about
               </MenuItem>
               <MenuItem
                 className={styles.headerMenuItem}
@@ -101,7 +101,7 @@ export default function Header({ onClick, icon }) {
                   color: "rgb(53, 52, 52)",
                 }}
               >
-                Contact
+                contact
               </MenuItem>
             </MenuList>
           </Menu>
