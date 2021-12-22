@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   //
   //this component needs refactoring and DRYer code
   //deactivating the modal can be achieved using just 'entered'
-  //'stage' is only needed in order to track how many times the user has been on the home (intro) screen for example, possibly to toggle or update the text to something fun pulled from an API...
+  //'stage' is only needed in order to track how many times the user has been on the home (intro) screen for example, possibly to toggle or update the text to something fun pulled from an API after the initial visit...
   //
 
   const [stage, setStage] = useState(0);

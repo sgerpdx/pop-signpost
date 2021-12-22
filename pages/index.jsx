@@ -22,50 +22,41 @@ import { TiHome } from "react-icons/ti";
 export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState("home");
-  //const [entered, setEntered] = useState(false);
   const [contentTransform, setContentTransform] = useState("0deg");
   const [show, setShow] = useState(true);
   const [icon, setIcon] = useState("none");
+
   // state items for managing user movement thru the site:
   const [contentHistory, setContentHistory] = useState([]);
-  //const [currentStage, setCurrentStage] = useState(0);
   const changeStage = value.handleStageChange;
   const toggleEntered = value.handleEntered;
   const stage = value.stage;
   const entered = value.entered;
+
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
     setContent(e.target.value);
     changeStage();
-    console.log("///Stage:", stage);
   };
 
   const handleBackNav = () => {
     const newContentHistory = contentHistory;
     const prevLocation = newContentHistory.splice(-2, 2);
-    console.log("prevLoc:", prevLocation);
     setContent(prevLocation[0]);
     setContentHistory(newContentHistory);
   };
 
   const handleHomeNav = () => {
     setContent("home");
-    console.log("HNC:", content);
   };
-
-  // const handleEnterSite = () => {
-  //   setTimeout(setEntered(true), 4000);
-  // };
 
   // handles loading spinner:
   useEffect(() => {
     setLoading(false);
-    console.log("------Stage:", stage);
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(() => {
-    //setEntered(false);
     const currentContent = content;
 
     if (currentContent === "home") setContentTransform("0deg");
@@ -75,38 +66,22 @@ export default function Home({ value }) {
     const newContentHistory = contentHistory;
     newContentHistory.push(currentContent);
     setContentHistory(newContentHistory);
-    console.log("AlienName:", contentHistory);
-    console.log(content);
   }, [content]);
 
   // closes the welcome modal and sets entered to reflect that:
   const handleModalClose = () => {
     setShow(false);
     toggleEntered(true);
-    console.log("Entered:", entered, "WORRRD");
   };
 
   // makes the top-right menu visible once modal closes
   const handleEntered = () => {
     if (entered) setIcon("menu");
-    console.log("icon:", icon);
   };
-
-  //// this needs more work, but should be an eventual feature:
-  // const handleGoBack = () => {
-  //   const previousContent = contentHistory;
-  //   setContent(previousContent);
-  // };
 
   useEffect(() => {
     handleEntered();
-    // setContent("home");
-    console.log("entered:", entered);
   }, [entered]);
-
-  useEffect(() => {
-    console.log("***CH***:", contentHistory);
-  }, [contentHistory]);
 
   if (loading) return <Spinner color="white" />;
 

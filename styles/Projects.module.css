@@ -64,10 +64,7 @@
   width: 100%;
   overflow: auto;
   /* background-color: #71c0bb; */
-  background-image: linear-gradient(
-    rgba(53, 52, 52, 255),
-    #71c0bb 20px
-  );
+  background-image: linear-gradient(rgba(53, 52, 52, 255), #71c0bb 20px);
 }
 
 .projectScrollArea {
@@ -91,8 +88,7 @@
 }
 
 /* .lowerContainer::-webkit-scrollbar-track:hover {
-  background: #353434;
-  border: solid 1px coral;
+ border: solid 1px #353434;
 } */
 
 .lowerContainer::-webkit-scrollbar-thumb {
@@ -103,6 +99,7 @@
 
 .lowerContainer::-webkit-scrollbar-thumb:hover {
   border: solid 1px #353434;
+  background: #353434;
 }
 
 .lowerContainer::-webkit-scrollbar-thumb:active {
@@ -142,7 +139,5 @@
     rgba(0, 0, 0, 0)
   ); */
 }
-
-
 
 /* for SingleProject component */
