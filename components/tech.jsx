@@ -38,10 +38,6 @@ export default function Tech({ onClick }) {
             </dt>{" "}
             <dd> Git, GitHub, Netlify, Heroku, Postman, AWS S3</dd>
           </dl>
-          {/* <p style={{ fontSize: "0.9em", textIndent: "40px" }}>
-            I've also done limited work with Python and Solidity, and am
-            currently learning TypeScript.
-          </p> */}
           <nav className={styles.projectLinksArea}>
             <p style={{ color: "#71c0bb" }}>
               Go to{" "}

@@ -1,6 +1,6 @@
 .techCategory {
-  color: #c4e175;
-  color: #faa2fa;
+  /* color: #c4e175;
+  color: #faa2fa; */
   color: #71c0bb;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .projectLinkSpan:active {
-  color: #c4e175;
+  /* color: #c4e175; */
   color: #faa2fa;
 }
 
@@ -38,5 +38,5 @@
 
 .projectLinkIcon:active {
   background-color: #faa2fa;
-  color: rgb(53, 52, 52);
+  color: #353434;
 }
