@@ -6,6 +6,7 @@ import styles from "../styles/About.module.css";
 import MeForest from "../public/me-green_640x500.jpg";
 import MeRedwoods from "../public/me_redwood_640x480.jpg";
 import MeCoffee from "../public/me_cafftemplative_480.jpg";
+import GithubDkGrey from "../public/github-dkgrey.png";
 //import { TiArrowBack } from "react-icons/ti";
 
 export default function About({ onClick }) {
@@ -76,16 +77,30 @@ export default function About({ onClick }) {
           </p>
         </section>
         <section id="about-credits">
-          <span
+          <div
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: "column",
+              flexWrap: "wrap",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <h2>Site Credits</h2>
-          </span>
+            <p className={styles.modularAboutSpan}>
+              <h2>Site Credits</h2>
+            </p>
+            <p className={styles.modularAboutSpan}>
+              <a
+                href="https://github.com/sgerpdx/pop-signpost"
+                target="_blank"
+                rel="noreferrer"
+                title="github repository link"
+                style={{ cursor: "pointer" }}
+              >
+                <Image src={GithubDkGrey} width="32px" height="32px" />
+              </a>
+            </p>
+          </div>
           <p>
             This website was built using React with a Next.js framework, the
             Framer Motion, Chakra UI and React Icons libraries, AWS S3 cloud

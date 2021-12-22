@@ -5,7 +5,6 @@ import styles from "../styles/Header.module.css";
 
 //image imports
 import SatelliteBlue from "../public/satellite-blue.png";
-import { RiHomeFill } from "react-icons/ri";
 import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
 
