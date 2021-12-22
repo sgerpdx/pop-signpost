@@ -35,12 +35,13 @@
 
 .aboutMeArea::-webkit-scrollbar-thumb:hover {
   border: solid 1px #71c0bb;
-}
-
-.aboutMeArea::-webkit-scrollbar-thumb:active {
-  border: solid 1px #71c0bb;
   background: #71c0bb;
 }
+
+/* .aboutMeArea::-webkit-scrollbar-thumb:active {
+  border: solid 1px #71c0bb;
+  background: #71c0bb;
+} */
 
 /* this is for an unused inter-component link pair */
 /* .aboutHeader {
