@@ -1,23 +1,66 @@
-.introTextArea {
+.introTextContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75%;
+  height: 100%;
   backface-visibility: hidden;
-  background-color: rgb(53, 52, 52);
-  /* background-color: cornflowerblue; */
+  background-color: #71c0bb;
+  color: #353434;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  /* font-family: 'Encode Sans', sans-serif; */
+  /* font-family: 'Quantico', sans-serif; */
+  font-size: 1.1em;
+  /* position: absolute; */
+  overflow: auto;
 }
 
-.socialMediaArea {
+.introTextArea {
+  text-align: center;
+  width: 90%;
+  height: 30%;
+  /* text-indent: 30px; */
+  padding: 10px;
+  background-color: white;
+  border: solid 1px rgba(53, 52, 52, 0.5);
+}
+.introLinkArea {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 25%;
-  /* background-color: coral; */
+  width: 90%;
+  height: 50%;
+}
+
+.linksLeft,
+.linksRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.introLinks {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  background-color: #353434;
+  color: white;
+  width: 100px;
+  border: solid 2px #71c0bb;
+  margin: 4px 0px 4px 0px;
+}
+
+.introLinks:hover {
+  border: solid 2px white;
+}
+
+.introLinks:active {
+  font-weight: bold;
+  background-color: white;
+  color: #353434;
+  border: solid 2px coral;
 }

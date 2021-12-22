@@ -1,0 +1,42 @@
+.techCategory {
+  /* color: #c4e175;
+  color: #faa2fa; */
+  color: #71c0bb;
+}
+
+.projectLinksArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLinkSpan {
+  color: white;
+}
+
+.projectLinkSpan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.projectLinkSpan:active {
+  /* color: #c4e175; */
+  color: #faa2fa;
+}
+
+.projectLinkIcon {
+  color: #71c0bb;
+  margin: 6px;
+  border-radius: 0.5em;
+}
+
+.projectLinkIcon:hover {
+  color: white;
+  border: solid 1px #faa2fa;
+}
+
+.projectLinkIcon:active {
+  background-color: #faa2fa;
+  color: #353434;
+}

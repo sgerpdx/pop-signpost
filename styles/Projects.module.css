@@ -1,14 +1,109 @@
-.projectScrollArea {
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+.loadingMask {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* padding: 0 2rem; */
+  /* background-color: #353434; */
+  color: white;
+  overflow: hidden;
+}
+
+/* custom styling for pop-signpost layout */
+
+/* upper container handles header and non-scrolling elements at top */
+
+.upperContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin: 10px;
+}
+
+.scrollBorder {
+  /* background-image: linear-gradient(
+    rgba(113, 192, 187, 0),
+    #71c0bb
+  ); */
+  /* background-color: rgba(170, 199, 91, 255); */
+  width: 100%;
+  height: 20px;
+  border-bottom: solid 2px #71c0bb;
+}
+
+/* lower container is everything below header */
+
+.lowerContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow: auto;
+  /* background-color: #71c0bb; */
+  background-image: linear-gradient(rgba(53, 52, 52, 255), #71c0bb 20px);
+}
+
+.projectScrollArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   width: 90%;
   height: 90%;
   backface-visibility: hidden;
-  background-color: rgba(113, 192, 187, 255);
-  overflow: auto;
+  color: #353434;
+}
+
+.lowerContainer::-webkit-scrollbar {
+  width: 12px;
+}
+
+.lowerContainer::-webkit-scrollbar-track {
+  background: #71c0bb;
+}
+
+/* .lowerContainer::-webkit-scrollbar-track:hover {
+ border: solid 1px #353434;
+} */
+
+.lowerContainer::-webkit-scrollbar-thumb {
+  background: #71c0bb;
+  border: solid 1px #71c0bb;
+  /* background: #353434; */
+}
+
+.lowerContainer::-webkit-scrollbar-thumb:hover {
+  border: solid 1px #353434;
+  background: #353434;
+}
+
+.lowerContainer::-webkit-scrollbar-thumb:active {
+  background: #353434;
 }
 
 .contentScrollArea {
@@ -17,5 +112,32 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  overflow: auto;
+  font-family: "Courier Prime", monospace;
+  margin-bottom: 40px;
 }
+
+.projectImageArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectSummaryArea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  margin: 40px;
+
+  /* background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    #353434,
+    rgba(0, 0, 0, 0)
+  ); */
+}
+
+/* for SingleProject component */

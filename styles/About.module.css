@@ -1,6 +1,6 @@
 .aboutMeArea {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -8,6 +8,80 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: rgb(53, 52, 52);
-  /* background-color: mediumturquoise; */
+  background-color: #71c0bb;
+  background-color: white;
+  color: #353434;
+  border: solid 4px #71c0bb;
+  padding: 0px 10px 0px 10px;
+  overflow: auto;
+}
+
+.aboutMeArea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.aboutMeArea::-webkit-scrollbar-track {
+  background: white;
+}
+
+.aboutMeArea::-webkit-scrollbar-track:hover {
+  background: white;
+  border: solid 1px white;
+}
+
+.aboutMeArea::-webkit-scrollbar-thumb {
+  border: solid 1px white;
+}
+
+.aboutMeArea::-webkit-scrollbar-thumb:hover {
+  border: solid 1px #71c0bb;
+  background: #71c0bb;
+}
+
+/* .aboutMeArea::-webkit-scrollbar-thumb:active {
+  border: solid 1px #71c0bb;
+  background: #71c0bb;
+} */
+
+/* this is for an unused inter-component link pair */
+/* .aboutHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.aboutTextParagraph {
+  margin-bottom: 32px;
+}
+
+.aboutImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contactLink {
+  font-family: "Courier Prime", monospace;
+  font-size: 1em;
+  text-decoration: underline;
+  border: none;
+  background-color: white;
+  color: #353434;
+}
+
+.contactLink:hover {
+  cursor: pointer;
+}
+
+.backToTopIcon {
+  color: #71c0bb;
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
+
+.creditsList {
+  list-style-type: none;
 }
