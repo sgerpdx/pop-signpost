@@ -41,7 +41,7 @@ export default function SingleProject({
                 rel="noreferrer"
                 title="github repository link"
               >
-                <Image src={GithubDkGrey} width="32" height={32} />
+                <Image src={GithubDkGrey} width="32" height="32" />
               </a>
             </p>
           </figcaption>
