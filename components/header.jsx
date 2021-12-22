@@ -1,12 +1,13 @@
 import React from "react";
-import styles from "../styles/Header.module.css";
 import Image from "next/image";
-import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
-import { RiMenuLine } from "react-icons/ri";
+import styles from "../styles/Header.module.css";
 
-// Personal Logo:
+//Chakra UI menu components
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
+
+//image imports:
 import PlanetImage from "../public/saturn-simple.png";
-//import StarsImage from "../public/stars.png";
+import { RiMenuLine } from "react-icons/ri";
 
 export default function Header({ onClick, icon }) {
   return (
@@ -47,7 +48,7 @@ export default function Header({ onClick, icon }) {
               className={styles.headerMenuButton}
               style={{ backgroundColor: "rgba(53, 52, 52,0)" }}
             >
-              <RiMenuLine size="3em" color="rgba(113, 192, 187, 255)" />
+              <RiMenuLine size="3em" color="#71c0bb" />
             </MenuButton>
 
             <MenuList>
@@ -59,7 +60,7 @@ export default function Header({ onClick, icon }) {
                 h="28px"
                 _active={{
                   bgColor: "coral",
-                  color: "rgb(53, 52, 52)",
+                  color: "#353434",
                 }}
               >
                 home
@@ -72,7 +73,7 @@ export default function Header({ onClick, icon }) {
                 h="28px"
                 _active={{
                   bgColor: "coral",
-                  color: "rgb(53, 52, 52)",
+                  color: "#353434",
                 }}
               >
                 tech
@@ -85,7 +86,7 @@ export default function Header({ onClick, icon }) {
                 h="28px"
                 _active={{
                   bgColor: "coral",
-                  color: "rgb(53, 52, 52)",
+                  color: "#353434",
                 }}
               >
                 about
@@ -98,7 +99,7 @@ export default function Header({ onClick, icon }) {
                 h="28px"
                 _active={{
                   bgColor: "coral",
-                  color: "rgb(53, 52, 52)",
+                  color: "#353434",
                 }}
               >
                 contact
