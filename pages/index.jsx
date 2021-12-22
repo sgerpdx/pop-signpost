@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 // Component imports:
 import Layout from "../components/layout";

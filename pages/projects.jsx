@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
-import Image from "next/image";
 
 //component imports
 import Layout from "../components/layout";
@@ -9,8 +8,6 @@ import SingleProject from "../components/singleProject";
 
 //image imports
 import { Spinner } from "@chakra-ui/spinner";
-import GithubDkGrey from "../public/github-dkgrey.png";
-//import { TiArrowBack } from "react-icons/ti";
 
 //individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";

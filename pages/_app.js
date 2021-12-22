@@ -1,15 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
-//currently provider is no longer being used
-//import Provider from "../state/provider";
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
-  //
-  //this component needs refactoring and DRYer code
-  //deactivating the modal can be achieved using just 'entered'
-  //'stage' is only needed in order to track how many times the user has been on the home (intro) screen for example, possibly to toggle or update the text to something fun pulled from an API after the initial visit...
+  // notes:
+  // this component needs refactoring and DRY-er code
+  // deactivating the modal can be achieved using just 'entered'
+  // 'stage' is only needed in order to track how many times the user has been on the home (intro) screen for example, possibly to toggle or update the text to something fun pulled from an API after the initial visit...
   //
 
   const [stage, setStage] = useState(0);
@@ -24,10 +22,6 @@ function MyApp({ Component, pageProps }) {
   };
 
   const state = { stage, entered, handleStageChange, handleEntered };
-
-  useEffect(() => {
-    console.log("S:", stage);
-  }, [stage]);
 
   return (
     <>
