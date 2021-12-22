@@ -1,4 +1,3 @@
-
 .aboutMeArea {
   display: flex;
   flex-direction: row;
@@ -9,14 +8,12 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: rgba(113, 192, 187, 255);
+  background-color: #71c0bb;
   background-color: white;
-  color: rgb(53, 52, 52);
-  border: solid 4px rgba(113, 192, 187, 255);
+  color: #353434;
+  border: solid 4px #71c0bb;
   padding: 0px 10px 0px 10px;
   overflow: auto;
-
-  /* background-color: mediumturquoise; */
 }
 
 .aboutMeArea::-webkit-scrollbar {
@@ -34,23 +31,35 @@
 
 .aboutMeArea::-webkit-scrollbar-thumb {
   border: solid 1px white;
-  /* background: rgb(53, 52, 52); */
 }
 
 .aboutMeArea::-webkit-scrollbar-thumb:hover {
-  border: solid 1px rgba(113, 192, 187, 255);
+  border: solid 1px #71c0bb;
 }
 
 .aboutMeArea::-webkit-scrollbar-thumb:active {
-  border: solid 1px rgba(113, 192, 187, 255);
-  background: rgba(113, 192, 187, 255);
+  border: solid 1px #71c0bb;
+  background: #71c0bb;
 }
 
-.aboutHeader {
+/* this is for an unused inter-component link pair */
+/* .aboutHeader {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+
+.aboutTextParagraph {
+  margin-bottom: 32px;
+}
+
+.aboutImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .contactLink {
@@ -59,7 +68,7 @@
   text-decoration: underline;
   border: none;
   background-color: white;
-  color: rgb(53, 52, 52);
+  color: #353434;
 }
 
 .contactLink:hover {
@@ -67,7 +76,7 @@
 }
 
 .backToTopIcon {
-  color: rgba(113, 192, 187, 255);
+  color: #71c0bb;
   transform: rotate(90deg);
   margin-left: 10px;
 }

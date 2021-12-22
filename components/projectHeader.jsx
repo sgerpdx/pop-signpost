@@ -1,8 +1,10 @@
 import React from "react";
-import SatelliteBlue from "../public/satellite-blue.png";
-import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "../styles/Header.module.css";
+
+//image imports
+import SatelliteBlue from "../public/satellite-blue.png";
 import { RiHomeFill } from "react-icons/ri";
 import { TiArrowBack } from "react-icons/ti";
 
@@ -28,14 +30,7 @@ export default function ProjectHeader() {
       </section>
       <section className={styles.mainMenuArea}>
         <Link href="/" scroll={false}>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "flex-end",
-              cursor: "pointer",
-            }}
-          >
+          <span className={styles.backHomeSpan}>
             {" "}
             <RiHomeFill
               title="return home"

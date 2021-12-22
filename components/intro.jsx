@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/Intro.module.css";
-import SatelliteImage from "../public/satellite.png";
 import Link from "next/link";
+import styles from "../styles/Intro.module.css";
+
+//image imports
+import SatelliteImage from "../public/satellite.png";
 
 export default function Intro({ onClick, toProjects }) {
   return (

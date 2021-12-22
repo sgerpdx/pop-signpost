@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "../styles/Contact.module.css";
 import Image from "next/image";
-//
+import styles from "../styles/Contact.module.css";
+
+//image imports
 import StarsImage from "../public/stars.png";
 import EnvelopeImage from "../public/email-blue.png";
 
@@ -18,7 +19,7 @@ export default function Contact() {
             <Image src={EnvelopeImage} width="27px" height="27px" />
           </figure>
           <a
-            style={{ textDecoration: "underline" }}
+            style={{ textDecoration: "underline", marginLeft: "6px" }}
             href="mailto:samhgerber@protonmail.com"
             title="mailto:samhgerber@protonmail.com"
           >
