@@ -32,12 +32,7 @@ export default function ProjectHeader() {
         <Link href="/" scroll={false}>
           <span className={styles.backHomeSpan} title="return home">
             {" "}
-            <TiHome
-              
-              size="2.4em"
-              color="rgba(113, 192, 187, 255)"
-              style={{ margin: "0px 4px 0px 4px" }}
-            />
+            <TiHome size="3em" className={styles.homeIcon} />
             <TiArrowBack className={styles.backHomeIcon} />
           </span>
         </Link>
