@@ -9,8 +9,8 @@ body {
   margin: 0;
   /* font-family: "Inter", sans-serif; */
   /* background-image: url("https://pop-portfolio-bucket.s3.us-west-2.amazonaws.com/seamles_topopatt04_edit-01-480.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAU7ADNKLOSFWTOALT%2F20211218%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211218T025815Z&X-Amz-Expires=60&X-Amz-Signature=f4ef71a7d486c1cdde8e55b1f46d7d106605ffc87a3705077e0ed84cb7bdc4a9&X-Amz-SignedHeaders=host"); */
-  background: linear-gradient(#353434, transparent, #353434),
-    url("../public/seamles_topopatt04_edit-01-480.png");
+  /* background: linear-gradient(#353434, transparent, #353434),
+    url("/seamles_topopatt04_edit-01-480.png"); */
   /* background: linear-gradient(#3f87a6, #ebf8e1, #f69d3c); */
   background-color: #353434;
   font-family: "Montserrat", sans-serif;

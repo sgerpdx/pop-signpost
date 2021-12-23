@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
+import TopographicBackground from "../public/seamles_topopatt04_edit-01-480.png";
 
 function MyApp({ Component, pageProps }) {
   // notes:
@@ -24,7 +25,12 @@ function MyApp({ Component, pageProps }) {
   const state = { stage, entered, handleStageChange, handleEntered };
 
   return (
-    <>
+    <div
+      style={{
+        background: `linear-gradient(#353434, transparent, #353434),
+    url("/seamles_topopatt04_edit-01-480.png")`,
+      }}
+    >
       <Head>
         <title>Sam Gerber</title>
         <meta property="my-title" content="Sam Gerber" key="title" />
@@ -37,7 +43,7 @@ function MyApp({ Component, pageProps }) {
       >
         <Component {...pageProps} value={state} />
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 

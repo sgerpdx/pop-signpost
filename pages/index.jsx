@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
 import SocialMedia from "../components/socialMedia";
+import Background from '../components/background';
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -86,6 +87,7 @@ export default function Home({ value }) {
 
   return (
     <Layout>
+      {/* <Background /> */}
       <main className={styles.container}>
         {stage > 0 ? (
           <></>
@@ -94,12 +96,12 @@ export default function Home({ value }) {
         )}
 
         {/* upper container houses header row */}
+
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
             <Header onClick={handleNavChange} icon={icon} />
           </section>
         </section>
-
         {/* lower container houses the content and nav menu in flex-row-wrap */}
         <section className={styles.lowerContainer}>
           <section className={styles.middleRow}>
