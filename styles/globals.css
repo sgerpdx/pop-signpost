@@ -3,6 +3,7 @@
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans&family=Quantico&display=swap");
 
+/* setting the background texture did not work from this file but did work as inline styling in _app.js */
 html,
 body {
   padding: 0;

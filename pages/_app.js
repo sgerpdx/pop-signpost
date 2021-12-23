@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
-import TopographicBackground from "../public/seamles_topopatt04_edit-01-480.png";
 
 function MyApp({ Component, pageProps }) {
   // notes:
