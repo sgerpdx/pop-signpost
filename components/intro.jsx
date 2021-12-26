@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Intro.module.css";
@@ -6,7 +6,12 @@ import styles from "../styles/Intro.module.css";
 //image imports
 import SatelliteImage from "../public/satellite.png";
 
-export default function Intro({ onClick, toProjects }) {
+export default function Intro({ onClick, toProjects, stage }) {
+  useEffect(() => {
+    const currentStage = stage;
+    if (currentStage > 0) console.log("RAAAAAADIO");
+  }, []);
+
   return (
     <>
       <section className={styles.introTextContainer}>
@@ -15,6 +20,7 @@ export default function Intro({ onClick, toProjects }) {
           focus on inspiring, content-rich UX. Have a look around, and have a
           nice day :)
         </p>
+
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>
             <button

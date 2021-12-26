@@ -28,6 +28,14 @@
   background-color: white;
   border: solid 1px rgba(53, 52, 52, 0.5);
 }
+
+.astronomyImageWrapper {
+  width: 90%;
+  height: 30%;
+  background-color: white;
+  border: solid 1px rgba(53, 52, 52, 0.5);
+}
+
 .introLinkArea {
   display: flex;
   flex-direction: row;

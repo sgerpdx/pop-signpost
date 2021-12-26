@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
 import SocialMedia from "../components/socialMedia";
-import Background from "../components/background";
+//import Background from "../components/background";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -64,13 +64,19 @@ export default function Home({ value }) {
   // handles loading spinner:
   useEffect(() => {
     setLoading(false);
+    // changeStage();
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(() => {
     const currentContent = content;
+    const currentStage = stage;
+    //
+    if (currentContent === "home") {
+      setContentTransform("0deg");
+      if (currentStage > 0) getAstronomyImage();
+    }
 
-    if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "tech") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
@@ -90,9 +96,22 @@ export default function Home({ value }) {
     if (entered) setIcon("menu");
   };
 
+  // fetch to NASA apod API:
+  const getAstronomyImage = async () => {
+    fetch(
+      "https://api.nasa.gov/planetary/apod?api_key=JR7SwqZcBESMd8ibY2aSXQNRfuQ6qDS11ojFq56d"
+    )
+      .then((response) => response.json())
+      .then((data) => console.log("NASADATA:", data));
+  };
+
   useEffect(() => {
     handleEntered();
   }, [entered]);
+
+  useEffect(() => {
+    console.log("STAGE>>>", stage);
+  }, [stage]);
 
   if (loading) return <Spinner color="white" />;
 
@@ -122,7 +141,11 @@ export default function Home({ value }) {
                 style={{ transform: `rotateY(${contentTransform})` }}
               >
                 <div className={styles.frontBox}>
-                  <Intro onClick={handleNavChange} toProjects={changeStage} />
+                  <Intro
+                    onClick={handleNavChange}
+                    toProjects={changeStage}
+                    stage={stage}
+                  />
                 </div>
                 <div className={styles.sideBoxRight} onClick={changeStage}>
                   <Tech />
