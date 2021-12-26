@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
 import SocialMedia from "../components/socialMedia";
-import Background from '../components/background';
+import Background from "../components/background";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -21,17 +21,26 @@ import { TiHome } from "react-icons/ti";
 
 export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
-  const [content, setContent] = useState("home");
-  const [contentTransform, setContentTransform] = useState("0deg");
-  const [show, setShow] = useState(true);
-  const [icon, setIcon] = useState("none");
 
+  ////
+  // specifies which face of the cube is visible:
+  const [content, setContent] = useState("home");
+  // implements cube rotation:
+  const [contentTransform, setContentTransform] = useState("0deg");
+  // toggles WelcomeModal on/off:
+  const [show, setShow] = useState(true);
+  // controls visibility of upper-right menu icon:
+  const [icon, setIcon] = useState("none");
   // state items for managing user movement thru the site:
   const [contentHistory, setContentHistory] = useState([]);
-  const changeStage = value.handleStageChange;
-  const toggleEntered = value.handleEntered;
+
+  //// props passed down from _app:
+  // tracks number of modal/component/page changes:
   const stage = value.stage;
+  const changeStage = value.handleStageChange;
+  // tracks loading of main content when modal closes;
   const entered = value.entered;
+  const toggleEntered = value.handleEntered;
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
@@ -39,6 +48,7 @@ export default function Home({ value }) {
     changeStage();
   };
 
+  // state management for the 'back arrow' button:
   const handleBackNav = () => {
     const newContentHistory = contentHistory;
     const prevLocation = newContentHistory.splice(-2, 2);
@@ -46,6 +56,7 @@ export default function Home({ value }) {
     setContentHistory(newContentHistory);
   };
 
+  // state management for the 'return home' button:
   const handleHomeNav = () => {
     setContent("home");
   };
