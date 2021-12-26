@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 // Component imports:
 import Layout from "../components/layout";
@@ -15,6 +16,7 @@ import About from "../components/about";
 import Contact from "../components/contact";
 
 // images and icons:
+import AsteroidImage from "../public/asteroid-blue.png";
 import { Spinner } from "@chakra-ui/spinner";
 import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
@@ -33,6 +35,8 @@ export default function Home({ value }) {
   const [icon, setIcon] = useState("none");
   // state items for managing user movement thru the site:
   const [contentHistory, setContentHistory] = useState([]);
+  // image variable for NASA API:
+  const [spaceImage, setSpaceImage] = useState(AsteroidImage);
 
   //// props passed down from _app:
   // tracks number of modal/component/page changes:
@@ -68,13 +72,16 @@ export default function Home({ value }) {
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
-  useEffect(() => {
+  useEffect(async () => {
     const currentContent = content;
     const currentStage = stage;
+    const currentSpaceImage = await getAstronomyImage();
+    console.log("CSI:", currentSpaceImage);
     //
+
     if (currentContent === "home") {
       setContentTransform("0deg");
-      if (currentStage > 0) getAstronomyImage();
+      if (currentStage > 0) setSpaceImage(`${currentSpaceImage}`);
     }
 
     if (currentContent === "tech") setContentTransform("-90deg");
@@ -98,11 +105,17 @@ export default function Home({ value }) {
 
   // fetch to NASA apod API:
   const getAstronomyImage = async () => {
-    fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=JR7SwqZcBESMd8ibY2aSXQNRfuQ6qDS11ojFq56d"
-    )
-      .then((response) => response.json())
-      .then((data) => console.log("NASADATA:", data));
+    try {
+      let response = await fetch(
+        "https://api.nasa.gov/planetary/apod?api_key=JR7SwqZcBESMd8ibY2aSXQNRfuQ6qDS11ojFq56d"
+      );
+
+      let data = await response.json();
+      console.log("DATA:", data.url);
+      return data.url;
+    } catch (error) {
+      console.log("Error:", error.message);
+    }
   };
 
   useEffect(() => {
@@ -224,6 +237,7 @@ export default function Home({ value }) {
             >
               © 2021 sam gerber
             </span> */}
+            <Image src={spaceImage} width="432" height="234" />
           </section>
         </section>
       </main>
