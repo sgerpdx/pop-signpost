@@ -104,7 +104,8 @@ export default function About({ onClick }) {
           <p>
             This website was built using React with a Next.js framework, the
             Framer Motion, Chakra UI and React Icons libraries, AWS S3 cloud
-            storage, and image assets by the following creators at{" "}
+            storage, the NASA Open APIs, and image assets by the following
+            creators at{" "}
             <a
               href="https://www.flaticon.com/"
               title="Flaticon"

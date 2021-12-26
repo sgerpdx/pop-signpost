@@ -13,7 +13,9 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
     <>
       <section className={styles.introTextContainer}>
         {stage > 1 ? (
-          <figure>
+          <figure
+            style={{ border: "solid 2px white", backgroundColor: "#353434" }}
+          >
             <figcaption className={styles.spaceImageCaption}>
               <span>
                 <BsStars className={styles.spaceCaptionIcon} />
@@ -22,19 +24,22 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
                   href="https://apod.nasa.gov/apod/astropix.html"
                   target="_blank"
                   rel="noreferrer"
+                  title="link to NASA astronomy picture of the day"
                 >
                   NASA
                 </a>
                 <BsStars className={styles.spaceCaptionIcon} />
               </span>
             </figcaption>
-            <Image
-              src={spaceImage}
-              width="360"
-              height="202"
-              alt="astronomy picture of the day"
-              title="astronomy picture of the day"
-            />
+            <a href={spaceImage} target="_blank" rel="noreferrer">
+              <Image
+                src={spaceImage}
+                width="340"
+                height="190"
+                alt="astronomy picture of the day"
+                title="astronomy picture of the day"
+              />
+            </a>
           </figure>
         ) : (
           <p className={styles.introTextArea}>

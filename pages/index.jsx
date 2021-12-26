@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
+//import Image from "next/image";
 
 // Component imports:
 import Layout from "../components/layout";
@@ -16,7 +16,7 @@ import About from "../components/about";
 import Contact from "../components/contact";
 
 // images and icons:
-import AsteroidImage from "../public/asteroid-blue.png";
+import AsteroidImage from "../public/asteroid.png";
 import { Spinner } from "@chakra-ui/spinner";
 import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
@@ -110,9 +110,7 @@ export default function Home({ value }) {
       let response = await fetch(
         "https://api.nasa.gov/planetary/apod?api_key=JR7SwqZcBESMd8ibY2aSXQNRfuQ6qDS11ojFq56d"
       );
-
       let data = await response.json();
-      console.log("DATA:", data.url);
       return data.url;
     } catch (error) {
       console.log("Error:", error.message);
@@ -122,11 +120,6 @@ export default function Home({ value }) {
   useEffect(() => {
     handleEntered();
   }, [entered]);
-
-  useEffect(() => {
-    const currentStage = stage;
-    console.log("STAGE>>>", stage);
-  }, [stage]);
 
   if (loading) return <Spinner color="white" />;
 

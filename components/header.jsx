@@ -39,7 +39,7 @@ export default function Header({ onClick, icon }) {
                 border: "none",
               }}
             >
-              <RiMenuLine size="3em" color="grey" />
+              <RiMenuLine size="3em" color="coral" />
             </MenuButton>
           </Menu>
         ) : (
