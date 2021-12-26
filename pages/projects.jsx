@@ -24,7 +24,7 @@ import Smore from "../components/individualProjects/smore";
 //props to hand down to individual SingleProject components:
 //[GitHub URL, Deployed URL, Project Image, Project Title, Descriptive Text]
 
-export default function Projects() {
+export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Projects() {
       <main className={styles.container}>
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <ProjectHeader />
+            <ProjectHeader value={value} />
           </section>
           <div className={styles.scrollBorder}></div>
         </section>

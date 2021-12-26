@@ -28,6 +28,14 @@
   background-color: white;
   border: solid 1px rgba(53, 52, 52, 0.5);
 }
+
+.astronomyImageWrapper {
+  width: 90%;
+  height: 30%;
+  background-color: white;
+  border: solid 1px rgba(53, 52, 52, 0.5);
+}
+
 .introLinkArea {
   display: flex;
   flex-direction: row;
@@ -63,4 +71,23 @@
   background-color: white;
   color: #353434;
   border: solid 2px coral;
+}
+
+.spaceImageCaption {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #353434;
+  color: white;
+  font-size: 0.8em;
+}
+
+.spaceCaptionIcon {
+  font-size: 0.8em;
+  margin: 0px 6px 0px 6px;
+  transform: rotate(90deg);
+  /* color: #71c0bb; */
 }
