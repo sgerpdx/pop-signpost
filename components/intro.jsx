@@ -1,25 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Intro.module.css";
 
 //image imports
 import SatelliteImage from "../public/satellite.png";
+import { BsStars } from "react-icons/bs";
+//import { FaSpaceShuttle } from "react-icons/fa";
 
-export default function Intro({ onClick, toProjects, stage }) {
-  useEffect(() => {
-    const currentStage = stage;
-    if (currentStage > 0) console.log("RAAAAAADIO");
-  }, []);
-
+export default function Intro({ onClick, toProjects, stage, spaceImage }) {
   return (
     <>
       <section className={styles.introTextContainer}>
-        <p className={styles.introTextArea}>
-          I&apos;m a software engineer building full-stack applications with a
-          focus on inspiring, content-rich UX. Have a look around, and have a
-          nice day :)
-        </p>
+        {stage > 1 ? (
+          <figure>
+            <figcaption className={styles.spaceImageCaption}>
+              <span>
+                <BsStars className={styles.spaceCaptionIcon} />
+                astroView courtesy of{" "}
+                <a
+                  href="https://apod.nasa.gov/apod/astropix.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NASA
+                </a>
+                <BsStars className={styles.spaceCaptionIcon} />
+              </span>
+            </figcaption>
+            <Image
+              src={spaceImage}
+              width="360"
+              height="202"
+              alt="astronomy picture of the day"
+              title="astronomy picture of the day"
+            />
+          </figure>
+        ) : (
+          <p className={styles.introTextArea}>
+            I&apos;m a software engineer building full-stack applications with a
+            focus on inspiring, content-rich UX. Have a look around, and have a
+            nice day :)
+          </p>
+        )}
 
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>

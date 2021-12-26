@@ -72,3 +72,21 @@
   color: #353434;
   border: solid 2px coral;
 }
+
+.spaceImageCaption {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #353434;
+  color: white;
+  font-size: 0.8em;
+}
+
+.spaceCaptionIcon {
+  font-size: 0.8em;
+  margin: 0px 6px 0px 6px;
+  transform: rotate(90deg);
+}

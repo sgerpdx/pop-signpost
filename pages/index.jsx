@@ -58,38 +58,39 @@ export default function Home({ value }) {
     const prevLocation = newContentHistory.splice(-2, 2);
     setContent(prevLocation[0]);
     setContentHistory(newContentHistory);
+    changeStage();
   };
 
   // state management for the 'return home' button:
   const handleHomeNav = () => {
     setContent("home");
+    changeStage();
   };
 
   // handles loading spinner:
-  useEffect(() => {
+  useEffect(async () => {
     setLoading(false);
-    // changeStage();
+    // on page load, we grab today's space image and set to state:
+    const currentSpaceImage = await getAstronomyImage();
+    setSpaceImage(`${currentSpaceImage}`);
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(async () => {
     const currentContent = content;
-    const currentStage = stage;
+
     const currentSpaceImage = await getAstronomyImage();
     console.log("CSI:", currentSpaceImage);
     //
-
-    if (currentContent === "home") {
-      setContentTransform("0deg");
-      if (currentStage > 0) setSpaceImage(`${currentSpaceImage}`);
-    }
-
+    // rotate cube based on selection:
+    if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "tech") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
     if (currentContent === "contact") setContentTransform("-270deg");
     const newContentHistory = contentHistory;
     newContentHistory.push(currentContent);
     setContentHistory(newContentHistory);
+    console.log("CONTENT:", currentContent);
   }, [content]);
 
   // closes the welcome modal and sets entered to reflect that:
@@ -123,6 +124,7 @@ export default function Home({ value }) {
   }, [entered]);
 
   useEffect(() => {
+    const currentStage = stage;
     console.log("STAGE>>>", stage);
   }, [stage]);
 
@@ -158,6 +160,7 @@ export default function Home({ value }) {
                     onClick={handleNavChange}
                     toProjects={changeStage}
                     stage={stage}
+                    spaceImage={spaceImage}
                   />
                 </div>
                 <div className={styles.sideBoxRight} onClick={changeStage}>
@@ -237,7 +240,6 @@ export default function Home({ value }) {
             >
               © 2021 sam gerber
             </span> */}
-            <Image src={spaceImage} width="432" height="234" />
           </section>
         </section>
       </main>
