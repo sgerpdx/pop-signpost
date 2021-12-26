@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 134px;
+  width: 80px;
   height: 80px;
   margin-left: 32px;
 }
@@ -43,7 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  width: 134px;
+  width: 80px;
   height: 80px;
   margin-right: 32px;
   z-index: 1;
@@ -75,6 +75,17 @@
 }
 
 /* for the ProjectHeader component */
+
+.homeLinkArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 30px;
+  /* width: 60px;
+  height: 60px; */
+}
+
 .backHomeSpan {
   display: flex;
   justify-content: flex-end;
@@ -82,8 +93,26 @@
   cursor: pointer;
 }
 
-.backHomeIcon {
+.homeIcon {
+  color: #71c0bb;
+  padding: 6px;
+  border: solid 2px white;
+  border-radius: 24px;
+  /* margin-right: 4px; */
+}
+
+.homeIcon:hover {
+  border: solid 2px #71c0bb;
+}
+
+.homeIcon:active {
+  background-color: #71c0bb;
+  color: #353434;
+  border: solid 2px white;
+}
+
+/* .backHomeIcon {
   color: #71c0bb;
   margin-left: 0px;
   font-size: 1.2em;
-}
+} */
