@@ -5,7 +5,7 @@ import styles from "../styles/Header.module.css";
 
 //image imports
 import SatelliteBlue from "../public/satellite-blue.png";
-import { TiArrowBack } from "react-icons/ti";
+//import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
 
 export default function ProjectHeader() {
@@ -33,7 +33,7 @@ export default function ProjectHeader() {
           <span className={styles.backHomeSpan} title="return home">
             {" "}
             <TiHome size="3em" className={styles.homeIcon} />
-            <TiArrowBack className={styles.backHomeIcon} />
+            {/* <TiArrowBack className={styles.backHomeIcon} /> */}
           </span>
         </Link>
       </section>
