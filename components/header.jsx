@@ -45,7 +45,7 @@ export default function Header({ onClick, onClose, icon }) {
                 border: "none",
               }}
             >
-              <BsStars size="3em" color="#71c0bb" />
+              <BsStars size="3em" color="white" />
             </MenuButton>
           </Menu>
         ) : (

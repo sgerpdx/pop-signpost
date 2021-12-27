@@ -8,9 +8,11 @@ export default function Elsewhere() {
           backgroundColor: "rgb(53, 52, 52)",
           color: "white",
           fontSize: "0.9em",
+          textAlign: "center",
+          width: "240px",
         }}
       >
-        ***note: currently working on an API key issue***
+        ***currently working on a map API key issue***
       </p>
       <p>
         API-driven geoguessing game app. primarily mob programmed in a one-week
