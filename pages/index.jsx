@@ -16,7 +16,7 @@ import About from "../components/about";
 import Contact from "../components/contact";
 
 // images and icons:
-import AsteroidImage from "../public/asteroid.png";
+import GreySatelliteImage from "../public/satellite-dkgrey.png";
 import { Spinner } from "@chakra-ui/spinner";
 import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
@@ -36,7 +36,7 @@ export default function Home({ value }) {
   // state items for managing user movement thru the site:
   const [contentHistory, setContentHistory] = useState([]);
   // image variable for NASA API:
-  const [spaceImage, setSpaceImage] = useState(AsteroidImage);
+  const [spaceImage, setSpaceImage] = useState(GreySatelliteImage);
 
   //// props passed down from _app:
   // tracks number of modal/component/page changes:
