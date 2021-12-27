@@ -25,9 +25,12 @@ export default function Header({ onClick, onClose, icon }) {
       </section>
       <section className={styles.mainTitleArea}>
         <div className={styles.headlineTextArea}>
-          <h1 onClick={onClose} title="tap here to enter site">
-            Sam Gerber
-          </h1>
+          <p>
+            {" "}
+            <h1 onClick={onClose} title="tap here to enter site">
+              Sam Gerber
+            </h1>
+          </p>
           {/* <p className={styles.subHeading}>software engineer</p> */}
         </div>
       </section>

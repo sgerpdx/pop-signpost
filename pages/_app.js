@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
@@ -22,8 +22,6 @@ function MyApp({ Component, pageProps }) {
   };
 
   const state = { stage, entered, handleStageChange, handleEntered };
-
-
 
   return (
     <div

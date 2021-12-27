@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Intro.module.css";
 
 //image imports
 import SatelliteImage from "../public/satellite.png";
+//import SatelliteGrey from "../public/satellite-dkgrey.png";
 import { BsStars } from "react-icons/bs";
 //import { FaSpaceShuttle } from "react-icons/fa";
 

@@ -7,7 +7,6 @@ import MeForest from "../public/me-green_640x500.jpg";
 import MeRedwoods from "../public/me_redwood_640x480.jpg";
 import MeCoffee from "../public/me_cafftemplative_480.jpg";
 import GithubDkGrey from "../public/github-dkgrey.png";
-//import { TiArrowBack } from "react-icons/ti";
 
 export default function About({ onClick }) {
   return (
