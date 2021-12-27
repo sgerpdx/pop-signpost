@@ -8,8 +8,9 @@ import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/menu";
 //image imports:
 import PlanetImage from "../public/saturn-simple.png";
 import { RiMenuLine } from "react-icons/ri";
+import { BsStars } from "react-icons/bs";
 
-export default function Header({ onClick, icon }) {
+export default function Header({ onClick, onClose, icon }) {
   return (
     <>
       <section className={styles.mainLogoArea}>
@@ -24,7 +25,12 @@ export default function Header({ onClick, icon }) {
       </section>
       <section className={styles.mainTitleArea}>
         <div className={styles.headlineTextArea}>
-          <h1>Sam Gerber</h1>
+          <p>
+            {" "}
+            <h1 onClick={onClose} title="tap here to enter site">
+              Sam Gerber
+            </h1>
+          </p>
           {/* <p className={styles.subHeading}>software engineer</p> */}
         </div>
       </section>
@@ -39,7 +45,7 @@ export default function Header({ onClick, icon }) {
                 border: "none",
               }}
             >
-              <RiMenuLine size="3em" color="coral" />
+              <BsStars size="3em" color="#71c0bb" />
             </MenuButton>
           </Menu>
         ) : (

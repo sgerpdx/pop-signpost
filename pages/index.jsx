@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 //import Image from "next/image";
 
@@ -78,10 +78,6 @@ export default function Home({ value }) {
   // controls rotation of 3D displayArea section and its internal div face elements:
   useEffect(async () => {
     const currentContent = content;
-
-    const currentSpaceImage = await getAstronomyImage();
-    console.log("CSI:", currentSpaceImage);
-    //
     // rotate cube based on selection:
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "tech") setContentTransform("-90deg");
@@ -90,7 +86,6 @@ export default function Home({ value }) {
     const newContentHistory = contentHistory;
     newContentHistory.push(currentContent);
     setContentHistory(newContentHistory);
-    console.log("CONTENT:", currentContent);
   }, [content]);
 
   // closes the welcome modal and sets entered to reflect that:
@@ -137,7 +132,11 @@ export default function Home({ value }) {
 
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <Header onClick={handleNavChange} icon={icon} />
+            <Header
+              onClick={handleNavChange}
+              onClose={handleModalClose}
+              icon={icon}
+            />
           </section>
         </section>
         {/* lower container houses the content and nav menu in flex-row-wrap */}
