@@ -137,7 +137,7 @@ export default function Home({ value }) {
 
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <Header onClick={handleNavChange} icon={icon} />
+            <Header onClick={handleNavChange} onClose={handleModalClose} icon={icon} />
           </section>
         </section>
         {/* lower container houses the content and nav menu in flex-row-wrap */}
