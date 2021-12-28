@@ -26,19 +26,20 @@
 
 .headlineTextArea {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
+  text-align: right;
   width: 240px;
   height: 80px;
   font-size: 2em;
 }
 
 /* for currently inactive text */
-/* .subHeading {
+.subHeading {
   font-family: "Montserrat", sans-serif;
   font-size: 0.6em;
-} */
+}
 
 .mainMenuArea {
   display: flex;

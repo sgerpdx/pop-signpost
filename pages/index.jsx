@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-//import Image from "next/image";
+import Image from "next/image";
 
 // Component imports:
 import Layout from "../components/layout";
@@ -103,10 +103,11 @@ export default function Home({ value }) {
   const getAstronomyImage = async () => {
     try {
       let response = await fetch(
-        "https://api.nasa.gov/planetary/apod?api_key=JR7SwqZcBESMd8ibY2aSXQNRfuQ6qDS11ojFq56d"
+        "https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/latest_photos?"
       );
       let data = await response.json();
-      return data.url;
+      //console.log("Mars Image", data.latest_photos[0].img_src);
+      return data.latest_photos[0].img_src;
     } catch (error) {
       console.log("Error:", error.message);
     }
