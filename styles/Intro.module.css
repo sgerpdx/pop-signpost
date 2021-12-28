@@ -19,6 +19,28 @@
   overflow: auto;
 }
 
+.introTextContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.introTextContainer::-webkit-scrollbar-track {
+  background: #71c0bb;
+}
+
+.introTextContainer::-webkit-scrollbar-track:hover {
+  background: #71c0bb;
+  border: solid 1px #71c0bb;
+}
+
+.introTextContainer::-webkit-scrollbar-thumb {
+  border: solid 1px #71c0bb;
+}
+
+.introTextContainer::-webkit-scrollbar-thumb:hover {
+  border: solid 1px white;
+  background: white;
+}
+
 .spaceGraphic {
   display: flex;
   justify-content: center;
