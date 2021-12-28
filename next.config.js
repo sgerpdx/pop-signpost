@@ -6,6 +6,8 @@ module.exports = {
       "placekitten.com",
       "firebasestorage.googleapis.com",
       "apod.nasa.gov",
+      "www.youtube.com",
+      "mars.nasa.gov",
     ],
   },
 };

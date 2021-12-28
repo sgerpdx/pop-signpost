@@ -18,29 +18,34 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
             style={{ border: "solid 2px white", backgroundColor: "#353434" }}
           >
             <figcaption className={styles.spaceImageCaption}>
+              <a
+                href={spaceImage}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.spaceGraphic}
+              >
+                <Image
+                  src={spaceImage}
+                  width="180"
+                  height="180"
+                  alt="NASA mars rover photo"
+                  title="NASA mars rover photo"
+                />
+              </a>
               <span>
-                <BsStars className={styles.spaceCaptionIcon} />
-                astroView courtesy of{" "}
+                {/* <BsStars className={styles.spaceCaptionIcon} /> */}
+                marsView from{" "}
                 <a
-                  href="https://apod.nasa.gov/apod/astropix.html"
+                  href="https://github.com/chrisccerami/mars-photo-api"
                   target="_blank"
                   rel="noreferrer"
-                  title="link to NASA astronomy picture of the day"
+                  title="link to NASA Mars Rover Photo API"
                 >
                   NASA
                 </a>
-                <BsStars className={styles.spaceCaptionIcon} />
+                {/* <BsStars className={styles.spaceCaptionIcon} /> */}
               </span>
             </figcaption>
-            <a href={spaceImage} target="_blank" rel="noreferrer">
-              <Image
-                src={spaceImage}
-                width="340"
-                height="190"
-                alt="astronomy picture of the day"
-                title="astronomy picture of the day"
-              />
-            </a>
           </figure>
         ) : (
           <p className={styles.introTextArea}>
