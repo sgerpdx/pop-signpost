@@ -33,9 +33,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Sam Gerber</title>
         <meta property="my-title" content="Sam Gerber" key="title" />
-        <meta name="twitter:card" content="player" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Sam Gerber" />
-        <meta name="twitter:site" content="samgerber.dev" />
+        <meta name="twitter:player" content="samgerber.dev" />
         <meta name="twitter:description" content="Sam's Dev Portfolio Site" />
         <meta name="twitter:picture" content="/site-sc-360.png" />
         <link rel="icon" href="/saturn-simple.png" type="image/png" />
