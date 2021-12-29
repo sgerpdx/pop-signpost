@@ -21,3 +21,9 @@ Inter Font Family:
 https://wallis.dev/blog/nextjs-page-transitions-with-framer-motion
 https://github.com/james-wallis/wallis.dev/blob/master/pages/index.tsx
 https://www.framer.com/motion/
+
+
+### Issues & Fixes
+
+- Module not found: Can't resolve 'fs' >>> when adding dotenv to index.jsx
+    - 

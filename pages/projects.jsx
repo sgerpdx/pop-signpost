@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
-import Image from "next/image";
 
 //component imports
 import Layout from "../components/layout";
@@ -9,8 +8,6 @@ import SingleProject from "../components/singleProject";
 
 //image imports
 import { Spinner } from "@chakra-ui/spinner";
-import GithubDkGrey from "../public/github-dkgrey.png";
-//import { TiArrowBack } from "react-icons/ti";
 
 //individual project screencaps:
 import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
@@ -27,7 +24,7 @@ import Smore from "../components/individualProjects/smore";
 //props to hand down to individual SingleProject components:
 //[GitHub URL, Deployed URL, Project Image, Project Title, Descriptive Text]
 
-export default function Projects() {
+export default function Projects({ value }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -41,7 +38,7 @@ export default function Projects() {
       <main className={styles.container}>
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <ProjectHeader />
+            <ProjectHeader value={value} />
           </section>
           <div className={styles.scrollBorder}></div>
         </section>

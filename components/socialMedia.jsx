@@ -57,17 +57,6 @@ export default function SocialMedia() {
             </a>
           </p>
         </div>
-        {/* <div className={styles.resumeArea}>
-          <p>
-            <a
-              href="/gerber-sam_resume-current.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className={styles.popButton}>Resume</button>
-            </a>
-          </p>
-        </div> */}
       </section>
     </>
   );

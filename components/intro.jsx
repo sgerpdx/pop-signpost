@@ -5,16 +5,56 @@ import styles from "../styles/Intro.module.css";
 
 //image imports
 import SatelliteImage from "../public/satellite.png";
+//import SatelliteGrey from "../public/satellite-dkgrey.png";
+import { BsStars } from "react-icons/bs";
+//import { FaSpaceShuttle } from "react-icons/fa";
 
-export default function Intro({ onClick, toProjects }) {
+export default function Intro({ onClick, toProjects, stage, spaceImage }) {
   return (
     <>
       <section className={styles.introTextContainer}>
-        <p className={styles.introTextArea}>
-          I&apos;m a software engineer building full-stack applications with a
-          focus on inspiring, content-rich UX. Have a look around, and have a
-          nice day :)
-        </p>
+        {stage > 1 ? (
+          <figure
+            style={{ border: "solid 2px white", backgroundColor: "#353434" }}
+          >
+            <figcaption className={styles.spaceImageCaption}>
+              <a
+                href={spaceImage}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.spaceGraphic}
+              >
+                <Image
+                  src={spaceImage}
+                  width="180"
+                  height="180"
+                  alt="NASA mars rover photo"
+                  title="NASA mars rover photo"
+                />
+              </a>
+              <span>
+                {/* <BsStars className={styles.spaceCaptionIcon} /> */}
+                marsView from{" "}
+                <a
+                  href="https://github.com/chrisccerami/mars-photo-api"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="link to NASA Mars Rover Photo API"
+                >
+                  NASA
+                </a>
+                {/* <BsStars className={styles.spaceCaptionIcon} /> */}
+              </span>
+            </figcaption>
+          </figure>
+        ) : (
+          <p className={styles.introTextArea}>
+            I&apos;m a software engineer building full-stack applications with a
+            focus on inspiring, content-rich UX. Have a look around, and have a
+            nice day :)
+          </p>
+        )}
+
         <div className={styles.introLinkArea}>
           <nav className={styles.linksLeft}>
             <button

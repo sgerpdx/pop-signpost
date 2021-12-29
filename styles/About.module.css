@@ -76,10 +76,21 @@
   cursor: pointer;
 }
 
-.backToTopIcon {
+/* currently not in use */
+/* .backToTopIcon {
   color: #71c0bb;
   transform: rotate(90deg);
   margin-left: 10px;
+} */
+
+.modularAboutSpan {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 32px;
 }
 
 .creditsList {

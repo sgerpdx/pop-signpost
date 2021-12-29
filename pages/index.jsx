@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import Image from "next/image";
 
 // Component imports:
 import Layout from "../components/layout";
 import Header from "../components/header";
 import WelcomeModal from "../components/welcomeModal";
 import SocialMedia from "../components/socialMedia";
+//import Background from "../components/background";
 
 // Content Components for Rotating MiddleRow Div:
 import Intro from "../components/intro";
@@ -15,23 +16,35 @@ import About from "../components/about";
 import Contact from "../components/contact";
 
 // images and icons:
+import GreySatelliteImage from "../public/satellite-dkgrey.png";
 import { Spinner } from "@chakra-ui/spinner";
 import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
 
 export default function Home({ value }) {
   const [loading, setLoading] = useState(true);
-  const [content, setContent] = useState("home");
-  const [contentTransform, setContentTransform] = useState("0deg");
-  const [show, setShow] = useState(true);
-  const [icon, setIcon] = useState("none");
 
+  ////
+  // specifies which face of the cube is visible:
+  const [content, setContent] = useState("home");
+  // implements cube rotation:
+  const [contentTransform, setContentTransform] = useState("0deg");
+  // toggles WelcomeModal on/off:
+  const [show, setShow] = useState(true);
+  // controls visibility of upper-right menu icon:
+  const [icon, setIcon] = useState("none");
   // state items for managing user movement thru the site:
   const [contentHistory, setContentHistory] = useState([]);
-  const changeStage = value.handleStageChange;
-  const toggleEntered = value.handleEntered;
+  // image variable for NASA API:
+  const [spaceImage, setSpaceImage] = useState(GreySatelliteImage);
+
+  //// props passed down from _app:
+  // tracks number of modal/component/page changes:
   const stage = value.stage;
+  const changeStage = value.handleStageChange;
+  // tracks loading of main content when modal closes;
   const entered = value.entered;
+  const toggleEntered = value.handleEntered;
 
   // dropdown selection handler for content navigation:
   const handleNavChange = (e) => {
@@ -39,26 +52,33 @@ export default function Home({ value }) {
     changeStage();
   };
 
+  // state management for the 'back arrow' button:
   const handleBackNav = () => {
     const newContentHistory = contentHistory;
     const prevLocation = newContentHistory.splice(-2, 2);
     setContent(prevLocation[0]);
     setContentHistory(newContentHistory);
+    changeStage();
   };
 
+  // state management for the 'return home' button:
   const handleHomeNav = () => {
     setContent("home");
+    changeStage();
   };
 
   // handles loading spinner:
-  useEffect(() => {
+  useEffect(async () => {
     setLoading(false);
+    // on page load, we grab today's space image and set to state:
+    const currentSpaceImage = await getAstronomyImage();
+    setSpaceImage(`${currentSpaceImage}`);
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
-  useEffect(() => {
+  useEffect(async () => {
     const currentContent = content;
-
+    // rotate cube based on selection:
     if (currentContent === "home") setContentTransform("0deg");
     if (currentContent === "tech") setContentTransform("-90deg");
     if (currentContent === "about") setContentTransform("-180deg");
@@ -79,6 +99,20 @@ export default function Home({ value }) {
     if (entered) setIcon("menu");
   };
 
+  // fetch to NASA apod API:
+  const getAstronomyImage = async () => {
+    try {
+      let response = await fetch(
+        "https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/latest_photos?"
+      );
+      let data = await response.json();
+      //console.log("Mars Image", data.latest_photos[0].img_src);
+      return data.latest_photos[0].img_src;
+    } catch (error) {
+      console.log("Error:", error.message);
+    }
+  };
+
   useEffect(() => {
     handleEntered();
   }, [entered]);
@@ -87,6 +121,7 @@ export default function Home({ value }) {
 
   return (
     <Layout>
+      {/* <Background /> */}
       <main className={styles.container}>
         {stage > 0 ? (
           <></>
@@ -95,12 +130,16 @@ export default function Home({ value }) {
         )}
 
         {/* upper container houses header row */}
+
         <section className={styles.upperContainer}>
           <section className={styles.topRow}>
-            <Header onClick={handleNavChange} icon={icon} />
+            <Header
+              onClick={handleNavChange}
+              onClose={handleModalClose}
+              icon={icon}
+            />
           </section>
         </section>
-
         {/* lower container houses the content and nav menu in flex-row-wrap */}
         <section className={styles.lowerContainer}>
           <section className={styles.middleRow}>
@@ -110,7 +149,12 @@ export default function Home({ value }) {
                 style={{ transform: `rotateY(${contentTransform})` }}
               >
                 <div className={styles.frontBox}>
-                  <Intro onClick={handleNavChange} toProjects={changeStage} />
+                  <Intro
+                    onClick={handleNavChange}
+                    toProjects={changeStage}
+                    stage={stage}
+                    spaceImage={spaceImage}
+                  />
                 </div>
                 <div className={styles.sideBoxRight} onClick={changeStage}>
                   <Tech />

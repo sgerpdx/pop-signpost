@@ -5,11 +5,11 @@ import styles from "../styles/Header.module.css";
 
 //image imports
 import SatelliteBlue from "../public/satellite-blue.png";
-import { RiHomeFill } from "react-icons/ri";
-import { TiArrowBack } from "react-icons/ti";
 import { TiHome } from "react-icons/ti";
 
-export default function ProjectHeader() {
+export default function ProjectHeader({ value }) {
+  const changeStage = value.handleStageChange;
+
   return (
     <>
       <section className={styles.mainLogoArea}>
@@ -34,12 +34,10 @@ export default function ProjectHeader() {
           <span className={styles.backHomeSpan} title="return home">
             {" "}
             <TiHome
-              
-              size="2.4em"
-              color="rgba(113, 192, 187, 255)"
-              style={{ margin: "0px 4px 0px 4px" }}
+              size="3em"
+              className={styles.homeIcon}
+              onClick={changeStage}
             />
-            <TiArrowBack className={styles.backHomeIcon} />
           </span>
         </Link>
       </section>
