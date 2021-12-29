@@ -4,11 +4,6 @@ import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
-  // notes:
-  // this component needs refactoring and DRY-er code
-  // deactivating the modal can be achieved using just 'entered'
-  // 'stage' is only needed in order to track how many times the user has been on the home (intro) screen for example, possibly to toggle or update the text to something fun pulled from an API after the initial visit...
-  //
 
   const [stage, setStage] = useState(0);
   const [entered, setEntered] = useState(false);
