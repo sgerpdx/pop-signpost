@@ -38,9 +38,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="samgerber.dev" />
         <meta
           name="twitter:description"
-          content="software dev portfolio site"
+          content="My Portfolio Site -- Full Stack Software Engineer"
         />
-        <meta name="twitter:image" content="/site-sc-360.png" />
+        <meta
+          name="twitter:image"
+          content="https://pop-portfolio-bucket.s3.us-west-2.amazonaws.com/sc_prod_no-modal-cube-360.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAU7ADNKLOSFWTOALT%2F20211229%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211229T070430Z&X-Amz-Expires=60&X-Amz-Signature=678d0de9db09092839c463eeacea17c921f8f732cf3fa8d257d9519657b32249&X-Amz-SignedHeaders=host"
+        />
         <link rel="icon" href="/saturn-simple.png" type="image/png" />
       </Head>
       <AnimatePresence
