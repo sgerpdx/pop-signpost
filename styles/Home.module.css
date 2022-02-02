@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
+/* media query format for items to right or left of cube: */
+/* @media only screen and (max-width: 620px) {
+  .divNAme {
+    display: none;
+  }
+} */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -61,6 +68,13 @@
   height: 420px;
   font-family: "Courier Prime", monospace;
 }
+
+/* .deathStar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
 .lowerNAvArea {
   display: flex;
