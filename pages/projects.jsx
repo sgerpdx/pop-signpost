@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
+import Image from "next/image";
 
 //component imports
 import Layout from "../components/layout";
@@ -14,6 +15,7 @@ import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 import SimpleSmoreImage from "../public/Projects_Simple-Smore.png";
+import AdventCalWIP from "../public/advent-cal.png";
 
 //individual project description components:
 import Greeting from "../components/individualProjects/greeting";
@@ -45,6 +47,27 @@ export default function Projects({ value }) {
 
         <section className={styles.lowerContainer}>
           <section className={styles.projectScrollArea}>
+            <div
+              style={{
+                width: "100%",
+                margin: "40px",
+                backgroundColor: "orange",
+                color: "black",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <h3>Current</h3>
+              <figure>
+                <Image
+                  src={AdventCalWIP}
+                  width="270"
+                  height="216"
+                  alt="screenshot of app"
+                />
+              </figure>
+            </div>
             <SingleProject
               projectName="Greeting Art"
               projectImage={GreetingImage}
