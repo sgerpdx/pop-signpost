@@ -51,22 +51,53 @@ export default function Projects({ value }) {
               style={{
                 width: "100%",
                 margin: "40px",
-                backgroundColor: "orange",
-                color: "black",
+                backgroundColor: "white",
+                color: "#353434",
                 justifyContent: "center",
                 alignItems: "center",
                 textAlign: "center",
               }}
             >
-              <h3>Current</h3>
-              <figure>
+              <h3>Current WIP: Calendoors</h3>
+              <figure
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
                 <Image
                   src={AdventCalWIP}
                   width="270"
                   height="216"
                   alt="screenshot of app"
                 />
+                <figcaption
+                  style={{
+                    fontStyle: "italic",
+                    fontSize: "0.9em",
+                    width: "270px",
+                    backgroundColor: "#71c0bb",
+                    marginTop: "4px",
+                  }}
+                >
+                  from the folksy original
+                </figcaption>
               </figure>
+              <p>
+                I&apos;m working on a &apos;daily-reveal calendar app&apos; that
+                is an outgrowth of a digital Advent Calendar that I made as a
+                gift this past December. Using React/Nextjs with a Firebase
+                back-end, it will allow the user to create an account and set up
+                customized calendars that facilitate content-reveals at
+                scheduled intervals, e.g. today&apos;s 'door' can be opened by
+                the recipient-user, who will then be able to access whatever
+                information or media the admin-user has loaded behind that door.
+                I&apos;m also planning to implement TypeScript and Tailwind CSS
+                once the MVP has been achieved.
+              </p>
             </div>
             <SingleProject
               projectName="Greeting Art"
