@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
+import Image from "next/image";
 
 //component imports
 import Layout from "../components/layout";
@@ -14,12 +15,14 @@ import DesignasaurImage from "../public/Projects_Designasaur-Park_680.jpg";
 import ElseImage from "../public/Projects_Else-By-Elsewhere_680.jpg";
 import GreetingImage from "../public/Projects_Greeting-Art_680.jpg";
 import SimpleSmoreImage from "../public/Projects_Simple-Smore.png";
+import CalendarAngle from "../public/angle-cal.png";
 
 //individual project description components:
 import Greeting from "../components/individualProjects/greeting";
 import Elsewhere from "../components/individualProjects/elsewhere";
 import Designasaur from "../components/individualProjects/designasaur";
 import Smore from "../components/individualProjects/smore";
+import Calendoors from "../components/individualProjects/calendoors";
 
 //props to hand down to individual SingleProject components:
 //[GitHub URL, Deployed URL, Project Image, Project Title, Descriptive Text]
@@ -45,6 +48,14 @@ export default function Projects({ value }) {
 
         <section className={styles.lowerContainer}>
           <section className={styles.projectScrollArea}>
+            <SingleProject
+              projectName="Current WIP: Calendoors"
+              projectImage={CalendarAngle}
+              // deployed=""
+              // github=""
+              isVisible="hidden"
+              projectText={<Calendoors />}
+            />
             <SingleProject
               projectName="Greeting Art"
               projectImage={GreetingImage}
@@ -73,7 +84,7 @@ export default function Projects({ value }) {
               projectName="S'mple S'more"
               projectImage={SimpleSmoreImage}
               deployed="https://samger.itch.io/smplsmore"
-              // github="https://itch.io/jam/stop-waiting-for-godot"
+              // github=""
               isVisible="hidden"
               projectText={<Smore />}
             />
