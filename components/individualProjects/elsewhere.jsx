@@ -3,17 +3,6 @@ import React from "react";
 export default function Elsewhere() {
   return (
     <>
-      <p
-        style={{
-          backgroundColor: "rgb(53, 52, 52)",
-          color: "white",
-          fontSize: "0.9em",
-          textAlign: "center",
-          width: "240px",
-        }}
-      >
-        ***currently working on a map API key issue***
-      </p>
       <p>
         API-driven geoguessing game app. primarily mob programmed in a one-week
         remote sprint, using:

@@ -76,6 +76,7 @@
   width: 90%;
   height: 90%;
   backface-visibility: hidden;
+  font-family: "Courier Prime", monospace;
   color: #353434;
 }
 
@@ -112,7 +113,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Courier Prime", monospace;
+  /* font-family: "Courier Prime", monospace; */
   margin-bottom: 40px;
 }
 

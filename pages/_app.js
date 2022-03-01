@@ -27,6 +27,7 @@ function MyApp({ Component, pageProps }) {
     >
       <Head>
         <title>Sam Gerber</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="my-title" content="Sam Gerber" key="title" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Sam Gerber" />
