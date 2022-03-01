@@ -8,9 +8,9 @@ export default function Calendoors() {
         digital Advent Calendar I built as a Christmas gift. It will allow the
         user to create an account and set up customized calendars that
         facilitate content-reveals at scheduled intervals, e.g. today&apos;s
-        &apos;door&apos; can be opened by the recipient-user, who will then be able to
-        access whatever information or media the admin-user has loaded behind
-        that door.
+        &apos;door&apos; can be opened by the recipient-user, who will then be
+        able to access whatever information or media the admin-user has loaded
+        behind that door.
       </p>
       <ul>
         <li>Front-end: React + Nextjs</li>
