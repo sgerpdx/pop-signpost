@@ -20,6 +20,7 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
             <figcaption className={styles.spaceImageCaption}>
               <a
                 href={spaceImage}
+                passHref
                 target="_blank"
                 rel="noreferrer"
                 className={styles.spaceGraphic}
@@ -37,6 +38,7 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
                 marsView from{" "}
                 <a
                   href="https://github.com/chrisccerami/mars-photo-api"
+                  passHref
                   target="_blank"
                   rel="noreferrer"
                   title="link to NASA Mars Rover Photo API"
@@ -65,7 +67,7 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
               tech stack
             </button>
 
-            <Link href="/projects" scroll={false} onClick={toProjects}>
+            <Link href="/projects" passHref scroll={false} onClick={toProjects}>
               <button className={styles.introLinks} onClick={toProjects}>
                 projects
               </button>
@@ -95,6 +97,7 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
             <button className={styles.introLinks}>
               <a
                 href="/gerber-sam_resume-current.pdf"
+                passHref
                 target="_blank"
                 rel="noreferrer"
               >

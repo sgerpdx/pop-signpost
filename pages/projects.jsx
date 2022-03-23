@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Projects.module.css";
-import Image from "next/image";
+//import Image from "next/image";
 
 //component imports
 import Layout from "../components/layout";

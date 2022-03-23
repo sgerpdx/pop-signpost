@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
+//import Image from "next/image";
 
 // Component imports:
 import Layout from "../components/layout";
@@ -67,6 +67,20 @@ export default function Home({ value }) {
     changeStage();
   };
 
+  // fetch to NASA Mars Photo API:
+  const getAstronomyImage = async () => {
+    try {
+      let response = await fetch(
+        "https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/latest_photos?"
+      );
+      let data = await response.json();
+      //console.log("Mars Image", data.latest_photos[0].img_src);
+      return data.latest_photos[0].img_src;
+    } catch (error) {
+      console.log("Error:", error.message);
+    }
+  };
+
   // handles loading spinner:
   useEffect(async () => {
     setLoading(false);
@@ -76,7 +90,7 @@ export default function Home({ value }) {
   }, []);
 
   // controls rotation of 3D displayArea section and its internal div face elements:
-  useEffect(async () => {
+  useEffect(() => {
     const currentContent = content;
     // rotate cube based on selection:
     if (currentContent === "home") setContentTransform("0deg");
@@ -97,20 +111,6 @@ export default function Home({ value }) {
   // makes the top-right menu visible once modal closes
   const handleEntered = () => {
     if (entered) setIcon("menu");
-  };
-
-  // fetch to NASA apod API:
-  const getAstronomyImage = async () => {
-    try {
-      let response = await fetch(
-        "https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/latest_photos?"
-      );
-      let data = await response.json();
-      //console.log("Mars Image", data.latest_photos[0].img_src);
-      return data.latest_photos[0].img_src;
-    } catch (error) {
-      console.log("Error:", error.message);
-    }
   };
 
   useEffect(() => {
