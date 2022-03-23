@@ -18,11 +18,11 @@ export default function Tech({ onClick }) {
               <u>Libraries/Runtimes/Frameworks</u>:
             </dt>{" "}
             <dd>
-              <dt style={{ color: "#71c0bb" }}>→ Front End:</dt>{" "}
+              <dt style={{ color: "#faa2fa" }}>→ Front End:</dt>{" "}
               <dd>React.js, Next.js, React Native</dd>
             </dd>
             <dd>
-              <dt style={{ color: "#71c0bb" }}>→ Back End:</dt>
+              <dt style={{ color: "#faa2fa" }}>→ Back End:</dt>
               <dd>Node.js, Express</dd>
             </dd>
             <dt className={styles.techCategory}>
@@ -38,16 +38,20 @@ export default function Tech({ onClick }) {
             </dt>{" "}
             <dd> Git, GitHub, Netlify, Heroku, Postman, AWS S3</dd>
           </dl>
+          <p className={styles.currentText}>
+            ...and currently learning:{" "}
+            <span style={{ color: "white" }}>TypeScript</span>
+          </p>
           <nav className={styles.projectLinksArea}>
             <p style={{ color: "#71c0bb" }}>
               Go to{" "}
-              <Link href="/projects" scroll={false}>
+              <Link href="/projects" passHref scroll={false}>
                 <span onClick={onClick} className={styles.projectLinkSpan}>
                   Projects
                 </span>
               </Link>
             </p>
-            <Link href="/projects">
+            <Link href="/projects" passHref>
               <RiArrowRightCircleLine
                 onClick={onClick}
                 className={styles.projectLinkIcon}

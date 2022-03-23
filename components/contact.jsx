@@ -16,7 +16,12 @@ export default function Contact() {
         <div className={styles.socialMediaTextArea}>
           <figure style={{ marginRight: "10px" }}>
             {" "}
-            <Image src={EnvelopeImage} width="27px" height="27px" />
+            <Image
+              src={EnvelopeImage}
+              width="27px"
+              height="27px"
+              alt="mailing envelope icon"
+            />
           </figure>
           <a
             style={{ textDecoration: "underline", marginLeft: "6px" }}
@@ -31,7 +36,12 @@ export default function Contact() {
         <div className={styles.socialMediaTextArea}>
           <figure style={{ marginRight: "10px" }}>
             {" "}
-            <Image src={StarsImage} width="32px" height="32px" />
+            <Image
+              src={StarsImage}
+              width="32px"
+              height="32px"
+              alt="stars icon"
+            />
           </figure>
 
           <p style={{ width: "240px", textAlign: "left" }}>

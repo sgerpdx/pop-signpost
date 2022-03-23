@@ -13,6 +13,7 @@ export default function Background() {
           layout="fixed"
           objectFit="cover"
           quality={100}
+          alt="topographic wallpaper background pattern"
         />
       </div>
     </>

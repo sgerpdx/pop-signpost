@@ -14,7 +14,7 @@ export default function ProjectHeader({ value }) {
     <>
       <section className={styles.mainLogoArea}>
         <div className={styles.logoImageArea}>
-          <Link href="/" scroll={false}>
+          <Link href="/" passHref scroll={false}>
             <Image
               src={SatelliteBlue}
               alt="logo image of a blue planet with rings and stars"
@@ -30,7 +30,7 @@ export default function ProjectHeader({ value }) {
         </div>
       </section>
       <section className={styles.mainMenuArea}>
-        <Link href="/" scroll={false}>
+        <Link href="/" passHref scroll={false}>
           <span className={styles.backHomeSpan} title="return home">
             {" "}
             <TiHome

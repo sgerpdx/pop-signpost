@@ -16,7 +16,12 @@ export default function About({ onClick }) {
           <div className={styles.aboutHeader}>
             <h2 id="about-top">About Me</h2>
             <figure className={styles.aboutImageWrapper}>
-              <Image src={MeForest} width="320px" height="250px" />
+              <Image
+                src={MeForest}
+                width="320px"
+                height="250px"
+                alt="photo of me wearing green hat in forest"
+              />
             </figure>
           </div>
 
@@ -27,7 +32,12 @@ export default function About({ onClick }) {
             connections between us.
           </p>
           <figure className={styles.aboutImageWrapper}>
-            <Image src={MeCoffee} width="240px" height="240px" />
+            <Image
+              src={MeCoffee}
+              width="240px"
+              height="240px"
+              alt="photo of me drinking coffee"
+            />
             <figcaption
               style={{
                 textAlign: "center",
@@ -47,7 +57,12 @@ export default function About({ onClick }) {
             regardless of borders or distance.
           </p>
           <figure className={styles.aboutImageWrapper}>
-            <Image src={MeRedwoods} width="320px" height="240px" />
+            <Image
+              src={MeRedwoods}
+              width="320px"
+              height="240px"
+              alt="photo of me in front of coastal redwood tree"
+            />
             <figcaption
               style={{
                 textAlign: "center",
@@ -56,7 +71,7 @@ export default function About({ onClick }) {
                 fontSize: "0.9em",
               }}
             >
-              requisite self-to-redwood comparison
+              coastal redwoods
             </figcaption>
           </figure>
           <p className={styles.aboutTextParagraph}>
@@ -96,7 +111,12 @@ export default function About({ onClick }) {
                 title="github repository link"
                 style={{ cursor: "pointer" }}
               >
-                <Image src={GithubDkGrey} width="32px" height="32px" />
+                <Image
+                  src={GithubDkGrey}
+                  width="32px"
+                  height="32px"
+                  alt="github icon in dark grey"
+                />
               </a>
             </p>
           </div>

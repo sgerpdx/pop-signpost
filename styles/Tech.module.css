@@ -4,6 +4,12 @@
   color: #71c0bb;
 }
 
+.currentText {
+  width: 100%;
+  text-align: center;
+  color: #faa2fa;
+}
+
 .projectLinksArea {
   display: flex;
   flex-direction: row;
