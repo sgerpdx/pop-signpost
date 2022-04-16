@@ -13,13 +13,13 @@ export default function Tech({ onClick }) {
             <dt className={styles.techCategory}>
               <u>Languages</u>:
             </dt>{" "}
-            <dd>JavaScript, HTML, CSS</dd>
+            <dd>TypeScript, JavaScript, HTML, CSS</dd>
             <dt className={styles.techCategory}>
               <u>Libraries/Runtimes/Frameworks</u>:
             </dt>{" "}
             <dd>
               <dt style={{ color: "#faa2fa" }}>→ Front End:</dt>{" "}
-              <dd>React.js, Next.js, React Native</dd>
+              <dd>React.js, Next.js, React Native, TailwindCSS</dd>
             </dd>
             <dd>
               <dt style={{ color: "#faa2fa" }}>→ Back End:</dt>
@@ -38,10 +38,10 @@ export default function Tech({ onClick }) {
             </dt>{" "}
             <dd> Git, GitHub, Netlify, Heroku, Postman, AWS S3</dd>
           </dl>
-          <p className={styles.currentText}>
+          {/* <p className={styles.currentText}>
             ...and currently learning:{" "}
-            <span style={{ color: "white" }}>TypeScript</span>
-          </p>
+            <span style={{ color: "white" }}></span>
+          </p> */}
           <nav className={styles.projectLinksArea}>
             <p style={{ color: "#71c0bb" }}>
               Go to{" "}
