@@ -29,7 +29,8 @@ export default function About({ onClick }) {
             Hi, I&apos;m Sam! I love finding the unexpected and often-amazing
             connections between things, even moreso between people. I&apos;m
             deeply inspired by tech&apos;s potential to bring out those
-            connections between us.
+            connections between us. Engineering products to do just that is my
+            passion.
           </p>
           <figure className={styles.aboutImageWrapper}>
             <Image

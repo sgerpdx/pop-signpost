@@ -100,7 +100,7 @@ export default function Home({ value }) {
     const newContentHistory = contentHistory;
     newContentHistory.push(currentContent);
     setContentHistory(newContentHistory);
-  }, [content]);
+  }, [content, contentHistory]);
 
   // closes the welcome modal and sets entered to reflect that:
   const handleModalClose = () => {
@@ -115,7 +115,7 @@ export default function Home({ value }) {
 
   useEffect(() => {
     handleEntered();
-  }, [entered]);
+  }, [entered, handleEntered]);
 
   if (loading) return <Spinner color="white" />;
 
