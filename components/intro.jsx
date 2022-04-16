@@ -51,7 +51,7 @@ export default function Intro({ onClick, toProjects, stage, spaceImage }) {
           </figure>
         ) : (
           <p className={styles.introTextArea}>
-            I&apos;m a software engineer building full-stack applications with a
+            I&apos;m a software developer building full-stack applications with a
             focus on inspiring, content-rich UX. Have a look around, and have a
             nice day :)
           </p>

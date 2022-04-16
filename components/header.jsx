@@ -42,7 +42,7 @@ export default function Header({ onClick, onClose, icon }) {
               marginLeft: "6px",
             }}
           >
-            software engineer
+            software developer
           </p>
         </div>
       </section>
