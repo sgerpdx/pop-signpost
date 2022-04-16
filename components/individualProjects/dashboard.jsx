@@ -4,11 +4,11 @@ export default function WebDashboard() {
   return (
     <>
       <p>
-        Work-in-process solo project to create a browser-agnostic &apos;homepage app&apos;
-        allowing users to save and manage bookmarks from any browser-enabled
-        device, as well as presenting local time/date/weather information and a
-        news feed. The UI design philosophy is to take subtle cues from a
-        literal vehicle dashboard.
+        Work-in-progress solo project to create a browser-agnostic
+        &apos;homepage app&apos; allowing users to save and manage bookmarks
+        from any browser-enabled device, as well as presenting local
+        time/date/weather information and a news feed. The UI design philosophy
+        is to take subtle cues from a literal vehicle dashboard.
       </p>
       <ul>
         <li>Front-end: React + Nextjs</li>
